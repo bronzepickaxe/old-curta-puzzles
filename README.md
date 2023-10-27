@@ -17,7 +17,7 @@
 - ✅ - [Puzzle17](https://www.curta.wtf/puzzle/17) by [hrkrshnn](https://twitter.com/_hrkrshnn)
 - ✅ - [Puzzle18](https://www.curta.wtf/puzzle/18) by [horsefacts](https://twitter.com/eth_call)
 
-If you manage to fix the ones that I couldn't get to work, feel free to submit a PR or DM me on Discord: `bronze_pickaxe`
+As you can see, some of the puzzles are not working at the moment. If you got them to work, feel free to submit a PR.
 
 # Old Curta Puzzles
 I decided to create a directory of old Curta puzzles because I want to play them, all other available options of playing the puzzles were not working for me.
@@ -53,7 +53,7 @@ Gas used: 266368
 Happy solving!
 
 ### Step 3 (Submitting answer)
-If you think you have got the answer, head tot the `DeployPuzzle` file in `script/deploy/` and follow these steps:
+If you think you have got the answer, head over to the `DeployPuzzle` file in `script/deploy/` and follow these steps:
 - Let's say we wan to submit the solution to Puzzle1
 - Open `script/deploy/DeployPuzzle.s.sol`
 - Un-comment `testSolve()` and put your answer between the parentheses:
@@ -68,4 +68,5 @@ If the script successfully runs, this means you have solved the puzzle.
 If it fails, you have submitted the wrong answer.
 
 ### Step 4 (Optional)
-If you are stuck with a puzzle, the answers for all puzzles are in `script/deploy/DeployBase.sol`. You can also use this to try making the puzzles work that I couldn't get to work.
+If you are stuck with a puzzle, the answers for all puzzles are in `script/deploy/DeployBase.sol`. 
+You can use the answers in `DeployBase.sol` to try debugging the puzzles that are not working at the moment.
