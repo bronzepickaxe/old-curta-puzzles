@@ -16,7 +16,7 @@ contract DeployPuzzle9 is DeployBase {
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17138934);
         vm.selectFork(forkId);
         puzzle = IPuzzle(HuffDeployer.deploy("../../src/puzzle-09/Antikythera"));
-        console.log("Antikythera.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("Antikythera.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.prank(mainnetWinner);
 
         // testSolved(0x123);

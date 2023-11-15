@@ -1,0 +1,551 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_seed",
+          "type": "address"
+        }
+      ],
+      "name": "generate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_start",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_solution",
+          "type": "uint256"
+        }
+      ],
+      "name": "verify",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "generate(address)": "2fa61cd8",
+    "name()": "06fdde03",
+    "verify(uint256,uint256)": "41161b10"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_seed\",\"type\":\"address\"}],\"name\":\"generate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_solution\",\"type\":\"uint256\"}],\"name\":\"verify\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Since puzzles are on-chain, everyone can view everyone else's submissions. The generative aspect prevents front-running and allows for multiple winners: even if players view someone else's solution, they still have to figure out what the rules/constraints of the puzzle are and apply the solution to their respective starting position.\",\"kind\":\"dev\",\"methods\":{\"generate(address)\":{\"details\":\"The seed is intended to be `msg.sender` of some wrapper function or call.\",\"params\":{\"_seed\":\"The seed to use to generate the puzzle.\"},\"returns\":{\"_0\":\"The puzzle's starting position.\"}},\"name()\":{\"returns\":{\"_0\":\"The puzzle's name.\"}},\"verify(uint256,uint256)\":{\"details\":\"`_start` is intended to be an output from {IPuzzle-generate}.\",\"params\":{\"_solution\":\"The solution to the puzzle.\",\"_start\":\"The puzzle's starting position.\"},\"returns\":{\"_0\":\"Whether the solution is valid.\"}}},\"title\":\"The interface for a puzzle on Curta\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"generate(address)\":{\"notice\":\"Generates the puzzle's starting position based on a seed.\"},\"name()\":{\"notice\":\"Returns the puzzle's name.\"},\"verify(uint256,uint256)\":{\"notice\":\"Verifies that a solution is valid for the puzzle.\"}},\"notice\":\"The goal of players is to view the source code of the puzzle (may range from just the bytecode to Solidity\\u2014whatever the author wishes to provide), interpret the code, solve it as if it was a regular puzzle, then verify the solution on-chain.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IPuzzle.sol\":\"IPuzzle\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"src/interfaces/IPuzzle.sol\":{\"keccak256\":\"0x8f61ede6963e8a98e9ebe6a5ea1973f69224d78c45bc26adf9dc9eae21794868\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9ec6424a391e0f18165d1c10b88a31d25e176169704f6dc2c1a63e62ad91e816\",\"dweb:/ipfs/QmSuAVCVxKWYYB4Jyy5G1UKhAAZcAfHs1rTAwuP5PUWeSs\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_seed",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "generate",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_start",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_solution",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "verify",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "generate(address)": {
+            "details": "The seed is intended to be `msg.sender` of some wrapper function or call.",
+            "params": {
+              "_seed": "The seed to use to generate the puzzle."
+            },
+            "returns": {
+              "_0": "The puzzle's starting position."
+            }
+          },
+          "name()": {
+            "returns": {
+              "_0": "The puzzle's name."
+            }
+          },
+          "verify(uint256,uint256)": {
+            "details": "`_start` is intended to be an output from {IPuzzle-generate}.",
+            "params": {
+              "_solution": "The solution to the puzzle.",
+              "_start": "The puzzle's starting position."
+            },
+            "returns": {
+              "_0": "Whether the solution is valid."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "generate(address)": {
+            "notice": "Generates the puzzle's starting position based on a seed."
+          },
+          "name()": {
+            "notice": "Returns the puzzle's name."
+          },
+          "verify(uint256,uint256)": {
+            "notice": "Verifies that a solution is valid for the puzzle."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/interfaces/IPuzzle.sol": "IPuzzle"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/IPuzzle.sol": {
+        "keccak256": "0x8f61ede6963e8a98e9ebe6a5ea1973f69224d78c45bc26adf9dc9eae21794868",
+        "urls": [
+          "bzz-raw://9ec6424a391e0f18165d1c10b88a31d25e176169704f6dc2c1a63e62ad91e816",
+          "dweb:/ipfs/QmSuAVCVxKWYYB4Jyy5G1UKhAAZcAfHs1rTAwuP5PUWeSs"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IPuzzle.sol",
+    "id": 41661,
+    "exportedSymbols": {
+      "IPuzzle": [
+        41660
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1581:68",
+    "nodes": [
+      {
+        "id": 41634,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:68",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 41660,
+        "nodeType": "ContractDefinition",
+        "src": "734:878:68",
+        "nodes": [
+          {
+            "id": 41641,
+            "nodeType": "FunctionDefinition",
+            "src": "836:54:68",
+            "nodes": [],
+            "documentation": {
+              "id": 41636,
+              "nodeType": "StructuredDocumentation",
+              "src": "758:73:68",
+              "text": "@notice Returns the puzzle's name.\n @return The puzzle's name."
+            },
+            "functionSelector": "06fdde03",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "name",
+            "nameLocation": "845:4:68",
+            "parameters": {
+              "id": 41637,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "849:2:68"
+            },
+            "returnParameters": {
+              "id": 41640,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41639,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41641,
+                  "src": "875:13:68",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 41638,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "875:6:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "874:15:68"
+            },
+            "scope": 41660,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41649,
+            "nodeType": "FunctionDefinition",
+            "src": "1174:60:68",
+            "nodes": [],
+            "documentation": {
+              "id": 41642,
+              "nodeType": "StructuredDocumentation",
+              "src": "896:273:68",
+              "text": "@notice Generates the puzzle's starting position based on a seed.\n @dev The seed is intended to be `msg.sender` of some wrapper function or\n call.\n @param _seed The seed to use to generate the puzzle.\n @return The puzzle's starting position."
+            },
+            "functionSelector": "2fa61cd8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generate",
+            "nameLocation": "1183:8:68",
+            "parameters": {
+              "id": 41645,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41644,
+                  "mutability": "mutable",
+                  "name": "_seed",
+                  "nameLocation": "1200:5:68",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41649,
+                  "src": "1192:13:68",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41643,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1192:7:68",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1191:15:68"
+            },
+            "returnParameters": {
+              "id": 41648,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41647,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41649,
+                  "src": "1225:7:68",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41646,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1225:7:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1224:9:68"
+            },
+            "scope": 41660,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41659,
+            "nodeType": "FunctionDefinition",
+            "src": "1535:75:68",
+            "nodes": [],
+            "documentation": {
+              "id": 41650,
+              "nodeType": "StructuredDocumentation",
+              "src": "1240:290:68",
+              "text": "@notice Verifies that a solution is valid for the puzzle.\n @dev `_start` is intended to be an output from {IPuzzle-generate}.\n @param _start The puzzle's starting position.\n @param _solution The solution to the puzzle.\n @return Whether the solution is valid."
+            },
+            "functionSelector": "41161b10",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verify",
+            "nameLocation": "1544:6:68",
+            "parameters": {
+              "id": 41655,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41652,
+                  "mutability": "mutable",
+                  "name": "_start",
+                  "nameLocation": "1559:6:68",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41659,
+                  "src": "1551:14:68",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41651,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1551:7:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41654,
+                  "mutability": "mutable",
+                  "name": "_solution",
+                  "nameLocation": "1575:9:68",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41659,
+                  "src": "1567:17:68",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41653,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1567:7:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1550:35:68"
+            },
+            "returnParameters": {
+              "id": 41658,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41657,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41659,
+                  "src": "1604:4:68",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 41656,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1604:4:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1603:6:68"
+            },
+            "scope": 41660,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPuzzle",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 41635,
+          "nodeType": "StructuredDocumentation",
+          "src": "58:676:68",
+          "text": "@title The interface for a puzzle on Curta\n @notice The goal of players is to view the source code of the puzzle (may\n range from just the bytecode to Solidity—whatever the author wishes to\n provide), interpret the code, solve it as if it was a regular puzzle, then\n verify the solution on-chain.\n @dev Since puzzles are on-chain, everyone can view everyone else's\n submissions. The generative aspect prevents front-running and allows for\n multiple winners: even if players view someone else's solution, they still\n have to figure out what the rules/constraints of the puzzle are and apply\n the solution to their respective starting position."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          41660
+        ],
+        "name": "IPuzzle",
+        "nameLocation": "744:7:68",
+        "scope": 41661,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 68
+}

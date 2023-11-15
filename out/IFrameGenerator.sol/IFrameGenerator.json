@@ -1,0 +1,386 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "Frame",
+          "type": "uint16"
+        }
+      ],
+      "name": "generateFrame",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "svgString",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IFrameGenerator.FrameData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "generateFrame(uint16)": "d0b7314f"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"Frame\",\"type\":\"uint16\"}],\"name\":\"generateFrame\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"fee\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"svgString\",\"type\":\"string\"}],\"internalType\":\"struct IFrameGenerator.FrameData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol\":\"IFrameGenerator\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol\":{\"keccak256\":\"0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e\",\"dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "Frame",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "generateFrame",
+          "outputs": [
+            {
+              "internalType": "struct IFrameGenerator.FrameData",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "fee",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "svgString",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": "IFrameGenerator"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": {
+        "keccak256": "0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1",
+        "urls": [
+          "bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e",
+          "dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS"
+        ],
+        "license": "The Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+    "id": 26131,
+    "exportedSymbols": {
+      "IFrameGenerator": [
+        26130
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:261:19",
+    "nodes": [
+      {
+        "id": 26114,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:19",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 26130,
+        "nodeType": "ContractDefinition",
+        "src": "67:235:19",
+        "nodes": [
+          {
+            "id": 26121,
+            "nodeType": "StructDefinition",
+            "src": "99:93:19",
+            "nodes": [],
+            "canonicalName": "IFrameGenerator.FrameData",
+            "members": [
+              {
+                "constant": false,
+                "id": 26116,
+                "mutability": "mutable",
+                "name": "title",
+                "nameLocation": "133:5:19",
+                "nodeType": "VariableDeclaration",
+                "scope": 26121,
+                "src": "126:12:19",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26115,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "126:6:19",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26118,
+                "mutability": "mutable",
+                "name": "fee",
+                "nameLocation": "156:3:19",
+                "nodeType": "VariableDeclaration",
+                "scope": 26121,
+                "src": "148:11:19",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 26117,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "148:7:19",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26120,
+                "mutability": "mutable",
+                "name": "svgString",
+                "nameLocation": "176:9:19",
+                "nodeType": "VariableDeclaration",
+                "scope": 26121,
+                "src": "169:16:19",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26119,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "169:6:19",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "FrameData",
+            "nameLocation": "106:9:19",
+            "scope": 26130,
+            "visibility": "public"
+          },
+          {
+            "id": 26129,
+            "nodeType": "FunctionDefinition",
+            "src": "198:102:19",
+            "nodes": [],
+            "functionSelector": "d0b7314f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateFrame",
+            "nameLocation": "207:13:19",
+            "parameters": {
+              "id": 26124,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26123,
+                  "mutability": "mutable",
+                  "name": "Frame",
+                  "nameLocation": "228:5:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26129,
+                  "src": "221:12:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26122,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "221:6:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "220:14:19"
+            },
+            "returnParameters": {
+              "id": 26128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26127,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26129,
+                  "src": "282:16:19",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FrameData_$26121_memory_ptr",
+                    "typeString": "struct IFrameGenerator.FrameData"
+                  },
+                  "typeName": {
+                    "id": 26126,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26125,
+                      "name": "FrameData",
+                      "nameLocations": [
+                        "282:9:19"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26121,
+                      "src": "282:9:19"
+                    },
+                    "referencedDeclaration": 26121,
+                    "src": "282:9:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FrameData_$26121_storage_ptr",
+                      "typeString": "struct IFrameGenerator.FrameData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "281:18:19"
+            },
+            "scope": 26130,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFrameGenerator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26130
+        ],
+        "name": "IFrameGenerator",
+        "nameLocation": "77:15:19",
+        "scope": 26131,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "The Unlicense"
+  },
+  "id": 19
+}

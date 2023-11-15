@@ -13,7 +13,7 @@ contract DeployPuzzle1 is DeployBase {
     function run() external {
         puzzle = new TwoTimesFourIsEight();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"), 16737571);
-        console.log("TwoTimesFourIsEight.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("TwoTimesFourIsEight.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

@@ -1,0 +1,2073 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_colormapHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ColormapAlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_colormapHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ColormapDoesNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_segmentData",
+          "type": "uint256"
+        }
+      ],
+      "name": "SegmentDataInvalid",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_hash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "contract IPaletteGenerator",
+          "name": "_paletteGenerator",
+          "type": "address"
+        }
+      ],
+      "name": "RegisterColormap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_hash",
+          "type": "bytes32"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "r",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "g",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "b",
+              "type": "uint256"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct IColormapRegistry.SegmentData",
+          "name": "_segmentData",
+          "type": "tuple"
+        }
+      ],
+      "name": "RegisterColormap",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_colormapHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_position",
+          "type": "uint256"
+        }
+      ],
+      "name": "getValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_colormapHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint8",
+          "name": "_position",
+          "type": "uint8"
+        }
+      ],
+      "name": "getValueAsHexString",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_colormapHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint8",
+          "name": "_position",
+          "type": "uint8"
+        }
+      ],
+      "name": "getValueAsUint8",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_colormapHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "paletteGenerators",
+      "outputs": [
+        {
+          "internalType": "contract IPaletteGenerator",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IPaletteGenerator",
+          "name": "_paletteGenerator",
+          "type": "address"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "r",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "g",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "b",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IColormapRegistry.SegmentData",
+          "name": "_segmentData",
+          "type": "tuple"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_colormapHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "segments",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getValue(bytes32,uint256)": "172327cd",
+    "getValueAsHexString(bytes32,uint8)": "730236ca",
+    "getValueAsUint8(bytes32,uint8)": "fd6d7d06",
+    "paletteGenerators(bytes32)": "7168be56",
+    "register((uint256,uint256,uint256))": "f14b4f3f",
+    "register(address)": "4420e486",
+    "segments(bytes32)": "f9484330"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_colormapHash\",\"type\":\"bytes32\"}],\"name\":\"ColormapAlreadyExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_colormapHash\",\"type\":\"bytes32\"}],\"name\":\"ColormapDoesNotExist\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_segmentData\",\"type\":\"uint256\"}],\"name\":\"SegmentDataInvalid\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_hash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"contract IPaletteGenerator\",\"name\":\"_paletteGenerator\",\"type\":\"address\"}],\"name\":\"RegisterColormap\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_hash\",\"type\":\"bytes32\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"r\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"g\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"indexed\":false,\"internalType\":\"struct IColormapRegistry.SegmentData\",\"name\":\"_segmentData\",\"type\":\"tuple\"}],\"name\":\"RegisterColormap\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_colormapHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_position\",\"type\":\"uint256\"}],\"name\":\"getValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_colormapHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"_position\",\"type\":\"uint8\"}],\"name\":\"getValueAsHexString\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_colormapHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"_position\",\"type\":\"uint8\"}],\"name\":\"getValueAsUint8\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_colormapHash\",\"type\":\"bytes32\"}],\"name\":\"paletteGenerators\",\"outputs\":[{\"internalType\":\"contract IPaletteGenerator\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IPaletteGenerator\",\"name\":\"_paletteGenerator\",\"type\":\"address\"}],\"name\":\"register\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"r\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"g\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"internalType\":\"struct IColormapRegistry.SegmentData\",\"name\":\"_segmentData\",\"type\":\"tuple\"}],\"name\":\"register\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_colormapHash\",\"type\":\"bytes32\"}],\"name\":\"segments\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"fiveoutofnine\",\"details\":\"A colormap may be defined in 2 ways: (1) via segment data and (2) via a ``palette generator.''     1. via segment data     2. or via a palette generator ({IPaletteGenerator}). Segment data contains 1 `uint256` each for red, green, and blue describing their intensity values along the colormap. Each `uint256` contains 24-bit words bitpacked together with the following structure (bits are right-indexed):     | Bits      | Meaning                                              |     | --------- | ---------------------------------------------------- |     | `23 - 16` | Position in the colormap the segment begins from     |     | `15 - 08` | Intensity of R, G, or B the previous segment ends at |     | `07 - 00` | Intensity of R, G, or B the next segment starts at   | Given some position, the output will be computed via linear interpolations on the segment data for R, G, and B. A maximum of 10 of these segments fit within 256 bits, so up to 9 segments can be defined. If you need more granularity or a nonlinear palette function, you may implement {IPaletteGenerator} and define a colormap with that.\",\"errors\":{\"ColormapAlreadyExists(bytes32)\":[{\"params\":{\"_colormapHash\":\"Hash of the colormap's definition.\"}}],\"ColormapDoesNotExist(bytes32)\":[{\"params\":{\"_colormapHash\":\"Hash of the colormap's definition.\"}}],\"SegmentDataInvalid(uint256)\":[{\"params\":{\"_segmentData\":\"Segment data for 1 of R, G, or B. See {IColormapRegistry} for its representation.\"}}]},\"events\":{\"RegisterColormap(bytes32,(uint256,uint256,uint256))\":{\"params\":{\"_hash\":\"Hash of `_segmentData`.\",\"_segmentData\":\"Segment data defining the colormap.\"}},\"RegisterColormap(bytes32,address)\":{\"params\":{\"_hash\":\"Hash of `_paletteGenerator`.\",\"_paletteGenerator\":\"Instance of {IPaletteGenerator} for the colormap.\"}}},\"kind\":\"dev\",\"methods\":{\"getValue(bytes32,uint256)\":{\"details\":\"Each color value will be returned as a 18 decimal fixed-point number in [0, 1]. Note that the function *will not* revert if `_position` is an invalid input (i.e. greater than 1e18). This responsibility is left to the implementation of {IPaletteGenerator}s.\",\"params\":{\"_colormapHash\":\"Hash of the colormap's definition.\",\"_position\":\"18 decimal fixed-point number in [0, 1] representing the position in the colormap (i.e. 0 being min, and 1 being max).\"},\"returns\":{\"_0\":\"uint256 Intensity of red in that color at the position `_position`.\",\"_1\":\"uint256 Intensity of green in that color at the position `_position`.\",\"_2\":\"uint256 Intensity of blue in that color at the position `_position`.\"}},\"getValueAsHexString(bytes32,uint8)\":{\"params\":{\"_colormapHash\":\"Hash of the colormap's definition.\",\"_position\":\"Position in the colormap (i.e. 0 being min, and 255 being max).\"},\"returns\":{\"_0\":\"string Hexstring excluding ``#'' (e.g. `007CFF`) of the color at the position `_position`.\"}},\"getValueAsUint8(bytes32,uint8)\":{\"details\":\"Each color value will be returned as a `uint8` number in [0, 255].\",\"params\":{\"_colormapHash\":\"Hash of the colormap's definition.\",\"_position\":\"Position in the colormap (i.e. 0 being min, and 255 being max).\"},\"returns\":{\"_0\":\"uint8 Intensity of red in that color at the position `_position`.\",\"_1\":\"uint8 Intensity of green in that color at the position `_position`.\",\"_2\":\"uint8 Intensity of blue in that color at the position `_position`.\"}},\"paletteGenerators(bytes32)\":{\"params\":{\"_colormapHash\":\"Hash of the colormap's definition (palette generator).\"},\"returns\":{\"_0\":\"IPaletteGenerator Instance of {IPaletteGenerator} for the colormap.\"}},\"register((uint256,uint256,uint256))\":{\"details\":\"See {IColormapRegistry} for how the segment data should be structured.\",\"params\":{\"_segmentData\":\"Segment data defining the colormap.\"}},\"register(address)\":{\"params\":{\"_paletteGenerator\":\"Instance of {IPaletteGenerator} for the colormap.\"}},\"segments(bytes32)\":{\"params\":{\"_colormapHash\":\"Hash of the colormap's definition (segment data).\"},\"returns\":{\"_0\":\"uint256 Segment data for red's color value along the colormap.\",\"_1\":\"uint256 Segment data for green's color value along the colormap.\",\"_2\":\"uint256 Segment data for blue's color value along the colormap.\"}}},\"title\":\"The interface for the colormap registry.\",\"version\":1},\"userdoc\":{\"errors\":{\"ColormapAlreadyExists(bytes32)\":[{\"notice\":\"Emitted when a colormap already exists.\"}],\"ColormapDoesNotExist(bytes32)\":[{\"notice\":\"Emitted when a colormap does not exist.\"}],\"SegmentDataInvalid(uint256)\":[{\"notice\":\"Emitted when a segment data used to define a colormap does not follow the representation outlined in {IColormapRegistry}.\"}]},\"events\":{\"RegisterColormap(bytes32,(uint256,uint256,uint256))\":{\"notice\":\"Emitted when a colormap is registered via segment data.\"},\"RegisterColormap(bytes32,address)\":{\"notice\":\"Emitted when a colormap is registered via a palette generator function.\"}},\"kind\":\"user\",\"methods\":{\"getValue(bytes32,uint256)\":{\"notice\":\"Get the red, green, and blue color values of a color in a colormap at some position.\"},\"getValueAsHexString(bytes32,uint8)\":{\"notice\":\"Get the hexstring for a color in a colormap at some position.\"},\"getValueAsUint8(bytes32,uint8)\":{\"notice\":\"Get the red, green, and blue color values of a color in a colormap at some position.\"},\"register((uint256,uint256,uint256))\":{\"notice\":\"Register a colormap with segment data that will be read via piece-wise linear interpolation.\"},\"register(address)\":{\"notice\":\"Register a colormap with a palette generator.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IColormapRegistry.sol\":\"IColormapRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"src/interfaces/IColormapRegistry.sol\":{\"keccak256\":\"0x4a564fddb633239b79f7dd949f3156115f311dccfc1b2bda407ad2cfbcaae9a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bd97a198d679bbb4325d7cfd6d23f0c8bf7dbcc3dd0095e22a540130495a5439\",\"dweb:/ipfs/QmVBcGDM1tSbvmPtcFmtug6QCERzm1peESiNTXA3ZbDG4y\"]},\"src/interfaces/IPaletteGenerator.sol\":{\"keccak256\":\"0x142bfa9141d119a7b3135239bb47f6b36388a66b14b6fe2b38c9d716f68b4b06\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2c3a9e3b56fd6f144faf7081a664e6d6825aeb7cd82f541ee9ef763a9b51ac5f\",\"dweb:/ipfs/QmNT4q5GZvrrVp38VtaSueEbVA2hgYdGv5U4sDQiSE6PwP\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_colormapHash",
+              "type": "bytes32"
+            }
+          ],
+          "type": "error",
+          "name": "ColormapAlreadyExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_colormapHash",
+              "type": "bytes32"
+            }
+          ],
+          "type": "error",
+          "name": "ColormapDoesNotExist"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_segmentData",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "SegmentDataInvalid"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_hash",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "contract IPaletteGenerator",
+              "name": "_paletteGenerator",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "RegisterColormap",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_hash",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "struct IColormapRegistry.SegmentData",
+              "name": "_segmentData",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "r",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "g",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "b",
+                  "type": "uint256"
+                }
+              ],
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "RegisterColormap",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_colormapHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_position",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_colormapHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "_position",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getValueAsHexString",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_colormapHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "_position",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getValueAsUint8",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_colormapHash",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "paletteGenerators",
+          "outputs": [
+            {
+              "internalType": "contract IPaletteGenerator",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IPaletteGenerator",
+              "name": "_paletteGenerator",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "register"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct IColormapRegistry.SegmentData",
+              "name": "_segmentData",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "r",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "g",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "b",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "register"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "_colormapHash",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "segments",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getValue(bytes32,uint256)": {
+            "details": "Each color value will be returned as a 18 decimal fixed-point number in [0, 1]. Note that the function *will not* revert if `_position` is an invalid input (i.e. greater than 1e18). This responsibility is left to the implementation of {IPaletteGenerator}s.",
+            "params": {
+              "_colormapHash": "Hash of the colormap's definition.",
+              "_position": "18 decimal fixed-point number in [0, 1] representing the position in the colormap (i.e. 0 being min, and 1 being max)."
+            },
+            "returns": {
+              "_0": "uint256 Intensity of red in that color at the position `_position`.",
+              "_1": "uint256 Intensity of green in that color at the position `_position`.",
+              "_2": "uint256 Intensity of blue in that color at the position `_position`."
+            }
+          },
+          "getValueAsHexString(bytes32,uint8)": {
+            "params": {
+              "_colormapHash": "Hash of the colormap's definition.",
+              "_position": "Position in the colormap (i.e. 0 being min, and 255 being max)."
+            },
+            "returns": {
+              "_0": "string Hexstring excluding ``#'' (e.g. `007CFF`) of the color at the position `_position`."
+            }
+          },
+          "getValueAsUint8(bytes32,uint8)": {
+            "details": "Each color value will be returned as a `uint8` number in [0, 255].",
+            "params": {
+              "_colormapHash": "Hash of the colormap's definition.",
+              "_position": "Position in the colormap (i.e. 0 being min, and 255 being max)."
+            },
+            "returns": {
+              "_0": "uint8 Intensity of red in that color at the position `_position`.",
+              "_1": "uint8 Intensity of green in that color at the position `_position`.",
+              "_2": "uint8 Intensity of blue in that color at the position `_position`."
+            }
+          },
+          "paletteGenerators(bytes32)": {
+            "params": {
+              "_colormapHash": "Hash of the colormap's definition (palette generator)."
+            },
+            "returns": {
+              "_0": "IPaletteGenerator Instance of {IPaletteGenerator} for the colormap."
+            }
+          },
+          "register((uint256,uint256,uint256))": {
+            "details": "See {IColormapRegistry} for how the segment data should be structured.",
+            "params": {
+              "_segmentData": "Segment data defining the colormap."
+            }
+          },
+          "register(address)": {
+            "params": {
+              "_paletteGenerator": "Instance of {IPaletteGenerator} for the colormap."
+            }
+          },
+          "segments(bytes32)": {
+            "params": {
+              "_colormapHash": "Hash of the colormap's definition (segment data)."
+            },
+            "returns": {
+              "_0": "uint256 Segment data for red's color value along the colormap.",
+              "_1": "uint256 Segment data for green's color value along the colormap.",
+              "_2": "uint256 Segment data for blue's color value along the colormap."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getValue(bytes32,uint256)": {
+            "notice": "Get the red, green, and blue color values of a color in a colormap at some position."
+          },
+          "getValueAsHexString(bytes32,uint8)": {
+            "notice": "Get the hexstring for a color in a colormap at some position."
+          },
+          "getValueAsUint8(bytes32,uint8)": {
+            "notice": "Get the red, green, and blue color values of a color in a colormap at some position."
+          },
+          "register((uint256,uint256,uint256))": {
+            "notice": "Register a colormap with segment data that will be read via piece-wise linear interpolation."
+          },
+          "register(address)": {
+            "notice": "Register a colormap with a palette generator."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/interfaces/IColormapRegistry.sol": "IColormapRegistry"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/IColormapRegistry.sol": {
+        "keccak256": "0x4a564fddb633239b79f7dd949f3156115f311dccfc1b2bda407ad2cfbcaae9a7",
+        "urls": [
+          "bzz-raw://bd97a198d679bbb4325d7cfd6d23f0c8bf7dbcc3dd0095e22a540130495a5439",
+          "dweb:/ipfs/QmVBcGDM1tSbvmPtcFmtug6QCERzm1peESiNTXA3ZbDG4y"
+        ],
+        "license": "MIT"
+      },
+      "src/interfaces/IPaletteGenerator.sol": {
+        "keccak256": "0x142bfa9141d119a7b3135239bb47f6b36388a66b14b6fe2b38c9d716f68b4b06",
+        "urls": [
+          "bzz-raw://2c3a9e3b56fd6f144faf7081a664e6d6825aeb7cd82f541ee9ef763a9b51ac5f",
+          "dweb:/ipfs/QmNT4q5GZvrrVp38VtaSueEbVA2hgYdGv5U4sDQiSE6PwP"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IColormapRegistry.sol",
+    "id": 41353,
+    "exportedSymbols": {
+      "IColormapRegistry": [
+        41352
+      ],
+      "IPaletteGenerator": [
+        41632
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:7860:64",
+    "nodes": [
+      {
+        "id": 41236,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:64",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 41238,
+        "nodeType": "ImportDirective",
+        "src": "58:81:64",
+        "nodes": [],
+        "absolutePath": "src/interfaces/IPaletteGenerator.sol",
+        "file": "@/contracts/interfaces/IPaletteGenerator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 41353,
+        "sourceUnit": 41633,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 41237,
+              "name": "IPaletteGenerator",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 41632,
+              "src": "67:17:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 41352,
+        "nodeType": "ContractDefinition",
+        "src": "1402:6489:64",
+        "nodes": [
+          {
+            "id": 41244,
+            "nodeType": "ErrorDefinition",
+            "src": "1733:51:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41240,
+              "nodeType": "StructuredDocumentation",
+              "src": "1613:115:64",
+              "text": "@notice Emitted when a colormap already exists.\n @param _colormapHash Hash of the colormap's definition."
+            },
+            "errorSelector": "ea82ade2",
+            "name": "ColormapAlreadyExists",
+            "nameLocation": "1739:21:64",
+            "parameters": {
+              "id": 41243,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41242,
+                  "mutability": "mutable",
+                  "name": "_colormapHash",
+                  "nameLocation": "1769:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41244,
+                  "src": "1761:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41241,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1761:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1760:23:64"
+            }
+          },
+          {
+            "id": 41249,
+            "nodeType": "ErrorDefinition",
+            "src": "1910:50:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41245,
+              "nodeType": "StructuredDocumentation",
+              "src": "1790:115:64",
+              "text": "@notice Emitted when a colormap does not exist.\n @param _colormapHash Hash of the colormap's definition."
+            },
+            "errorSelector": "6ed9c4db",
+            "name": "ColormapDoesNotExist",
+            "nameLocation": "1916:20:64",
+            "parameters": {
+              "id": 41248,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41247,
+                  "mutability": "mutable",
+                  "name": "_colormapHash",
+                  "nameLocation": "1945:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41249,
+                  "src": "1937:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41246,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1937:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1936:23:64"
+            }
+          },
+          {
+            "id": 41254,
+            "nodeType": "ErrorDefinition",
+            "src": "2230:47:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41250,
+              "nodeType": "StructuredDocumentation",
+              "src": "1966:259:64",
+              "text": "@notice Emitted when a segment data used to define a colormap does not\n follow the representation outlined in {IColormapRegistry}.\n @param _segmentData Segment data for 1 of R, G, or B. See\n {IColormapRegistry} for its representation."
+            },
+            "errorSelector": "524661ea",
+            "name": "SegmentDataInvalid",
+            "nameLocation": "2236:18:64",
+            "parameters": {
+              "id": 41253,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41252,
+                  "mutability": "mutable",
+                  "name": "_segmentData",
+                  "nameLocation": "2263:12:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41254,
+                  "src": "2255:20:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41251,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2255:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2254:22:64"
+            }
+          },
+          {
+            "id": 41262,
+            "nodeType": "StructDefinition",
+            "src": "2978:83:64",
+            "nodes": [],
+            "canonicalName": "IColormapRegistry.SegmentData",
+            "documentation": {
+              "id": 41255,
+              "nodeType": "StructuredDocumentation",
+              "src": "2461:512:64",
+              "text": "@notice Segment data that defines a colormap when read via piece-wise\n linear interpolation.\n @dev Each param contains 24-bit words, so each one may contain at most\n 9 (24*10 - 1) segments. See {IColormapRegistry} for how the segment data\n should be structured.\n @param r Segment data for red's color value along the colormap.\n @param g Segment data for green's color value along the colormap.\n @param b Segment data for blue's color value along the colormap."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 41257,
+                "mutability": "mutable",
+                "name": "r",
+                "nameLocation": "3015:1:64",
+                "nodeType": "VariableDeclaration",
+                "scope": 41262,
+                "src": "3007:9:64",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 41256,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3007:7:64",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41259,
+                "mutability": "mutable",
+                "name": "g",
+                "nameLocation": "3034:1:64",
+                "nodeType": "VariableDeclaration",
+                "scope": 41262,
+                "src": "3026:9:64",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 41258,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3026:7:64",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41261,
+                "mutability": "mutable",
+                "name": "b",
+                "nameLocation": "3053:1:64",
+                "nodeType": "VariableDeclaration",
+                "scope": 41262,
+                "src": "3045:9:64",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 41260,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3045:7:64",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SegmentData",
+            "nameLocation": "2985:11:64",
+            "scope": 41352,
+            "visibility": "public"
+          },
+          {
+            "id": 41270,
+            "nodeType": "EventDefinition",
+            "src": "3481:75:64",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 41263,
+              "nodeType": "StructuredDocumentation",
+              "src": "3244:232:64",
+              "text": "@notice Emitted when a colormap is registered via a palette generator\n function.\n @param _hash Hash of `_paletteGenerator`.\n @param _paletteGenerator Instance of {IPaletteGenerator} for the\n colormap."
+            },
+            "eventSelector": "f2d00828f226f5dd23b91aed5ba27bfd61a57ac84aed836d9171b2c08771f210",
+            "name": "RegisterColormap",
+            "nameLocation": "3487:16:64",
+            "parameters": {
+              "id": 41269,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41265,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_hash",
+                  "nameLocation": "3512:5:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41270,
+                  "src": "3504:13:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41264,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3504:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41268,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_paletteGenerator",
+                  "nameLocation": "3537:17:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41270,
+                  "src": "3519:35:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPaletteGenerator_$41632",
+                    "typeString": "contract IPaletteGenerator"
+                  },
+                  "typeName": {
+                    "id": 41267,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41266,
+                      "name": "IPaletteGenerator",
+                      "nameLocations": [
+                        "3519:17:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41632,
+                      "src": "3519:17:64"
+                    },
+                    "referencedDeclaration": 41632,
+                    "src": "3519:17:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPaletteGenerator_$41632",
+                      "typeString": "contract IPaletteGenerator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3503:52:64"
+            }
+          },
+          {
+            "id": 41278,
+            "nodeType": "EventDefinition",
+            "src": "3743:64:64",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 41271,
+              "nodeType": "StructuredDocumentation",
+              "src": "3562:176:64",
+              "text": "@notice Emitted when a colormap is registered via segment data.\n @param _hash Hash of `_segmentData`.\n @param _segmentData Segment data defining the colormap."
+            },
+            "eventSelector": "9b14bb94e1465f1fcfb06453c86dce8b6cb7240b254eea39298cc71ca5168da6",
+            "name": "RegisterColormap",
+            "nameLocation": "3749:16:64",
+            "parameters": {
+              "id": 41277,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41273,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_hash",
+                  "nameLocation": "3774:5:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41278,
+                  "src": "3766:13:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41272,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3766:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41276,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_segmentData",
+                  "nameLocation": "3793:12:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41278,
+                  "src": "3781:24:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SegmentData_$41262_memory_ptr",
+                    "typeString": "struct IColormapRegistry.SegmentData"
+                  },
+                  "typeName": {
+                    "id": 41275,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41274,
+                      "name": "SegmentData",
+                      "nameLocations": [
+                        "3781:11:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41262,
+                      "src": "3781:11:64"
+                    },
+                    "referencedDeclaration": 41262,
+                    "src": "3781:11:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SegmentData_$41262_storage_ptr",
+                      "typeString": "struct IColormapRegistry.SegmentData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3765:41:64"
+            }
+          },
+          {
+            "id": 41290,
+            "nodeType": "FunctionDefinition",
+            "src": "4310:91:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41279,
+              "nodeType": "StructuredDocumentation",
+              "src": "3991:314:64",
+              "text": "@param _colormapHash Hash of the colormap's definition (segment data).\n @return uint256 Segment data for red's color value along the colormap.\n @return uint256 Segment data for green's color value along the colormap.\n @return uint256 Segment data for blue's color value along the colormap."
+            },
+            "functionSelector": "f9484330",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "segments",
+            "nameLocation": "4319:8:64",
+            "parameters": {
+              "id": 41282,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41281,
+                  "mutability": "mutable",
+                  "name": "_colormapHash",
+                  "nameLocation": "4336:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41290,
+                  "src": "4328:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41280,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4328:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4327:23:64"
+            },
+            "returnParameters": {
+              "id": 41289,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41284,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41290,
+                  "src": "4374:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41283,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4374:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41286,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41290,
+                  "src": "4383:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41285,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4383:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41288,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41290,
+                  "src": "4392:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41287,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4392:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4373:27:64"
+            },
+            "scope": 41352,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41299,
+            "nodeType": "FunctionDefinition",
+            "src": "4591:92:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41291,
+              "nodeType": "StructuredDocumentation",
+              "src": "4407:179:64",
+              "text": "@param _colormapHash Hash of the colormap's definition (palette\n generator).\n @return IPaletteGenerator Instance of {IPaletteGenerator} for the\n colormap."
+            },
+            "functionSelector": "7168be56",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "paletteGenerators",
+            "nameLocation": "4600:17:64",
+            "parameters": {
+              "id": 41294,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41293,
+                  "mutability": "mutable",
+                  "name": "_colormapHash",
+                  "nameLocation": "4626:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41299,
+                  "src": "4618:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41292,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4618:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4617:23:64"
+            },
+            "returnParameters": {
+              "id": 41298,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41297,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41299,
+                  "src": "4664:17:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPaletteGenerator_$41632",
+                    "typeString": "contract IPaletteGenerator"
+                  },
+                  "typeName": {
+                    "id": 41296,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41295,
+                      "name": "IPaletteGenerator",
+                      "nameLocations": [
+                        "4664:17:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41632,
+                      "src": "4664:17:64"
+                    },
+                    "referencedDeclaration": 41632,
+                    "src": "4664:17:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPaletteGenerator_$41632",
+                      "typeString": "contract IPaletteGenerator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4663:19:64"
+            },
+            "scope": 41352,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41306,
+            "nodeType": "FunctionDefinition",
+            "src": "5020:64:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41300,
+              "nodeType": "StructuredDocumentation",
+              "src": "4867:148:64",
+              "text": "@notice Register a colormap with a palette generator.\n @param _paletteGenerator Instance of {IPaletteGenerator} for the\n colormap."
+            },
+            "functionSelector": "4420e486",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "register",
+            "nameLocation": "5029:8:64",
+            "parameters": {
+              "id": 41304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41303,
+                  "mutability": "mutable",
+                  "name": "_paletteGenerator",
+                  "nameLocation": "5056:17:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41306,
+                  "src": "5038:35:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPaletteGenerator_$41632",
+                    "typeString": "contract IPaletteGenerator"
+                  },
+                  "typeName": {
+                    "id": 41302,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41301,
+                      "name": "IPaletteGenerator",
+                      "nameLocations": [
+                        "5038:17:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41632,
+                      "src": "5038:17:64"
+                    },
+                    "referencedDeclaration": 41632,
+                    "src": "5038:17:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPaletteGenerator_$41632",
+                      "typeString": "contract IPaletteGenerator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5037:37:64"
+            },
+            "returnParameters": {
+              "id": 41305,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5083:0:64"
+            },
+            "scope": 41352,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41313,
+            "nodeType": "FunctionDefinition",
+            "src": "5363:60:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41307,
+              "nodeType": "StructuredDocumentation",
+              "src": "5090:268:64",
+              "text": "@notice Register a colormap with segment data that will be read via\n piece-wise linear interpolation.\n @dev See {IColormapRegistry} for how the segment data should be\n structured.\n @param _segmentData Segment data defining the colormap."
+            },
+            "functionSelector": "f14b4f3f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "register",
+            "nameLocation": "5372:8:64",
+            "parameters": {
+              "id": 41311,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41310,
+                  "mutability": "mutable",
+                  "name": "_segmentData",
+                  "nameLocation": "5400:12:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41313,
+                  "src": "5381:31:64",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SegmentData_$41262_memory_ptr",
+                    "typeString": "struct IColormapRegistry.SegmentData"
+                  },
+                  "typeName": {
+                    "id": 41309,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41308,
+                      "name": "SegmentData",
+                      "nameLocations": [
+                        "5381:11:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41262,
+                      "src": "5381:11:64"
+                    },
+                    "referencedDeclaration": 41262,
+                    "src": "5381:11:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SegmentData_$41262_storage_ptr",
+                      "typeString": "struct IColormapRegistry.SegmentData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5380:33:64"
+            },
+            "returnParameters": {
+              "id": 41312,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5422:0:64"
+            },
+            "scope": 41352,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41327,
+            "nodeType": "FunctionDefinition",
+            "src": "6502:134:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41314,
+              "nodeType": "StructuredDocumentation",
+              "src": "5604:893:64",
+              "text": "@notice Get the red, green, and blue color values of a color in a\n colormap at some position.\n @dev Each color value will be returned as a 18 decimal fixed-point\n number in [0, 1]. Note that the function *will not* revert if\n `_position` is an invalid input (i.e. greater than 1e18). This\n responsibility is left to the implementation of {IPaletteGenerator}s.\n @param _colormapHash Hash of the colormap's definition.\n @param _position 18 decimal fixed-point number in [0, 1] representing\n the position in the colormap (i.e. 0 being min, and 1 being max).\n @return uint256 Intensity of red in that color at the position\n `_position`.\n @return uint256 Intensity of green in that color at the position\n `_position`.\n @return uint256 Intensity of blue in that color at the position\n `_position`."
+            },
+            "functionSelector": "172327cd",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValue",
+            "nameLocation": "6511:8:64",
+            "parameters": {
+              "id": 41319,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41316,
+                  "mutability": "mutable",
+                  "name": "_colormapHash",
+                  "nameLocation": "6528:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41327,
+                  "src": "6520:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41315,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6520:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41318,
+                  "mutability": "mutable",
+                  "name": "_position",
+                  "nameLocation": "6551:9:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41327,
+                  "src": "6543:17:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41317,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6543:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6519:42:64"
+            },
+            "returnParameters": {
+              "id": 41326,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41321,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41327,
+                  "src": "6609:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41320,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6609:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41323,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41327,
+                  "src": "6618:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41322,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6618:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41325,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41327,
+                  "src": "6627:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41324,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6627:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6608:27:64"
+            },
+            "scope": 41352,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41341,
+            "nodeType": "FunctionDefinition",
+            "src": "7265:133:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41328,
+              "nodeType": "StructuredDocumentation",
+              "src": "6642:618:64",
+              "text": "@notice Get the red, green, and blue color values of a color in a\n colormap at some position.\n @dev Each color value will be returned as a `uint8` number in [0, 255].\n @param _colormapHash Hash of the colormap's definition.\n @param _position Position in the colormap (i.e. 0 being min, and 255\n being max).\n @return uint8 Intensity of red in that color at the position\n `_position`.\n @return uint8 Intensity of green in that color at the position\n `_position`.\n @return uint8 Intensity of blue in that color at the position\n `_position`."
+            },
+            "functionSelector": "fd6d7d06",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValueAsUint8",
+            "nameLocation": "7274:15:64",
+            "parameters": {
+              "id": 41333,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41330,
+                  "mutability": "mutable",
+                  "name": "_colormapHash",
+                  "nameLocation": "7298:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41341,
+                  "src": "7290:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41329,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7290:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41332,
+                  "mutability": "mutable",
+                  "name": "_position",
+                  "nameLocation": "7319:9:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41341,
+                  "src": "7313:15:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 41331,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7313:5:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7289:40:64"
+            },
+            "returnParameters": {
+              "id": 41340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41335,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41341,
+                  "src": "7377:5:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 41334,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7377:5:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41337,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41341,
+                  "src": "7384:5:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 41336,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7384:5:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41339,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41341,
+                  "src": "7391:5:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 41338,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7391:5:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7376:21:64"
+            },
+            "scope": 41352,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41351,
+            "nodeType": "FunctionDefinition",
+            "src": "7758:131:64",
+            "nodes": [],
+            "documentation": {
+              "id": 41342,
+              "nodeType": "StructuredDocumentation",
+              "src": "7404:349:64",
+              "text": "@notice Get the hexstring for a color in a colormap at some position.\n @param _colormapHash Hash of the colormap's definition.\n @param _position Position in the colormap (i.e. 0 being min, and 255\n being max).\n @return string Hexstring excluding ``#'' (e.g. `007CFF`) of the color\n at the position `_position`."
+            },
+            "functionSelector": "730236ca",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValueAsHexString",
+            "nameLocation": "7767:19:64",
+            "parameters": {
+              "id": 41347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41344,
+                  "mutability": "mutable",
+                  "name": "_colormapHash",
+                  "nameLocation": "7795:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41351,
+                  "src": "7787:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 41343,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7787:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41346,
+                  "mutability": "mutable",
+                  "name": "_position",
+                  "nameLocation": "7816:9:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41351,
+                  "src": "7810:15:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 41345,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7810:5:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7786:40:64"
+            },
+            "returnParameters": {
+              "id": 41350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41349,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41351,
+                  "src": "7874:13:64",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 41348,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7874:6:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7873:15:64"
+            },
+            "scope": 41352,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IColormapRegistry",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 41239,
+          "nodeType": "StructuredDocumentation",
+          "src": "141:1261:64",
+          "text": "@title The interface for the colormap registry.\n @author fiveoutofnine\n @dev A colormap may be defined in 2 ways: (1) via segment data and (2) via a\n ``palette generator.''\n     1. via segment data\n     2. or via a palette generator ({IPaletteGenerator}).\n Segment data contains 1 `uint256` each for red, green, and blue describing\n their intensity values along the colormap. Each `uint256` contains 24-bit\n words bitpacked together with the following structure (bits are\n right-indexed):\n     | Bits      | Meaning                                              |\n     | --------- | ---------------------------------------------------- |\n     | `23 - 16` | Position in the colormap the segment begins from     |\n     | `15 - 08` | Intensity of R, G, or B the previous segment ends at |\n     | `07 - 00` | Intensity of R, G, or B the next segment starts at   |\n Given some position, the output will be computed via linear interpolations\n on the segment data for R, G, and B. A maximum of 10 of these segments fit\n within 256 bits, so up to 9 segments can be defined. If you need more\n granularity or a nonlinear palette function, you may implement\n {IPaletteGenerator} and define a colormap with that."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          41352
+        ],
+        "name": "IColormapRegistry",
+        "nameLocation": "1412:17:64",
+        "scope": 41353,
+        "usedErrors": [
+          41244,
+          41249,
+          41254
+        ],
+        "usedEvents": [
+          41270,
+          41278
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 64
+}

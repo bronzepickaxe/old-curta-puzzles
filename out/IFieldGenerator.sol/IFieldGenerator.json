@@ -1,0 +1,483 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "field",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint24[4]",
+          "name": "colors",
+          "type": "uint24[4]"
+        }
+      ],
+      "name": "generateField",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "enum IFieldGenerator.FieldCategories",
+              "name": "fieldType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "string",
+              "name": "svgString",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IFieldGenerator.FieldData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "generateField(uint16,uint24[4])": "ccf27bea"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint24[4]\",\"name\":\"colors\",\"type\":\"uint24[4]\"}],\"name\":\"generateField\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"enum IFieldGenerator.FieldCategories\",\"name\":\"fieldType\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"svgString\",\"type\":\"string\"}],\"internalType\":\"struct IFieldGenerator.FieldData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol\":\"IFieldGenerator\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol\":{\"keccak256\":\"0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad\",\"dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint24[4]",
+              "name": "colors",
+              "type": "uint24[4]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "generateField",
+          "outputs": [
+            {
+              "internalType": "struct IFieldGenerator.FieldData",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "enum IFieldGenerator.FieldCategories",
+                  "name": "fieldType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "string",
+                  "name": "svgString",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": "IFieldGenerator"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": {
+        "keccak256": "0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029",
+        "urls": [
+          "bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad",
+          "dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4"
+        ],
+        "license": "The Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+    "id": 26113,
+    "exportedSymbols": {
+      "IFieldGenerator": [
+        26112
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:366:18",
+    "nodes": [
+      {
+        "id": 26088,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:18",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 26112,
+        "nodeType": "ContractDefinition",
+        "src": "67:340:18",
+        "nodes": [
+          {
+            "id": 26091,
+            "nodeType": "EnumDefinition",
+            "src": "99:61:18",
+            "nodes": [],
+            "canonicalName": "IFieldGenerator.FieldCategories",
+            "members": [
+              {
+                "id": 26089,
+                "name": "MYTHIC",
+                "nameLocation": "130:6:18",
+                "nodeType": "EnumValue",
+                "src": "130:6:18"
+              },
+              {
+                "id": 26090,
+                "name": "HERALDIC",
+                "nameLocation": "146:8:18",
+                "nodeType": "EnumValue",
+                "src": "146:8:18"
+              }
+            ],
+            "name": "FieldCategories",
+            "nameLocation": "104:15:18"
+          },
+          {
+            "id": 26099,
+            "nodeType": "StructDefinition",
+            "src": "165:107:18",
+            "nodes": [],
+            "canonicalName": "IFieldGenerator.FieldData",
+            "members": [
+              {
+                "constant": false,
+                "id": 26093,
+                "mutability": "mutable",
+                "name": "title",
+                "nameLocation": "199:5:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 26099,
+                "src": "192:12:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26092,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "192:6:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26096,
+                "mutability": "mutable",
+                "name": "fieldType",
+                "nameLocation": "230:9:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 26099,
+                "src": "214:25:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_FieldCategories_$26091",
+                  "typeString": "enum IFieldGenerator.FieldCategories"
+                },
+                "typeName": {
+                  "id": 26095,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 26094,
+                    "name": "FieldCategories",
+                    "nameLocations": [
+                      "214:15:18"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 26091,
+                    "src": "214:15:18"
+                  },
+                  "referencedDeclaration": 26091,
+                  "src": "214:15:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FieldCategories_$26091",
+                    "typeString": "enum IFieldGenerator.FieldCategories"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26098,
+                "mutability": "mutable",
+                "name": "svgString",
+                "nameLocation": "256:9:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 26099,
+                "src": "249:16:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26097,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "249:6:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "FieldData",
+            "nameLocation": "172:9:18",
+            "scope": 26112,
+            "visibility": "public"
+          },
+          {
+            "id": 26111,
+            "nodeType": "FunctionDefinition",
+            "src": "278:127:18",
+            "nodes": [],
+            "functionSelector": "ccf27bea",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateField",
+            "nameLocation": "287:13:18",
+            "parameters": {
+              "id": 26106,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26101,
+                  "mutability": "mutable",
+                  "name": "field",
+                  "nameLocation": "308:5:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26111,
+                  "src": "301:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26100,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "301:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26105,
+                  "mutability": "mutable",
+                  "name": "colors",
+                  "nameLocation": "332:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26111,
+                  "src": "315:23:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint24_$4_memory_ptr",
+                    "typeString": "uint24[4]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 26102,
+                      "name": "uint24",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "315:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint24",
+                        "typeString": "uint24"
+                      }
+                    },
+                    "id": 26104,
+                    "length": {
+                      "hexValue": "34",
+                      "id": 26103,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "322:1:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "nodeType": "ArrayTypeName",
+                    "src": "315:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint24_$4_storage_ptr",
+                      "typeString": "uint24[4]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "300:39:18"
+            },
+            "returnParameters": {
+              "id": 26110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26109,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26111,
+                  "src": "387:16:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FieldData_$26099_memory_ptr",
+                    "typeString": "struct IFieldGenerator.FieldData"
+                  },
+                  "typeName": {
+                    "id": 26108,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26107,
+                      "name": "FieldData",
+                      "nameLocations": [
+                        "387:9:18"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26099,
+                      "src": "387:9:18"
+                    },
+                    "referencedDeclaration": 26099,
+                    "src": "387:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FieldData_$26099_storage_ptr",
+                      "typeString": "struct IFieldGenerator.FieldData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "386:18:18"
+            },
+            "scope": 26112,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFieldGenerator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26112
+        ],
+        "name": "IFieldGenerator",
+        "nameLocation": "77:15:18",
+        "scope": 26113,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "The Unlicense"
+  },
+  "id": 18
+}

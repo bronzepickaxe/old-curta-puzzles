@@ -14,7 +14,7 @@ contract DeployPuzzle10 is DeployBase {
     function run() external {
         puzzle = new Chess();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17266668);
-        console.log("Chess.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("Chess.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

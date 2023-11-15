@@ -1,0 +1,629 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_position",
+          "type": "uint256"
+        }
+      ],
+      "name": "InvalidPosition",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_position",
+          "type": "uint256"
+        }
+      ],
+      "name": "b",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_position",
+          "type": "uint256"
+        }
+      ],
+      "name": "g",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_position",
+          "type": "uint256"
+        }
+      ],
+      "name": "r",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "b(uint256)": "cd580ff3",
+    "g(uint256)": "e420264a",
+    "r(uint256)": "f471d7ac"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_position\",\"type\":\"uint256\"}],\"name\":\"InvalidPosition\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_position\",\"type\":\"uint256\"}],\"name\":\"b\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_position\",\"type\":\"uint256\"}],\"name\":\"g\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_position\",\"type\":\"uint256\"}],\"name\":\"r\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"fiveoutofnine\",\"details\":\"`IPaletteGenerator` contains generator functions for a color's red, green, and blue color values. Each of these functions is intended to take in a 18 decimal fixed-point number in [0, 1] representing the position in the colormap and return the corresponding 18 decimal fixed-point number in [0, 1] representing the value of each respective color.\",\"errors\":{\"InvalidPosition(uint256)\":[{\"details\":\"The position is not a valid input if it is greater than 1e18.\",\"params\":{\"_position\":\"Position in the colormap.\"}}]},\"kind\":\"dev\",\"methods\":{\"b(uint256)\":{\"details\":\"The function should revert if `_position` is not a valid input (i.e. greater than 1e18). Also, the return value for all inputs must be a 18 decimal.\",\"params\":{\"_position\":\"Position in the colormap.\"},\"returns\":{\"_0\":\"uint256 Intensity of blue in that color at the position `_position`.\"}},\"g(uint256)\":{\"details\":\"The function should revert if `_position` is not a valid input (i.e. greater than 1e18). Also, the return value for all inputs must be a 18 decimal.\",\"params\":{\"_position\":\"Position in the colormap.\"},\"returns\":{\"_0\":\"uint256 Intensity of green in that color at the position `_position`.\"}},\"r(uint256)\":{\"details\":\"The function should revert if `_position` is not a valid input (i.e. greater than 1e18). Also, the return value for all inputs must be a 18 decimal.\",\"params\":{\"_position\":\"Position in the colormap.\"},\"returns\":{\"_0\":\"uint256 Intensity of red in that color at the position `_position`.\"}}},\"title\":\"The interface for a palette generator.\",\"version\":1},\"userdoc\":{\"errors\":{\"InvalidPosition(uint256)\":[{\"notice\":\"Reverts if the position is not a valid input.\"}]},\"kind\":\"user\",\"methods\":{\"b(uint256)\":{\"notice\":\"Computes the intensity of blue of the palette at some position.\"},\"g(uint256)\":{\"notice\":\"Computes the intensity of green of the palette at some position.\"},\"r(uint256)\":{\"notice\":\"Computes the intensity of red of the palette at some position.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IPaletteGenerator.sol\":\"IPaletteGenerator\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"src/interfaces/IPaletteGenerator.sol\":{\"keccak256\":\"0x142bfa9141d119a7b3135239bb47f6b36388a66b14b6fe2b38c9d716f68b4b06\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2c3a9e3b56fd6f144faf7081a664e6d6825aeb7cd82f541ee9ef763a9b51ac5f\",\"dweb:/ipfs/QmNT4q5GZvrrVp38VtaSueEbVA2hgYdGv5U4sDQiSE6PwP\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_position",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "InvalidPosition"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_position",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "b",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_position",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "g",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_position",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "r",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "b(uint256)": {
+            "details": "The function should revert if `_position` is not a valid input (i.e. greater than 1e18). Also, the return value for all inputs must be a 18 decimal.",
+            "params": {
+              "_position": "Position in the colormap."
+            },
+            "returns": {
+              "_0": "uint256 Intensity of blue in that color at the position `_position`."
+            }
+          },
+          "g(uint256)": {
+            "details": "The function should revert if `_position` is not a valid input (i.e. greater than 1e18). Also, the return value for all inputs must be a 18 decimal.",
+            "params": {
+              "_position": "Position in the colormap."
+            },
+            "returns": {
+              "_0": "uint256 Intensity of green in that color at the position `_position`."
+            }
+          },
+          "r(uint256)": {
+            "details": "The function should revert if `_position` is not a valid input (i.e. greater than 1e18). Also, the return value for all inputs must be a 18 decimal.",
+            "params": {
+              "_position": "Position in the colormap."
+            },
+            "returns": {
+              "_0": "uint256 Intensity of red in that color at the position `_position`."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "b(uint256)": {
+            "notice": "Computes the intensity of blue of the palette at some position."
+          },
+          "g(uint256)": {
+            "notice": "Computes the intensity of green of the palette at some position."
+          },
+          "r(uint256)": {
+            "notice": "Computes the intensity of red of the palette at some position."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/interfaces/IPaletteGenerator.sol": "IPaletteGenerator"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/IPaletteGenerator.sol": {
+        "keccak256": "0x142bfa9141d119a7b3135239bb47f6b36388a66b14b6fe2b38c9d716f68b4b06",
+        "urls": [
+          "bzz-raw://2c3a9e3b56fd6f144faf7081a664e6d6825aeb7cd82f541ee9ef763a9b51ac5f",
+          "dweb:/ipfs/QmNT4q5GZvrrVp38VtaSueEbVA2hgYdGv5U4sDQiSE6PwP"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IPaletteGenerator.sol",
+    "id": 41633,
+    "exportedSymbols": {
+      "IPaletteGenerator": [
+        41632
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2508:67",
+    "nodes": [
+      {
+        "id": 41601,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:67",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 41632,
+        "nodeType": "ContractDefinition",
+        "src": "506:2033:67",
+        "nodes": [
+          {
+            "id": 41607,
+            "nodeType": "ErrorDefinition",
+            "src": "905:41:67",
+            "nodes": [],
+            "documentation": {
+              "id": 41603,
+              "nodeType": "StructuredDocumentation",
+              "src": "717:183:67",
+              "text": "@notice Reverts if the position is not a valid input.\n @dev The position is not a valid input if it is greater than 1e18.\n @param _position Position in the colormap."
+            },
+            "errorSelector": "6c618a8c",
+            "name": "InvalidPosition",
+            "nameLocation": "911:15:67",
+            "parameters": {
+              "id": 41606,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41605,
+                  "mutability": "mutable",
+                  "name": "_position",
+                  "nameLocation": "935:9:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41607,
+                  "src": "927:17:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41604,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "927:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "926:19:67"
+            }
+          },
+          {
+            "id": 41615,
+            "nodeType": "FunctionDefinition",
+            "src": "1533:62:67",
+            "nodes": [],
+            "documentation": {
+              "id": 41608,
+              "nodeType": "StructuredDocumentation",
+              "src": "1133:395:67",
+              "text": "@notice Computes the intensity of red of the palette at some position.\n @dev The function should revert if `_position` is not a valid input\n (i.e. greater than 1e18). Also, the return value for all inputs must be\n a 18 decimal.\n @param _position Position in the colormap.\n @return uint256 Intensity of red in that color at the position\n `_position`."
+            },
+            "functionSelector": "f471d7ac",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "r",
+            "nameLocation": "1542:1:67",
+            "parameters": {
+              "id": 41611,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41610,
+                  "mutability": "mutable",
+                  "name": "_position",
+                  "nameLocation": "1552:9:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41615,
+                  "src": "1544:17:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41609,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1544:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1543:19:67"
+            },
+            "returnParameters": {
+              "id": 41614,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41613,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41615,
+                  "src": "1586:7:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41612,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1586:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1585:9:67"
+            },
+            "scope": 41632,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41623,
+            "nodeType": "FunctionDefinition",
+            "src": "2005:62:67",
+            "nodes": [],
+            "documentation": {
+              "id": 41616,
+              "nodeType": "StructuredDocumentation",
+              "src": "1601:399:67",
+              "text": "@notice Computes the intensity of green of the palette at some position.\n @dev The function should revert if `_position` is not a valid input\n (i.e. greater than 1e18). Also, the return value for all inputs must be\n a 18 decimal.\n @param _position Position in the colormap.\n @return uint256 Intensity of green in that color at the position\n `_position`."
+            },
+            "functionSelector": "e420264a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "g",
+            "nameLocation": "2014:1:67",
+            "parameters": {
+              "id": 41619,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41618,
+                  "mutability": "mutable",
+                  "name": "_position",
+                  "nameLocation": "2024:9:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41623,
+                  "src": "2016:17:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41617,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2016:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2015:19:67"
+            },
+            "returnParameters": {
+              "id": 41622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41621,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41623,
+                  "src": "2058:7:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41620,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2058:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2057:9:67"
+            },
+            "scope": 41632,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41631,
+            "nodeType": "FunctionDefinition",
+            "src": "2475:62:67",
+            "nodes": [],
+            "documentation": {
+              "id": 41624,
+              "nodeType": "StructuredDocumentation",
+              "src": "2073:397:67",
+              "text": "@notice Computes the intensity of blue of the palette at some position.\n @dev The function should revert if `_position` is not a valid input\n (i.e. greater than 1e18). Also, the return value for all inputs must be\n a 18 decimal.\n @param _position Position in the colormap.\n @return uint256 Intensity of blue in that color at the position\n `_position`."
+            },
+            "functionSelector": "cd580ff3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "b",
+            "nameLocation": "2484:1:67",
+            "parameters": {
+              "id": 41627,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41626,
+                  "mutability": "mutable",
+                  "name": "_position",
+                  "nameLocation": "2494:9:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41631,
+                  "src": "2486:17:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41625,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2486:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2485:19:67"
+            },
+            "returnParameters": {
+              "id": 41630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41629,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41631,
+                  "src": "2528:7:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41628,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2528:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2527:9:67"
+            },
+            "scope": 41632,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPaletteGenerator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 41602,
+          "nodeType": "StructuredDocumentation",
+          "src": "58:448:67",
+          "text": "@title The interface for a palette generator.\n @author fiveoutofnine\n @dev `IPaletteGenerator` contains generator functions for a color's red,\n green, and blue color values. Each of these functions is intended to take in\n a 18 decimal fixed-point number in [0, 1] representing the position in the\n colormap and return the corresponding 18 decimal fixed-point number in\n [0, 1] representing the value of each respective color."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          41632
+        ],
+        "name": "IPaletteGenerator",
+        "nameLocation": "516:17:67",
+        "scope": 41633,
+        "usedErrors": [
+          41607
+        ],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 67
+}

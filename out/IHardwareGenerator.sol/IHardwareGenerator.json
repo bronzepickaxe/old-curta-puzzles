@@ -1,0 +1,421 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "hardware",
+          "type": "uint16"
+        }
+      ],
+      "name": "generateHardware",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "enum IHardwareGenerator.HardwareCategories",
+              "name": "hardwareType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "string",
+              "name": "svgString",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IHardwareGenerator.HardwareData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "generateHardware(uint16)": "e6e2e97c"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"}],\"name\":\"generateHardware\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"enum IHardwareGenerator.HardwareCategories\",\"name\":\"hardwareType\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"svgString\",\"type\":\"string\"}],\"internalType\":\"struct IHardwareGenerator.HardwareData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol\":\"IHardwareGenerator\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol\":{\"keccak256\":\"0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887\",\"dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "generateHardware",
+          "outputs": [
+            {
+              "internalType": "struct IHardwareGenerator.HardwareData",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "enum IHardwareGenerator.HardwareCategories",
+                  "name": "hardwareType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "string",
+                  "name": "svgString",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": "IHardwareGenerator"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": {
+        "keccak256": "0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0",
+        "urls": [
+          "bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887",
+          "dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y"
+        ],
+        "license": "The Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+    "id": 26153,
+    "exportedSymbols": {
+      "IHardwareGenerator": [
+        26152
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:366:20",
+    "nodes": [
+      {
+        "id": 26132,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:20",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 26152,
+        "nodeType": "ContractDefinition",
+        "src": "67:340:20",
+        "nodes": [
+          {
+            "id": 26135,
+            "nodeType": "EnumDefinition",
+            "src": "102:65:20",
+            "nodes": [],
+            "canonicalName": "IHardwareGenerator.HardwareCategories",
+            "members": [
+              {
+                "id": 26133,
+                "name": "STANDARD",
+                "nameLocation": "136:8:20",
+                "nodeType": "EnumValue",
+                "src": "136:8:20"
+              },
+              {
+                "id": 26134,
+                "name": "SPECIAL",
+                "nameLocation": "154:7:20",
+                "nodeType": "EnumValue",
+                "src": "154:7:20"
+              }
+            ],
+            "name": "HardwareCategories",
+            "nameLocation": "107:18:20"
+          },
+          {
+            "id": 26143,
+            "nodeType": "StructDefinition",
+            "src": "172:116:20",
+            "nodes": [],
+            "canonicalName": "IHardwareGenerator.HardwareData",
+            "members": [
+              {
+                "constant": false,
+                "id": 26137,
+                "mutability": "mutable",
+                "name": "title",
+                "nameLocation": "209:5:20",
+                "nodeType": "VariableDeclaration",
+                "scope": 26143,
+                "src": "202:12:20",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26136,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "202:6:20",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26140,
+                "mutability": "mutable",
+                "name": "hardwareType",
+                "nameLocation": "243:12:20",
+                "nodeType": "VariableDeclaration",
+                "scope": 26143,
+                "src": "224:31:20",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_HardwareCategories_$26135",
+                  "typeString": "enum IHardwareGenerator.HardwareCategories"
+                },
+                "typeName": {
+                  "id": 26139,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 26138,
+                    "name": "HardwareCategories",
+                    "nameLocations": [
+                      "224:18:20"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 26135,
+                    "src": "224:18:20"
+                  },
+                  "referencedDeclaration": 26135,
+                  "src": "224:18:20",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_HardwareCategories_$26135",
+                    "typeString": "enum IHardwareGenerator.HardwareCategories"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26142,
+                "mutability": "mutable",
+                "name": "svgString",
+                "nameLocation": "272:9:20",
+                "nodeType": "VariableDeclaration",
+                "scope": 26143,
+                "src": "265:16:20",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26141,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "265:6:20",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "HardwareData",
+            "nameLocation": "179:12:20",
+            "scope": 26152,
+            "visibility": "public"
+          },
+          {
+            "id": 26151,
+            "nodeType": "FunctionDefinition",
+            "src": "294:111:20",
+            "nodes": [],
+            "functionSelector": "e6e2e97c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateHardware",
+            "nameLocation": "303:16:20",
+            "parameters": {
+              "id": 26146,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26145,
+                  "mutability": "mutable",
+                  "name": "hardware",
+                  "nameLocation": "327:8:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26151,
+                  "src": "320:15:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26144,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:6:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "319:17:20"
+            },
+            "returnParameters": {
+              "id": 26150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26149,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26151,
+                  "src": "384:19:20",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_HardwareData_$26143_memory_ptr",
+                    "typeString": "struct IHardwareGenerator.HardwareData"
+                  },
+                  "typeName": {
+                    "id": 26148,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26147,
+                      "name": "HardwareData",
+                      "nameLocations": [
+                        "384:12:20"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26143,
+                      "src": "384:12:20"
+                    },
+                    "referencedDeclaration": 26143,
+                    "src": "384:12:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_HardwareData_$26143_storage_ptr",
+                      "typeString": "struct IHardwareGenerator.HardwareData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:21:20"
+            },
+            "scope": 26152,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IHardwareGenerator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26152
+        ],
+        "name": "IHardwareGenerator",
+        "nameLocation": "77:18:20",
+        "scope": 26153,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "The Unlicense"
+  },
+  "id": 20
+}

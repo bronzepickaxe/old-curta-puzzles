@@ -1,0 +1,3686 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "AuthorshipTokenAlreadyUsed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "IncorrectSolution",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InsufficientFunds",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "PuzzleAlreadyFermat",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "PuzzleAlreadySolved",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "PuzzleDoesNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "PuzzleNotFermat",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "PuzzleNotSolved",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "SubmissionClosed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Unauthorized",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "id",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "author",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "contract IPuzzle",
+          "name": "puzzle",
+          "type": "address"
+        }
+      ],
+      "name": "AddPuzzle",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "id",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "solver",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "solution",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "phase",
+          "type": "uint8"
+        }
+      ],
+      "name": "SolvePuzzle",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "id",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "colors",
+          "type": "uint256"
+        }
+      ],
+      "name": "UpdatePuzzleColors",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IPuzzle",
+          "name": "_puzzle",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "addPuzzle",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "authorshipToken",
+      "outputs": [
+        {
+          "internalType": "contract AuthorshipToken",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "fermat",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "puzzleId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint40",
+          "name": "timeTaken",
+          "type": "uint40"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "flagRenderer",
+      "outputs": [
+        {
+          "internalType": "contract FlagRenderer",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "getPuzzle",
+      "outputs": [
+        {
+          "internalType": "contract IPuzzle",
+          "name": "puzzle",
+          "type": "address"
+        },
+        {
+          "internalType": "uint40",
+          "name": "addedTimestamp",
+          "type": "uint40"
+        },
+        {
+          "internalType": "uint40",
+          "name": "firstSolveTimestamp",
+          "type": "uint40"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "getPuzzleAuthor",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "getPuzzleColorsAndSolves",
+      "outputs": [
+        {
+          "internalType": "uint120",
+          "name": "colors",
+          "type": "uint120"
+        },
+        {
+          "internalType": "uint32",
+          "name": "phase0Solves",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "phase1Solves",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "phase2Solves",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "solves",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_solver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "hasSolvedPuzzle",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "hasUsedAuthorshipToken",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "puzzleId",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        }
+      ],
+      "name": "setFermat",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint120",
+          "name": "_colors",
+          "type": "uint120"
+        }
+      ],
+      "name": "setPuzzleColors",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_puzzleId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_solution",
+          "type": "uint256"
+        }
+      ],
+      "name": "solve",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addPuzzle(address,uint256)": "4ddf9d81",
+    "authorshipToken()": "012583ab",
+    "fermat()": "76a50464",
+    "flagRenderer()": "301cca8f",
+    "getPuzzle(uint32)": "54eed6ac",
+    "getPuzzleAuthor(uint32)": "1756aaac",
+    "getPuzzleColorsAndSolves(uint32)": "96f6326c",
+    "hasSolvedPuzzle(address,uint32)": "40854ed5",
+    "hasUsedAuthorshipToken(uint256)": "e4ff676d",
+    "puzzleId()": "f9aa8ff1",
+    "setFermat(uint32)": "bb16f862",
+    "setPuzzleColors(uint32,uint120)": "ea620cc7",
+    "solve(uint32,uint256)": "31468f06"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"AuthorshipTokenAlreadyUsed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"IncorrectSolution\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InsufficientFunds\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"PuzzleAlreadyFermat\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"PuzzleAlreadySolved\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"PuzzleDoesNotExist\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"PuzzleNotFermat\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"PuzzleNotSolved\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"SubmissionClosed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Unauthorized\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"id\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"author\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"contract IPuzzle\",\"name\":\"puzzle\",\"type\":\"address\"}],\"name\":\"AddPuzzle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"id\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"solver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"solution\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"phase\",\"type\":\"uint8\"}],\"name\":\"SolvePuzzle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"id\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"colors\",\"type\":\"uint256\"}],\"name\":\"UpdatePuzzleColors\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"contract IPuzzle\",\"name\":\"_puzzle\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"addPuzzle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"authorshipToken\",\"outputs\":[{\"internalType\":\"contract AuthorshipToken\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"fermat\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"puzzleId\",\"type\":\"uint32\"},{\"internalType\":\"uint40\",\"name\":\"timeTaken\",\"type\":\"uint40\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"flagRenderer\",\"outputs\":[{\"internalType\":\"contract FlagRenderer\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"getPuzzle\",\"outputs\":[{\"internalType\":\"contract IPuzzle\",\"name\":\"puzzle\",\"type\":\"address\"},{\"internalType\":\"uint40\",\"name\":\"addedTimestamp\",\"type\":\"uint40\"},{\"internalType\":\"uint40\",\"name\":\"firstSolveTimestamp\",\"type\":\"uint40\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"getPuzzleAuthor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"getPuzzleColorsAndSolves\",\"outputs\":[{\"internalType\":\"uint120\",\"name\":\"colors\",\"type\":\"uint120\"},{\"internalType\":\"uint32\",\"name\":\"phase0Solves\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"phase1Solves\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"phase2Solves\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"solves\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_solver\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"hasSolvedPuzzle\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"hasUsedAuthorshipToken\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"puzzleId\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"}],\"name\":\"setFermat\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"},{\"internalType\":\"uint120\",\"name\":\"_colors\",\"type\":\"uint120\"}],\"name\":\"setPuzzleColors\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_puzzleId\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"_solution\",\"type\":\"uint256\"}],\"name\":\"solve\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Each solve is represented by an NFT. However, the NFT with token ID 0 is reserved to denote ``Fermat''\\u2014the author's whose puzzle went the longest unsolved.\",\"errors\":{\"AuthorshipTokenAlreadyUsed(uint256)\":[{\"params\":{\"_tokenId\":\"The ID of an Authorship Token.\"}}],\"PuzzleAlreadyFermat(uint32)\":[{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"}}],\"PuzzleAlreadySolved(uint32)\":[{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"}}],\"PuzzleDoesNotExist(uint32)\":[{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"}}],\"PuzzleNotFermat(uint32)\":[{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"}}],\"PuzzleNotSolved(uint32)\":[{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"}}],\"SubmissionClosed(uint32)\":[{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"}}]},\"events\":{\"AddPuzzle(uint32,address,address)\":{\"params\":{\"author\":\"The address of the puzzle author.\",\"id\":\"The ID of the puzzle.\",\"puzzle\":\"The address of the puzzle.\"}},\"SolvePuzzle(uint32,address,uint256,uint8)\":{\"params\":{\"id\":\"The ID of the puzzle.\",\"phase\":\"The phase in which the puzzle was solved.\",\"solution\":\"The solution.\",\"solver\":\"The address of the solver.\"}},\"UpdatePuzzleColors(uint32,uint256)\":{\"params\":{\"colors\":\"A bitpacked `uint120` of 5 24-bit colors for the puzzle's Flags.\",\"id\":\"The ID of the puzzle.\"}}},\"kind\":\"dev\",\"methods\":{\"addPuzzle(address,uint256)\":{\"params\":{\"_id\":\"The ID of the Authorship Token to burn.\",\"_puzzle\":\"The address of the puzzle.\"}},\"authorshipToken()\":{\"returns\":{\"_0\":\"The Authorship Token contract.\"}},\"fermat()\":{\"returns\":{\"puzzleId\":\"The ID of the puzzle corresponding to Fermat.\",\"timeTaken\":\"The number of seconds it took to solve the puzzle.\"}},\"getPuzzle(uint32)\":{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"},\"returns\":{\"addedTimestamp\":\"The timestamp at which the puzzle was added.\",\"firstSolveTimestamp\":\"The timestamp at which the first solution was submitted.\",\"puzzle\":\"The address of the puzzle.\"}},\"getPuzzleAuthor(uint32)\":{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"},\"returns\":{\"_0\":\"The address of the puzzle author.\"}},\"getPuzzleColorsAndSolves(uint32)\":{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\"},\"returns\":{\"colors\":\"A bitpacked `uint120` of 5 24-bit colors for the puzzle's Flags.\",\"phase0Solves\":\"The total number of Phase 0 solves a puzzle has.\",\"phase1Solves\":\"The total number of Phase 1 solves a puzzle has.\",\"phase2Solves\":\"The total number of Phase 2 solves a puzzle has.\",\"solves\":\"The total number of solves a puzzle has.\"}},\"hasSolvedPuzzle(address,uint32)\":{\"params\":{\"_puzzleId\":\"The ID of a puzzle.\",\"_solver\":\"The address of a solver.\"},\"returns\":{\"_0\":\"Whether `_solver` has solved the puzzle of ID `_puzzleId`.\"}},\"hasUsedAuthorshipToken(uint256)\":{\"params\":{\"_tokenId\":\"The ID of an Authorship Token.\"},\"returns\":{\"_0\":\"Whether the Authorship Token of ID `_tokenId` has been used to add a puzzle.\"}},\"puzzleId()\":{\"returns\":{\"_0\":\"The total number of puzzles.\"}},\"setFermat(uint32)\":{\"details\":\"The puzzle of ID `_puzzleId` must have been solved at least once.\",\"params\":{\"_puzzleId\":\"The ID of the puzzle.\"}},\"setPuzzleColors(uint32,uint120)\":{\"details\":\"Only the author of the puzzle of ID `_puzzleId` may set its token renderer.\",\"params\":{\"_colors\":\"A bitpacked `uint120` of 5 24-bit colors for the puzzle's Flags.\",\"_puzzleId\":\"The ID of the puzzle.\"}},\"solve(uint32,uint256)\":{\"params\":{\"_puzzleId\":\"The ID of the puzzle.\",\"_solution\":\"The solution.\"}}},\"title\":\"The interface for Curta\",\"version\":1},\"userdoc\":{\"errors\":{\"AuthorshipTokenAlreadyUsed(uint256)\":[{\"notice\":\"Emitted when an Authorship Token has already been used to add a puzzle to Curta.\"}],\"IncorrectSolution()\":[{\"notice\":\"Emitted when a puzzle's solution is incorrect.\"}],\"InsufficientFunds()\":[{\"notice\":\"Emitted when insufficient funds are sent during \\\"Phase 2\\\" submissions.\"}],\"PuzzleAlreadyFermat(uint32)\":[{\"notice\":\"Emitted when a puzzle is already marked as Fermat.\"}],\"PuzzleAlreadySolved(uint32)\":[{\"notice\":\"Emitted when a solver has already solved a puzzle.\"}],\"PuzzleDoesNotExist(uint32)\":[{\"notice\":\"Emitted when a puzzle does not exist.\"}],\"PuzzleNotFermat(uint32)\":[{\"notice\":\"Emitted when the puzzle was not the one that went longest unsolved.\"}],\"PuzzleNotSolved(uint32)\":[{\"notice\":\"Emitted when a puzzle has not been solved yet.\"}],\"SubmissionClosed(uint32)\":[{\"notice\":\"Emitted when submissions for a puzzle is closed.\"}],\"Unauthorized()\":[{\"notice\":\"Emitted when `msg.sender` is not authorized.\"}]},\"events\":{\"AddPuzzle(uint32,address,address)\":{\"notice\":\"Emitted when a puzzle is added.\"},\"SolvePuzzle(uint32,address,uint256,uint8)\":{\"notice\":\"Emitted when a puzzle is solved.\"},\"UpdatePuzzleColors(uint32,uint256)\":{\"notice\":\"Emitted when a puzzle's colors are updated.\"}},\"kind\":\"user\",\"methods\":{\"addPuzzle(address,uint256)\":{\"notice\":\"Adds a puzzle to the contract. Note that an unused Authorship Token is required to add a puzzle (see {AuthorshipToken}).\"},\"flagRenderer()\":{\"notice\":\"The Flag metadata and art renderer contract.\"},\"setFermat(uint32)\":{\"notice\":\"Burns and mints NFT #0 to the author of the puzzle of ID `_puzzleId` if it is the puzzle that went longest unsolved.\"},\"setPuzzleColors(uint32,uint120)\":{\"notice\":\"Set the colors for a puzzle's Flags.\"},\"solve(uint32,uint256)\":{\"notice\":\"Mints a Flag NFT if the provided solution solves the puzzle.\"}},\"notice\":\"A CTF protocol, where players create and solve EVM puzzles to earn NFTs.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/ICurta.sol\":\"ICurta\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol\":{\"keccak256\":\"0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600\",\"dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs\"]},\"lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol\":{\"keccak256\":\"0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad\",\"dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4\"]},\"lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol\":{\"keccak256\":\"0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e\",\"dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS\"]},\"lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol\":{\"keccak256\":\"0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887\",\"dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y\"]},\"lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol\":{\"keccak256\":\"0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf\",\"dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe\"]},\"lib/shields-api-contract/contracts/interfaces/IShields.sol\":{\"keccak256\":\"0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4\",\"dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH\"]},\"lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol\":{\"keccak256\":\"0xe8a1bfb80ca957d5246ebb34160c19ed72b22ffd88bc2e7af9560622d2403e74\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://89b99128ed6bb97474184f4ab5304c1331bdf21212becede6da4bef60190c760\",\"dweb:/ipfs/QmPdFkkSEaASzp46MZ237rebua6xrP4xKbDEayMRyhGpL3\"]},\"lib/solady/src/utils/LibString.sol\":{\"keccak256\":\"0xa81597472f09c5a3980789eb66daafb9cfc7e7ffab6439f1ec74677c30bba0c6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f3561aaa8a9757a31e109ac81cf4ccd6894c912e89c744a0dcaf6173bce16bf2\",\"dweb:/ipfs/Qmbmzq6s6BqNP8dRmK9bek4mru5VEwUAHcXVJffmpTWf8B\"]},\"lib/solmate/src/auth/Owned.sol\":{\"keccak256\":\"0xfedb27d14c508342c33eb067c9a02eabcdb0f9dcf93b04ded1001f580d12d0ea\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://1ff52bbee698b9cf9e4574615e6550be0887ccf355f6571e23d6f25b332e79b4\",\"dweb:/ipfs/QmVorA2apojVRStzS7h8aFccR3Uv32G6HVtBtFHZrE7YXx\"]},\"lib/solmate/src/tokens/ERC721.sol\":{\"keccak256\":\"0x04af19f16f00ba65ae168d6d10da5210dc18da6bcec6974dccf984ba388aa22d\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://098e69f22b67da6927e03203c12ebfda5b0490518f6d9cce7853001ac5ad8403\",\"dweb:/ipfs/QmYyzfurQe88PsVjRNfutV3gS7Vi68f7zgtVZVtLfd4ViK\"]},\"lib/solmate/src/utils/LibString.sol\":{\"keccak256\":\"0x0a9c5bd6d59db41d1a20f9d2a4c8ed0d923fe132056ab8c6242de23bf04089c9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4d4bfb236059d001d2379b122e7d14e14cd72f253b165ae532777872ef390efd\",\"dweb:/ipfs/QmUjGdQSRm1ZcDJEHB1uJfVnSA9KrBAoPXTpgJks6K3gwL\"]},\"src/AuthorshipToken.sol\":{\"keccak256\":\"0x25a5cecff19bf6ea0f7ed29e5fa6ee72e8e5b95a001649b47d4445019865a040\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f2563f3bc236007bb634bfa877ca24e1e8e62b82f87165c12ea8e7218b1e8fa1\",\"dweb:/ipfs/QmdwrN8sfUx2CoGYPi6ZD3kadm5BerigUigZSkjhvTDTFc\"]},\"src/FlagRenderer.sol\":{\"keccak256\":\"0xae74aad64a5d476170427062aa1cb0350f695986c8742ce142050f8e42eac266\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39b4c53e459fbf0ed6f36b584f8f5e70a06e88156d4d13604f9d4ccd930b94af\",\"dweb:/ipfs/QmTCJJKocAXPuYgpGqbPXZu7uJ3zM9bcRsumCj1MmtpJXh\"]},\"src/interfaces/IColormapRegistry.sol\":{\"keccak256\":\"0x4a564fddb633239b79f7dd949f3156115f311dccfc1b2bda407ad2cfbcaae9a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bd97a198d679bbb4325d7cfd6d23f0c8bf7dbcc3dd0095e22a540130495a5439\",\"dweb:/ipfs/QmVBcGDM1tSbvmPtcFmtug6QCERzm1peESiNTXA3ZbDG4y\"]},\"src/interfaces/ICurta.sol\":{\"keccak256\":\"0x258b266f8835da5e165547fc3a171f9622a7c5cc34e2d609d89aa58d46bc0f97\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7d2d287ab5987104dca49ad75097e4a0c2dfd9b7dd7c6042ac849055cc81b87a\",\"dweb:/ipfs/QmXd2kE58rmKHPkdAoV3imTygQgVyEdgrKcRnXZwXgVR3a\"]},\"src/interfaces/IPaletteGenerator.sol\":{\"keccak256\":\"0x142bfa9141d119a7b3135239bb47f6b36388a66b14b6fe2b38c9d716f68b4b06\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2c3a9e3b56fd6f144faf7081a664e6d6825aeb7cd82f541ee9ef763a9b51ac5f\",\"dweb:/ipfs/QmNT4q5GZvrrVp38VtaSueEbVA2hgYdGv5U4sDQiSE6PwP\"]},\"src/interfaces/IPuzzle.sol\":{\"keccak256\":\"0x8f61ede6963e8a98e9ebe6a5ea1973f69224d78c45bc26adf9dc9eae21794868\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9ec6424a391e0f18165d1c10b88a31d25e176169704f6dc2c1a63e62ad91e816\",\"dweb:/ipfs/QmSuAVCVxKWYYB4Jyy5G1UKhAAZcAfHs1rTAwuP5PUWeSs\"]},\"src/utils/Base64.sol\":{\"keccak256\":\"0x6bbf3ef6d0d1f0048fffeec089b6dfe99c429b794a9f0d12e3e03bf77eb9eafe\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c79ffdceb10bb430cd538b9e311dc18578ba12079bbd2060439bfc274d3a3864\",\"dweb:/ipfs/QmVRyAwaUtBBiS32eDxAjCHKi18LYdi8wB9k3uCV9ckURw\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_tokenId",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "AuthorshipTokenAlreadyUsed"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "IncorrectSolution"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InsufficientFunds"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "type": "error",
+          "name": "PuzzleAlreadyFermat"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "type": "error",
+          "name": "PuzzleAlreadySolved"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "type": "error",
+          "name": "PuzzleDoesNotExist"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "type": "error",
+          "name": "PuzzleNotFermat"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "type": "error",
+          "name": "PuzzleNotSolved"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "type": "error",
+          "name": "SubmissionClosed"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Unauthorized"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "id",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "author",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "contract IPuzzle",
+              "name": "puzzle",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AddPuzzle",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "id",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "solver",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "solution",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint8",
+              "name": "phase",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SolvePuzzle",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "id",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "colors",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "UpdatePuzzleColors",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IPuzzle",
+              "name": "_puzzle",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_id",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addPuzzle"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "authorshipToken",
+          "outputs": [
+            {
+              "internalType": "contract AuthorshipToken",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "fermat",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "puzzleId",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint40",
+              "name": "timeTaken",
+              "type": "uint40"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "flagRenderer",
+          "outputs": [
+            {
+              "internalType": "contract FlagRenderer",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPuzzle",
+          "outputs": [
+            {
+              "internalType": "contract IPuzzle",
+              "name": "puzzle",
+              "type": "address"
+            },
+            {
+              "internalType": "uint40",
+              "name": "addedTimestamp",
+              "type": "uint40"
+            },
+            {
+              "internalType": "uint40",
+              "name": "firstSolveTimestamp",
+              "type": "uint40"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPuzzleAuthor",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPuzzleColorsAndSolves",
+          "outputs": [
+            {
+              "internalType": "uint120",
+              "name": "colors",
+              "type": "uint120"
+            },
+            {
+              "internalType": "uint32",
+              "name": "phase0Solves",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "phase1Solves",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "phase2Solves",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "solves",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_solver",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "hasSolvedPuzzle",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "hasUsedAuthorshipToken",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "puzzleId",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setFermat"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint120",
+              "name": "_colors",
+              "type": "uint120"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setPuzzleColors"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "_puzzleId",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_solution",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "solve"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "addPuzzle(address,uint256)": {
+            "params": {
+              "_id": "The ID of the Authorship Token to burn.",
+              "_puzzle": "The address of the puzzle."
+            }
+          },
+          "authorshipToken()": {
+            "returns": {
+              "_0": "The Authorship Token contract."
+            }
+          },
+          "fermat()": {
+            "returns": {
+              "puzzleId": "The ID of the puzzle corresponding to Fermat.",
+              "timeTaken": "The number of seconds it took to solve the puzzle."
+            }
+          },
+          "getPuzzle(uint32)": {
+            "params": {
+              "_puzzleId": "The ID of a puzzle."
+            },
+            "returns": {
+              "addedTimestamp": "The timestamp at which the puzzle was added.",
+              "firstSolveTimestamp": "The timestamp at which the first solution was submitted.",
+              "puzzle": "The address of the puzzle."
+            }
+          },
+          "getPuzzleAuthor(uint32)": {
+            "params": {
+              "_puzzleId": "The ID of a puzzle."
+            },
+            "returns": {
+              "_0": "The address of the puzzle author."
+            }
+          },
+          "getPuzzleColorsAndSolves(uint32)": {
+            "params": {
+              "_puzzleId": "The ID of a puzzle."
+            },
+            "returns": {
+              "colors": "A bitpacked `uint120` of 5 24-bit colors for the puzzle's Flags.",
+              "phase0Solves": "The total number of Phase 0 solves a puzzle has.",
+              "phase1Solves": "The total number of Phase 1 solves a puzzle has.",
+              "phase2Solves": "The total number of Phase 2 solves a puzzle has.",
+              "solves": "The total number of solves a puzzle has."
+            }
+          },
+          "hasSolvedPuzzle(address,uint32)": {
+            "params": {
+              "_puzzleId": "The ID of a puzzle.",
+              "_solver": "The address of a solver."
+            },
+            "returns": {
+              "_0": "Whether `_solver` has solved the puzzle of ID `_puzzleId`."
+            }
+          },
+          "hasUsedAuthorshipToken(uint256)": {
+            "params": {
+              "_tokenId": "The ID of an Authorship Token."
+            },
+            "returns": {
+              "_0": "Whether the Authorship Token of ID `_tokenId` has been used to add a puzzle."
+            }
+          },
+          "puzzleId()": {
+            "returns": {
+              "_0": "The total number of puzzles."
+            }
+          },
+          "setFermat(uint32)": {
+            "details": "The puzzle of ID `_puzzleId` must have been solved at least once.",
+            "params": {
+              "_puzzleId": "The ID of the puzzle."
+            }
+          },
+          "setPuzzleColors(uint32,uint120)": {
+            "details": "Only the author of the puzzle of ID `_puzzleId` may set its token renderer.",
+            "params": {
+              "_colors": "A bitpacked `uint120` of 5 24-bit colors for the puzzle's Flags.",
+              "_puzzleId": "The ID of the puzzle."
+            }
+          },
+          "solve(uint32,uint256)": {
+            "params": {
+              "_puzzleId": "The ID of the puzzle.",
+              "_solution": "The solution."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addPuzzle(address,uint256)": {
+            "notice": "Adds a puzzle to the contract. Note that an unused Authorship Token is required to add a puzzle (see {AuthorshipToken})."
+          },
+          "flagRenderer()": {
+            "notice": "The Flag metadata and art renderer contract."
+          },
+          "setFermat(uint32)": {
+            "notice": "Burns and mints NFT #0 to the author of the puzzle of ID `_puzzleId` if it is the puzzle that went longest unsolved."
+          },
+          "setPuzzleColors(uint32,uint120)": {
+            "notice": "Set the colors for a puzzle's Flags."
+          },
+          "solve(uint32,uint256)": {
+            "notice": "Mints a Flag NFT if the provided solution solves the puzzle."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/interfaces/ICurta.sol": "ICurta"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol": {
+        "keccak256": "0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059",
+        "urls": [
+          "bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600",
+          "dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": {
+        "keccak256": "0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029",
+        "urls": [
+          "bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad",
+          "dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": {
+        "keccak256": "0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1",
+        "urls": [
+          "bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e",
+          "dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": {
+        "keccak256": "0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0",
+        "urls": [
+          "bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887",
+          "dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol": {
+        "keccak256": "0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c",
+        "urls": [
+          "bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf",
+          "dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShields.sol": {
+        "keccak256": "0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59",
+        "urls": [
+          "bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4",
+          "dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol": {
+        "keccak256": "0xe8a1bfb80ca957d5246ebb34160c19ed72b22ffd88bc2e7af9560622d2403e74",
+        "urls": [
+          "bzz-raw://89b99128ed6bb97474184f4ab5304c1331bdf21212becede6da4bef60190c760",
+          "dweb:/ipfs/QmPdFkkSEaASzp46MZ237rebua6xrP4xKbDEayMRyhGpL3"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/solady/src/utils/LibString.sol": {
+        "keccak256": "0xa81597472f09c5a3980789eb66daafb9cfc7e7ffab6439f1ec74677c30bba0c6",
+        "urls": [
+          "bzz-raw://f3561aaa8a9757a31e109ac81cf4ccd6894c912e89c744a0dcaf6173bce16bf2",
+          "dweb:/ipfs/Qmbmzq6s6BqNP8dRmK9bek4mru5VEwUAHcXVJffmpTWf8B"
+        ],
+        "license": "MIT"
+      },
+      "lib/solmate/src/auth/Owned.sol": {
+        "keccak256": "0xfedb27d14c508342c33eb067c9a02eabcdb0f9dcf93b04ded1001f580d12d0ea",
+        "urls": [
+          "bzz-raw://1ff52bbee698b9cf9e4574615e6550be0887ccf355f6571e23d6f25b332e79b4",
+          "dweb:/ipfs/QmVorA2apojVRStzS7h8aFccR3Uv32G6HVtBtFHZrE7YXx"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "lib/solmate/src/tokens/ERC721.sol": {
+        "keccak256": "0x04af19f16f00ba65ae168d6d10da5210dc18da6bcec6974dccf984ba388aa22d",
+        "urls": [
+          "bzz-raw://098e69f22b67da6927e03203c12ebfda5b0490518f6d9cce7853001ac5ad8403",
+          "dweb:/ipfs/QmYyzfurQe88PsVjRNfutV3gS7Vi68f7zgtVZVtLfd4ViK"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "lib/solmate/src/utils/LibString.sol": {
+        "keccak256": "0x0a9c5bd6d59db41d1a20f9d2a4c8ed0d923fe132056ab8c6242de23bf04089c9",
+        "urls": [
+          "bzz-raw://4d4bfb236059d001d2379b122e7d14e14cd72f253b165ae532777872ef390efd",
+          "dweb:/ipfs/QmUjGdQSRm1ZcDJEHB1uJfVnSA9KrBAoPXTpgJks6K3gwL"
+        ],
+        "license": "MIT"
+      },
+      "src/AuthorshipToken.sol": {
+        "keccak256": "0x25a5cecff19bf6ea0f7ed29e5fa6ee72e8e5b95a001649b47d4445019865a040",
+        "urls": [
+          "bzz-raw://f2563f3bc236007bb634bfa877ca24e1e8e62b82f87165c12ea8e7218b1e8fa1",
+          "dweb:/ipfs/QmdwrN8sfUx2CoGYPi6ZD3kadm5BerigUigZSkjhvTDTFc"
+        ],
+        "license": "MIT"
+      },
+      "src/FlagRenderer.sol": {
+        "keccak256": "0xae74aad64a5d476170427062aa1cb0350f695986c8742ce142050f8e42eac266",
+        "urls": [
+          "bzz-raw://39b4c53e459fbf0ed6f36b584f8f5e70a06e88156d4d13604f9d4ccd930b94af",
+          "dweb:/ipfs/QmTCJJKocAXPuYgpGqbPXZu7uJ3zM9bcRsumCj1MmtpJXh"
+        ],
+        "license": "MIT"
+      },
+      "src/interfaces/IColormapRegistry.sol": {
+        "keccak256": "0x4a564fddb633239b79f7dd949f3156115f311dccfc1b2bda407ad2cfbcaae9a7",
+        "urls": [
+          "bzz-raw://bd97a198d679bbb4325d7cfd6d23f0c8bf7dbcc3dd0095e22a540130495a5439",
+          "dweb:/ipfs/QmVBcGDM1tSbvmPtcFmtug6QCERzm1peESiNTXA3ZbDG4y"
+        ],
+        "license": "MIT"
+      },
+      "src/interfaces/ICurta.sol": {
+        "keccak256": "0x258b266f8835da5e165547fc3a171f9622a7c5cc34e2d609d89aa58d46bc0f97",
+        "urls": [
+          "bzz-raw://7d2d287ab5987104dca49ad75097e4a0c2dfd9b7dd7c6042ac849055cc81b87a",
+          "dweb:/ipfs/QmXd2kE58rmKHPkdAoV3imTygQgVyEdgrKcRnXZwXgVR3a"
+        ],
+        "license": "MIT"
+      },
+      "src/interfaces/IPaletteGenerator.sol": {
+        "keccak256": "0x142bfa9141d119a7b3135239bb47f6b36388a66b14b6fe2b38c9d716f68b4b06",
+        "urls": [
+          "bzz-raw://2c3a9e3b56fd6f144faf7081a664e6d6825aeb7cd82f541ee9ef763a9b51ac5f",
+          "dweb:/ipfs/QmNT4q5GZvrrVp38VtaSueEbVA2hgYdGv5U4sDQiSE6PwP"
+        ],
+        "license": "MIT"
+      },
+      "src/interfaces/IPuzzle.sol": {
+        "keccak256": "0x8f61ede6963e8a98e9ebe6a5ea1973f69224d78c45bc26adf9dc9eae21794868",
+        "urls": [
+          "bzz-raw://9ec6424a391e0f18165d1c10b88a31d25e176169704f6dc2c1a63e62ad91e816",
+          "dweb:/ipfs/QmSuAVCVxKWYYB4Jyy5G1UKhAAZcAfHs1rTAwuP5PUWeSs"
+        ],
+        "license": "MIT"
+      },
+      "src/utils/Base64.sol": {
+        "keccak256": "0x6bbf3ef6d0d1f0048fffeec089b6dfe99c429b794a9f0d12e3e03bf77eb9eafe",
+        "urls": [
+          "bzz-raw://c79ffdceb10bb430cd538b9e311dc18578ba12079bbd2060439bfc274d3a3864",
+          "dweb:/ipfs/QmVRyAwaUtBBiS32eDxAjCHKi18LYdi8wB9k3uCV9ckURw"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/ICurta.sol",
+    "id": 41576,
+    "exportedSymbols": {
+      "AuthorshipToken": [
+        38303
+      ],
+      "FlagRenderer": [
+        39808
+      ],
+      "ICurta": [
+        41575
+      ],
+      "IPuzzle": [
+        41660
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:9187:65",
+    "nodes": [
+      {
+        "id": 41354,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 41356,
+        "nodeType": "ImportDirective",
+        "src": "58:40:65",
+        "nodes": [],
+        "absolutePath": "src/interfaces/IPuzzle.sol",
+        "file": "./IPuzzle.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 41576,
+        "sourceUnit": 41661,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 41355,
+              "name": "IPuzzle",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 41660,
+              "src": "67:7:65",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 41358,
+        "nodeType": "ImportDirective",
+        "src": "99:66:65",
+        "nodes": [],
+        "absolutePath": "src/AuthorshipToken.sol",
+        "file": "@/contracts/AuthorshipToken.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 41576,
+        "sourceUnit": 38304,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 41357,
+              "name": "AuthorshipToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38303,
+              "src": "108:15:65",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 41360,
+        "nodeType": "ImportDirective",
+        "src": "166:60:65",
+        "nodes": [],
+        "absolutePath": "src/FlagRenderer.sol",
+        "file": "@/contracts/FlagRenderer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 41576,
+        "sourceUnit": 39809,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 41359,
+              "name": "FlagRenderer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 39808,
+              "src": "175:12:65",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 41575,
+        "nodeType": "ContractDefinition",
+        "src": "527:8691:65",
+        "nodes": [
+          {
+            "id": 41366,
+            "nodeType": "ErrorDefinition",
+            "src": "887:51:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41362,
+              "nodeType": "StructuredDocumentation",
+              "src": "727:155:65",
+              "text": "@notice Emitted when an Authorship Token has already been used to add a\n puzzle to Curta.\n @param _tokenId The ID of an Authorship Token."
+            },
+            "errorSelector": "e75c31ed",
+            "name": "AuthorshipTokenAlreadyUsed",
+            "nameLocation": "893:26:65",
+            "parameters": {
+              "id": 41365,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41364,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "928:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41366,
+                  "src": "920:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41363,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "920:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "919:18:65"
+            }
+          },
+          {
+            "id": 41369,
+            "nodeType": "ErrorDefinition",
+            "src": "1007:26:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41367,
+              "nodeType": "StructuredDocumentation",
+              "src": "944:58:65",
+              "text": "@notice Emitted when a puzzle's solution is incorrect."
+            },
+            "errorSelector": "62cebecf",
+            "name": "IncorrectSolution",
+            "nameLocation": "1013:17:65",
+            "parameters": {
+              "id": 41368,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1030:2:65"
+            }
+          },
+          {
+            "id": 41372,
+            "nodeType": "ErrorDefinition",
+            "src": "1134:26:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41370,
+              "nodeType": "StructuredDocumentation",
+              "src": "1039:90:65",
+              "text": "@notice Emitted when insufficient funds are sent during \"Phase 2\"\n submissions."
+            },
+            "errorSelector": "356680b7",
+            "name": "InsufficientFunds",
+            "nameLocation": "1140:17:65",
+            "parameters": {
+              "id": 41371,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1157:2:65"
+            }
+          },
+          {
+            "id": 41377,
+            "nodeType": "ErrorDefinition",
+            "src": "1278:44:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41373,
+              "nodeType": "StructuredDocumentation",
+              "src": "1166:107:65",
+              "text": "@notice Emitted when a puzzle is already marked as Fermat.\n @param _puzzleId The ID of a puzzle."
+            },
+            "errorSelector": "f31ab1ac",
+            "name": "PuzzleAlreadyFermat",
+            "nameLocation": "1284:19:65",
+            "parameters": {
+              "id": 41376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41375,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "1311:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41377,
+                  "src": "1304:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41374,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1304:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1303:18:65"
+            }
+          },
+          {
+            "id": 41382,
+            "nodeType": "ErrorDefinition",
+            "src": "1440:44:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41378,
+              "nodeType": "StructuredDocumentation",
+              "src": "1328:107:65",
+              "text": "@notice Emitted when a solver has already solved a puzzle.\n @param _puzzleId The ID of a puzzle."
+            },
+            "errorSelector": "36a1d8d4",
+            "name": "PuzzleAlreadySolved",
+            "nameLocation": "1446:19:65",
+            "parameters": {
+              "id": 41381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41380,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "1473:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41382,
+                  "src": "1466:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41379,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1466:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1465:18:65"
+            }
+          },
+          {
+            "id": 41387,
+            "nodeType": "ErrorDefinition",
+            "src": "1589:43:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41383,
+              "nodeType": "StructuredDocumentation",
+              "src": "1490:94:65",
+              "text": "@notice Emitted when a puzzle does not exist.\n @param _puzzleId The ID of a puzzle."
+            },
+            "errorSelector": "684773c3",
+            "name": "PuzzleDoesNotExist",
+            "nameLocation": "1595:18:65",
+            "parameters": {
+              "id": 41386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41385,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "1621:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41387,
+                  "src": "1614:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41384,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1614:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1613:18:65"
+            }
+          },
+          {
+            "id": 41392,
+            "nodeType": "ErrorDefinition",
+            "src": "1775:40:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41388,
+              "nodeType": "StructuredDocumentation",
+              "src": "1638:132:65",
+              "text": "@notice Emitted when the puzzle was not the one that went longest\n unsolved.\n @param _puzzleId The ID of a puzzle."
+            },
+            "errorSelector": "20012d73",
+            "name": "PuzzleNotFermat",
+            "nameLocation": "1781:15:65",
+            "parameters": {
+              "id": 41391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41390,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "1804:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41392,
+                  "src": "1797:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41389,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1797:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1796:18:65"
+            }
+          },
+          {
+            "id": 41397,
+            "nodeType": "ErrorDefinition",
+            "src": "1929:40:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41393,
+              "nodeType": "StructuredDocumentation",
+              "src": "1821:103:65",
+              "text": "@notice Emitted when a puzzle has not been solved yet.\n @param _puzzleId The ID of a puzzle."
+            },
+            "errorSelector": "71c4611b",
+            "name": "PuzzleNotSolved",
+            "nameLocation": "1935:15:65",
+            "parameters": {
+              "id": 41396,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41395,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "1958:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41397,
+                  "src": "1951:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41394,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1951:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1950:18:65"
+            }
+          },
+          {
+            "id": 41402,
+            "nodeType": "ErrorDefinition",
+            "src": "2085:41:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41398,
+              "nodeType": "StructuredDocumentation",
+              "src": "1975:105:65",
+              "text": "@notice Emitted when submissions for a puzzle is closed.\n @param _puzzleId The ID of a puzzle."
+            },
+            "errorSelector": "aa5ebdc7",
+            "name": "SubmissionClosed",
+            "nameLocation": "2091:16:65",
+            "parameters": {
+              "id": 41401,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41400,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "2115:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41402,
+                  "src": "2108:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41399,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2108:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2107:18:65"
+            }
+          },
+          {
+            "id": 41405,
+            "nodeType": "ErrorDefinition",
+            "src": "2193:21:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41403,
+              "nodeType": "StructuredDocumentation",
+              "src": "2132:56:65",
+              "text": "@notice Emitted when `msg.sender` is not authorized."
+            },
+            "errorSelector": "82b42900",
+            "name": "Unauthorized",
+            "nameLocation": "2199:12:65",
+            "parameters": {
+              "id": 41404,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2211:2:65"
+            }
+          },
+          {
+            "id": 41411,
+            "nodeType": "StructDefinition",
+            "src": "2674:72:65",
+            "nodes": [],
+            "canonicalName": "ICurta.Fermat",
+            "documentation": {
+              "id": 41406,
+              "nodeType": "StructuredDocumentation",
+              "src": "2398:271:65",
+              "text": "@notice A struct containing data about the puzzle corresponding to\n Fermat (i.e. the puzzle that went the longest unsolved).\n @param puzzleId The ID of the puzzle.\n @param timeTaken The number of seconds it took to first solve the\n puzzle."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 41408,
+                "mutability": "mutable",
+                "name": "puzzleId",
+                "nameLocation": "2705:8:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41411,
+                "src": "2698:15:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 41407,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2698:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41410,
+                "mutability": "mutable",
+                "name": "timeTaken",
+                "nameLocation": "2730:9:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41411,
+                "src": "2723:16:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 41409,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2723:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Fermat",
+            "nameLocation": "2681:6:65",
+            "scope": 41575,
+            "visibility": "public"
+          },
+          {
+            "id": 41420,
+            "nodeType": "StructDefinition",
+            "src": "3039:116:65",
+            "nodes": [],
+            "canonicalName": "ICurta.PuzzleData",
+            "documentation": {
+              "id": 41412,
+              "nodeType": "StructuredDocumentation",
+              "src": "2752:282:65",
+              "text": "@notice A struct containing data about a puzzle.\n @param puzzle The address of the puzzle.\n @param addedTimestamp The timestamp at which the puzzle was added.\n @param firstSolveTimestamp The timestamp at which the first valid\n solution was submitted."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 41415,
+                "mutability": "mutable",
+                "name": "puzzle",
+                "nameLocation": "3075:6:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41420,
+                "src": "3067:14:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                  "typeString": "contract IPuzzle"
+                },
+                "typeName": {
+                  "id": 41414,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 41413,
+                    "name": "IPuzzle",
+                    "nameLocations": [
+                      "3067:7:65"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 41660,
+                    "src": "3067:7:65"
+                  },
+                  "referencedDeclaration": 41660,
+                  "src": "3067:7:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                    "typeString": "contract IPuzzle"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41417,
+                "mutability": "mutable",
+                "name": "addedTimestamp",
+                "nameLocation": "3098:14:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41420,
+                "src": "3091:21:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 41416,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3091:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41419,
+                "mutability": "mutable",
+                "name": "firstSolveTimestamp",
+                "nameLocation": "3129:19:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41420,
+                "src": "3122:26:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                },
+                "typeName": {
+                  "id": 41418,
+                  "name": "uint40",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3122:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "PuzzleData",
+            "nameLocation": "3046:10:65",
+            "scope": 41575,
+            "visibility": "public"
+          },
+          {
+            "id": 41432,
+            "nodeType": "StructDefinition",
+            "src": "3811:170:65",
+            "nodes": [],
+            "canonicalName": "ICurta.PuzzleColorsAndSolves",
+            "documentation": {
+              "id": 41421,
+              "nodeType": "StructuredDocumentation",
+              "src": "3161:645:65",
+              "text": "@notice A struct containing the number of solves a puzzle has.\n @param colors A bitpacked `uint120` of 5 24-bit colors for the puzzle's\n Flags in the following order (left-to-right):\n     * Background color\n     * Fill color\n     * Border color\n     * Primary text color\n     * Secondary text color\n @param phase0Solves The total number of Phase 0 solves a puzzle has.\n @param phase1Solves The total number of Phase 1 solves a puzzle has.\n @param phase2Solves The total number of Phase 2 solves a puzzle has.\n @param solves The total number of solves a puzzle has."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 41423,
+                "mutability": "mutable",
+                "name": "colors",
+                "nameLocation": "3858:6:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41432,
+                "src": "3850:14:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint120",
+                  "typeString": "uint120"
+                },
+                "typeName": {
+                  "id": 41422,
+                  "name": "uint120",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3850:7:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint120",
+                    "typeString": "uint120"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41425,
+                "mutability": "mutable",
+                "name": "phase0Solves",
+                "nameLocation": "3881:12:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41432,
+                "src": "3874:19:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 41424,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3874:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41427,
+                "mutability": "mutable",
+                "name": "phase1Solves",
+                "nameLocation": "3910:12:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41432,
+                "src": "3903:19:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 41426,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3903:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41429,
+                "mutability": "mutable",
+                "name": "phase2Solves",
+                "nameLocation": "3939:12:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41432,
+                "src": "3932:19:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 41428,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3932:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41431,
+                "mutability": "mutable",
+                "name": "solves",
+                "nameLocation": "3968:6:65",
+                "nodeType": "VariableDeclaration",
+                "scope": 41432,
+                "src": "3961:13:65",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 41430,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3961:6:65",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "PuzzleColorsAndSolves",
+            "nameLocation": "3818:21:65",
+            "scope": 41575,
+            "visibility": "public"
+          },
+          {
+            "id": 41442,
+            "nodeType": "EventDefinition",
+            "src": "4357:75:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 41433,
+              "nodeType": "StructuredDocumentation",
+              "src": "4164:188:65",
+              "text": "@notice Emitted when a puzzle is added.\n @param id The ID of the puzzle.\n @param author The address of the puzzle author.\n @param puzzle The address of the puzzle."
+            },
+            "eventSelector": "f769adab71d9ec16f2a65a83569ce900dfec45bc5f6d39d364d7059d631c9514",
+            "name": "AddPuzzle",
+            "nameLocation": "4363:9:65",
+            "parameters": {
+              "id": 41441,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41435,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "4388:2:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41442,
+                  "src": "4373:17:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41434,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4373:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41437,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "author",
+                  "nameLocation": "4408:6:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41442,
+                  "src": "4392:22:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41436,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4392:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41440,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "puzzle",
+                  "nameLocation": "4424:6:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41442,
+                  "src": "4416:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                    "typeString": "contract IPuzzle"
+                  },
+                  "typeName": {
+                    "id": 41439,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41438,
+                      "name": "IPuzzle",
+                      "nameLocations": [
+                        "4416:7:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41660,
+                      "src": "4416:7:65"
+                    },
+                    "referencedDeclaration": 41660,
+                    "src": "4416:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                      "typeString": "contract IPuzzle"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4372:59:65"
+            }
+          },
+          {
+            "id": 41453,
+            "nodeType": "EventDefinition",
+            "src": "4677:92:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 41443,
+              "nodeType": "StructuredDocumentation",
+              "src": "4438:234:65",
+              "text": "@notice Emitted when a puzzle is solved.\n @param id The ID of the puzzle.\n @param solver The address of the solver.\n @param solution The solution.\n @param phase The phase in which the puzzle was solved."
+            },
+            "eventSelector": "79550049b42009b11b52956ed9da213919c1417e6980af5e79bf7fffbb28a533",
+            "name": "SolvePuzzle",
+            "nameLocation": "4683:11:65",
+            "parameters": {
+              "id": 41452,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41445,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "4710:2:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41453,
+                  "src": "4695:17:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41444,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4695:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41447,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "solver",
+                  "nameLocation": "4730:6:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41453,
+                  "src": "4714:22:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41446,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4714:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41449,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "solution",
+                  "nameLocation": "4746:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41453,
+                  "src": "4738:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41448,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4738:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41451,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "phase",
+                  "nameLocation": "4762:5:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41453,
+                  "src": "4756:11:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 41450,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4756:5:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4694:74:65"
+            }
+          },
+          {
+            "id": 41460,
+            "nodeType": "EventDefinition",
+            "src": "4970:60:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 41454,
+              "nodeType": "StructuredDocumentation",
+              "src": "4775:190:65",
+              "text": "@notice Emitted when a puzzle's colors are updated.\n @param id The ID of the puzzle.\n @param colors A bitpacked `uint120` of 5 24-bit colors for the puzzle's\n Flags."
+            },
+            "eventSelector": "589aaff1c002925ad33e34d092a74d95c823ee866338f474c74a5bd51f511512",
+            "name": "UpdatePuzzleColors",
+            "nameLocation": "4976:18:65",
+            "parameters": {
+              "id": 41459,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41456,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "5010:2:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41460,
+                  "src": "4995:17:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41455,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4995:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41458,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "colors",
+                  "nameLocation": "5022:6:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41460,
+                  "src": "5014:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41457,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5014:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4994:35:65"
+            }
+          },
+          {
+            "id": 41467,
+            "nodeType": "FunctionDefinition",
+            "src": "5285:61:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41461,
+              "nodeType": "StructuredDocumentation",
+              "src": "5224:56:65",
+              "text": "@notice The Flag metadata and art renderer contract."
+            },
+            "functionSelector": "301cca8f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flagRenderer",
+            "nameLocation": "5294:12:65",
+            "parameters": {
+              "id": 41462,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5306:2:65"
+            },
+            "returnParameters": {
+              "id": 41466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41465,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41467,
+                  "src": "5332:12:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_FlagRenderer_$39808",
+                    "typeString": "contract FlagRenderer"
+                  },
+                  "typeName": {
+                    "id": 41464,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41463,
+                      "name": "FlagRenderer",
+                      "nameLocations": [
+                        "5332:12:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 39808,
+                      "src": "5332:12:65"
+                    },
+                    "referencedDeclaration": 39808,
+                    "src": "5332:12:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FlagRenderer_$39808",
+                      "typeString": "contract FlagRenderer"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5331:14:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41474,
+            "nodeType": "FunctionDefinition",
+            "src": "5399:67:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41468,
+              "nodeType": "StructuredDocumentation",
+              "src": "5352:42:65",
+              "text": "@return The Authorship Token contract."
+            },
+            "functionSelector": "012583ab",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "authorshipToken",
+            "nameLocation": "5408:15:65",
+            "parameters": {
+              "id": 41469,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5423:2:65"
+            },
+            "returnParameters": {
+              "id": 41473,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41472,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41474,
+                  "src": "5449:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_AuthorshipToken_$38303",
+                    "typeString": "contract AuthorshipToken"
+                  },
+                  "typeName": {
+                    "id": 41471,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41470,
+                      "name": "AuthorshipToken",
+                      "nameLocations": [
+                        "5449:15:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 38303,
+                      "src": "5449:15:65"
+                    },
+                    "referencedDeclaration": 38303,
+                    "src": "5449:15:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_AuthorshipToken_$38303",
+                      "typeString": "contract AuthorshipToken"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5448:17:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41480,
+            "nodeType": "FunctionDefinition",
+            "src": "5695:51:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41475,
+              "nodeType": "StructuredDocumentation",
+              "src": "5650:40:65",
+              "text": "@return The total number of puzzles."
+            },
+            "functionSelector": "f9aa8ff1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "puzzleId",
+            "nameLocation": "5704:8:65",
+            "parameters": {
+              "id": 41476,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5712:2:65"
+            },
+            "returnParameters": {
+              "id": 41479,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41478,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41480,
+                  "src": "5738:6:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41477,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5738:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5737:8:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41488,
+            "nodeType": "FunctionDefinition",
+            "src": "5900:76:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41481,
+              "nodeType": "StructuredDocumentation",
+              "src": "5752:143:65",
+              "text": "@return puzzleId The ID of the puzzle corresponding to Fermat.\n @return timeTaken The number of seconds it took to solve the puzzle."
+            },
+            "functionSelector": "76a50464",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fermat",
+            "nameLocation": "5909:6:65",
+            "parameters": {
+              "id": 41482,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5915:2:65"
+            },
+            "returnParameters": {
+              "id": 41487,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41484,
+                  "mutability": "mutable",
+                  "name": "puzzleId",
+                  "nameLocation": "5948:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41488,
+                  "src": "5941:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41483,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5941:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41486,
+                  "mutability": "mutable",
+                  "name": "timeTaken",
+                  "nameLocation": "5965:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41488,
+                  "src": "5958:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 41485,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5958:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5940:35:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41504,
+            "nodeType": "FunctionDefinition",
+            "src": "6421:263:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41489,
+              "nodeType": "StructuredDocumentation",
+              "src": "5982:434:65",
+              "text": "@param _puzzleId The ID of a puzzle.\n @return colors A bitpacked `uint120` of 5 24-bit colors for the puzzle's\n Flags.\n @return phase0Solves The total number of Phase 0 solves a puzzle has.\n @return phase1Solves The total number of Phase 1 solves a puzzle has.\n @return phase2Solves The total number of Phase 2 solves a puzzle has.\n @return solves The total number of solves a puzzle has."
+            },
+            "functionSelector": "96f6326c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPuzzleColorsAndSolves",
+            "nameLocation": "6430:24:65",
+            "parameters": {
+              "id": 41492,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41491,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "6462:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41504,
+                  "src": "6455:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41490,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6455:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6454:18:65"
+            },
+            "returnParameters": {
+              "id": 41503,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41494,
+                  "mutability": "mutable",
+                  "name": "colors",
+                  "nameLocation": "6541:6:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41504,
+                  "src": "6533:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint120",
+                    "typeString": "uint120"
+                  },
+                  "typeName": {
+                    "id": 41493,
+                    "name": "uint120",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6533:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint120",
+                      "typeString": "uint120"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41496,
+                  "mutability": "mutable",
+                  "name": "phase0Solves",
+                  "nameLocation": "6568:12:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41504,
+                  "src": "6561:19:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41495,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6561:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41498,
+                  "mutability": "mutable",
+                  "name": "phase1Solves",
+                  "nameLocation": "6601:12:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41504,
+                  "src": "6594:19:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41497,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6594:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41500,
+                  "mutability": "mutable",
+                  "name": "phase2Solves",
+                  "nameLocation": "6634:12:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41504,
+                  "src": "6627:19:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41499,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6627:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41502,
+                  "mutability": "mutable",
+                  "name": "solves",
+                  "nameLocation": "6667:6:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41504,
+                  "src": "6660:13:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41501,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6660:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6519:164:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41517,
+            "nodeType": "FunctionDefinition",
+            "src": "6962:151:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41505,
+              "nodeType": "StructuredDocumentation",
+              "src": "6690:267:65",
+              "text": "@param _puzzleId The ID of a puzzle.\n @return puzzle The address of the puzzle.\n @return addedTimestamp The timestamp at which the puzzle was added.\n @return firstSolveTimestamp The timestamp at which the first solution\n was submitted."
+            },
+            "functionSelector": "54eed6ac",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPuzzle",
+            "nameLocation": "6971:9:65",
+            "parameters": {
+              "id": 41508,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41507,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "6988:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41517,
+                  "src": "6981:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41506,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6981:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6980:18:65"
+            },
+            "returnParameters": {
+              "id": 41516,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41511,
+                  "mutability": "mutable",
+                  "name": "puzzle",
+                  "nameLocation": "7054:6:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41517,
+                  "src": "7046:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                    "typeString": "contract IPuzzle"
+                  },
+                  "typeName": {
+                    "id": 41510,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41509,
+                      "name": "IPuzzle",
+                      "nameLocations": [
+                        "7046:7:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41660,
+                      "src": "7046:7:65"
+                    },
+                    "referencedDeclaration": 41660,
+                    "src": "7046:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                      "typeString": "contract IPuzzle"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41513,
+                  "mutability": "mutable",
+                  "name": "addedTimestamp",
+                  "nameLocation": "7069:14:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41517,
+                  "src": "7062:21:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 41512,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7062:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41515,
+                  "mutability": "mutable",
+                  "name": "firstSolveTimestamp",
+                  "nameLocation": "7092:19:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41517,
+                  "src": "7085:26:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 41514,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7085:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7045:67:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41525,
+            "nodeType": "FunctionDefinition",
+            "src": "7214:75:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41518,
+              "nodeType": "StructuredDocumentation",
+              "src": "7119:90:65",
+              "text": "@param _puzzleId The ID of a puzzle.\n @return The address of the puzzle author."
+            },
+            "functionSelector": "1756aaac",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPuzzleAuthor",
+            "nameLocation": "7223:15:65",
+            "parameters": {
+              "id": 41521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41520,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "7246:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41525,
+                  "src": "7239:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41519,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7239:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7238:18:65"
+            },
+            "returnParameters": {
+              "id": 41524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41523,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41525,
+                  "src": "7280:7:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41522,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7280:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7279:9:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41535,
+            "nodeType": "FunctionDefinition",
+            "src": "7463:89:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41526,
+              "nodeType": "StructuredDocumentation",
+              "src": "7295:163:65",
+              "text": "@param _solver The address of a solver.\n @param _puzzleId The ID of a puzzle.\n @return Whether `_solver` has solved the puzzle of ID `_puzzleId`."
+            },
+            "functionSelector": "40854ed5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasSolvedPuzzle",
+            "nameLocation": "7472:15:65",
+            "parameters": {
+              "id": 41531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41528,
+                  "mutability": "mutable",
+                  "name": "_solver",
+                  "nameLocation": "7496:7:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41535,
+                  "src": "7488:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41527,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7488:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41530,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "7512:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41535,
+                  "src": "7505:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41529,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7505:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7487:35:65"
+            },
+            "returnParameters": {
+              "id": 41534,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41533,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41535,
+                  "src": "7546:4:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 41532,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7546:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7545:6:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41543,
+            "nodeType": "FunctionDefinition",
+            "src": "7714:79:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41536,
+              "nodeType": "StructuredDocumentation",
+              "src": "7558:151:65",
+              "text": "@param _tokenId The ID of an Authorship Token.\n @return Whether the Authorship Token of ID `_tokenId` has been used to\n add a puzzle."
+            },
+            "functionSelector": "e4ff676d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasUsedAuthorshipToken",
+            "nameLocation": "7723:22:65",
+            "parameters": {
+              "id": 41539,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41538,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "7754:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41543,
+                  "src": "7746:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41537,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7746:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7745:18:65"
+            },
+            "returnParameters": {
+              "id": 41542,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41541,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41543,
+                  "src": "7787:4:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 41540,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7787:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7786:6:65"
+            },
+            "scope": 41575,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41551,
+            "nodeType": "FunctionDefinition",
+            "src": "8142:69:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41544,
+              "nodeType": "StructuredDocumentation",
+              "src": "7979:158:65",
+              "text": "@notice Mints a Flag NFT if the provided solution solves the puzzle.\n @param _puzzleId The ID of the puzzle.\n @param _solution The solution."
+            },
+            "functionSelector": "31468f06",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "solve",
+            "nameLocation": "8151:5:65",
+            "parameters": {
+              "id": 41549,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41546,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "8164:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41551,
+                  "src": "8157:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41545,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8157:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41548,
+                  "mutability": "mutable",
+                  "name": "_solution",
+                  "nameLocation": "8183:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41551,
+                  "src": "8175:17:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41547,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8175:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8156:37:65"
+            },
+            "returnParameters": {
+              "id": 41550,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8210:0:65"
+            },
+            "scope": 41575,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41560,
+            "nodeType": "FunctionDefinition",
+            "src": "8471:58:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41552,
+              "nodeType": "StructuredDocumentation",
+              "src": "8217:249:65",
+              "text": "@notice Adds a puzzle to the contract. Note that an unused Authorship\n Token is required to add a puzzle (see {AuthorshipToken}).\n @param _puzzle The address of the puzzle.\n @param _id The ID of the Authorship Token to burn."
+            },
+            "functionSelector": "4ddf9d81",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addPuzzle",
+            "nameLocation": "8480:9:65",
+            "parameters": {
+              "id": 41558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41555,
+                  "mutability": "mutable",
+                  "name": "_puzzle",
+                  "nameLocation": "8498:7:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41560,
+                  "src": "8490:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                    "typeString": "contract IPuzzle"
+                  },
+                  "typeName": {
+                    "id": 41554,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 41553,
+                      "name": "IPuzzle",
+                      "nameLocations": [
+                        "8490:7:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 41660,
+                      "src": "8490:7:65"
+                    },
+                    "referencedDeclaration": 41660,
+                    "src": "8490:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPuzzle_$41660",
+                      "typeString": "contract IPuzzle"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41557,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "8515:3:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41560,
+                  "src": "8507:11:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41556,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8507:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8489:30:65"
+            },
+            "returnParameters": {
+              "id": 41559,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8528:0:65"
+            },
+            "scope": 41575,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41568,
+            "nodeType": "FunctionDefinition",
+            "src": "8828:69:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41561,
+              "nodeType": "StructuredDocumentation",
+              "src": "8535:288:65",
+              "text": "@notice Set the colors for a puzzle's Flags.\n @dev Only the author of the puzzle of ID `_puzzleId` may set its token\n renderer.\n @param _puzzleId The ID of the puzzle.\n @param _colors A bitpacked `uint120` of 5 24-bit colors for the puzzle's\n Flags."
+            },
+            "functionSelector": "ea620cc7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPuzzleColors",
+            "nameLocation": "8837:15:65",
+            "parameters": {
+              "id": 41566,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41563,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "8860:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41568,
+                  "src": "8853:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41562,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8853:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41565,
+                  "mutability": "mutable",
+                  "name": "_colors",
+                  "nameLocation": "8879:7:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41568,
+                  "src": "8871:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint120",
+                    "typeString": "uint120"
+                  },
+                  "typeName": {
+                    "id": 41564,
+                    "name": "uint120",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8871:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint120",
+                      "typeString": "uint120"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8852:35:65"
+            },
+            "returnParameters": {
+              "id": 41567,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8896:0:65"
+            },
+            "scope": 41575,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 41574,
+            "nodeType": "FunctionDefinition",
+            "src": "9170:46:65",
+            "nodes": [],
+            "documentation": {
+              "id": 41569,
+              "nodeType": "StructuredDocumentation",
+              "src": "8903:262:65",
+              "text": "@notice Burns and mints NFT #0 to the author of the puzzle of ID\n `_puzzleId` if it is the puzzle that went longest unsolved.\n @dev The puzzle of ID `_puzzleId` must have been solved at least once.\n @param _puzzleId The ID of the puzzle."
+            },
+            "functionSelector": "bb16f862",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFermat",
+            "nameLocation": "9179:9:65",
+            "parameters": {
+              "id": 41572,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 41571,
+                  "mutability": "mutable",
+                  "name": "_puzzleId",
+                  "nameLocation": "9196:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41574,
+                  "src": "9189:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 41570,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9189:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9188:18:65"
+            },
+            "returnParameters": {
+              "id": 41573,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "9215:0:65"
+            },
+            "scope": 41575,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICurta",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 41361,
+          "nodeType": "StructuredDocumentation",
+          "src": "228:299:65",
+          "text": "@title The interface for Curta\n @notice A CTF protocol, where players create and solve EVM puzzles to earn\n NFTs.\n @dev Each solve is represented by an NFT. However, the NFT with token ID 0\n is reserved to denote ``Fermat''—the author's whose puzzle went the longest\n unsolved."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          41575
+        ],
+        "name": "ICurta",
+        "nameLocation": "537:6:65",
+        "scope": 41576,
+        "usedErrors": [
+          41366,
+          41369,
+          41372,
+          41377,
+          41382,
+          41387,
+          41392,
+          41397,
+          41402,
+          41405
+        ],
+        "usedEvents": [
+          41442,
+          41453,
+          41460
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 65
+}

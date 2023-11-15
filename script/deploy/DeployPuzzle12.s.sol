@@ -17,7 +17,7 @@ contract DeployPuzzle12 is DeployBase {
 
         vm.selectFork(forkId);
         puzzle = IPuzzle(HuffDeployer.deploy("../../src/puzzle-12/Labyrinth"));
-        console.log("Labyrinth.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("Labyrinth.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.prank(mainnetWinner);
 
         // testSolved(0x123);

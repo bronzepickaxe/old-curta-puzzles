@@ -1,0 +1,901 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "emblemWeaver",
+      "outputs": [
+        {
+          "internalType": "contract IEmblemWeaver",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "shields",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "field",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint16",
+          "name": "hardware",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint16",
+          "name": "frame",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint24",
+          "name": "color1",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint24",
+          "name": "color2",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint24",
+          "name": "color3",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint24",
+          "name": "color4",
+          "type": "uint24"
+        },
+        {
+          "internalType": "enum IShields.ShieldBadge",
+          "name": "shieldBadge",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "emblemWeaver()": "00813dd5",
+    "shields(uint256)": "f862ab1b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"emblemWeaver\",\"outputs\":[{\"internalType\":\"contract IEmblemWeaver\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"shields\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"frame\",\"type\":\"uint16\"},{\"internalType\":\"uint24\",\"name\":\"color1\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"color2\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"color3\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"color4\",\"type\":\"uint24\"},{\"internalType\":\"enum IShields.ShieldBadge\",\"name\":\"shieldBadge\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/shields-api-contract/contracts/interfaces/IShields.sol\":\"IShields\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol\":{\"keccak256\":\"0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600\",\"dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs\"]},\"lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol\":{\"keccak256\":\"0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad\",\"dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4\"]},\"lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol\":{\"keccak256\":\"0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e\",\"dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS\"]},\"lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol\":{\"keccak256\":\"0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887\",\"dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y\"]},\"lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol\":{\"keccak256\":\"0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf\",\"dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe\"]},\"lib/shields-api-contract/contracts/interfaces/IShields.sol\":{\"keccak256\":\"0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4\",\"dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "emblemWeaver",
+          "outputs": [
+            {
+              "internalType": "contract IEmblemWeaver",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "shields",
+          "outputs": [
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "frame",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint24",
+              "name": "color1",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "color2",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "color3",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "color4",
+              "type": "uint24"
+            },
+            {
+              "internalType": "enum IShields.ShieldBadge",
+              "name": "shieldBadge",
+              "type": "uint8"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol": "IShields"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol": {
+        "keccak256": "0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059",
+        "urls": [
+          "bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600",
+          "dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": {
+        "keccak256": "0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029",
+        "urls": [
+          "bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad",
+          "dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": {
+        "keccak256": "0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1",
+        "urls": [
+          "bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e",
+          "dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": {
+        "keccak256": "0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0",
+        "urls": [
+          "bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887",
+          "dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol": {
+        "keccak256": "0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c",
+        "urls": [
+          "bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf",
+          "dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShields.sol": {
+        "keccak256": "0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59",
+        "urls": [
+          "bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4",
+          "dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH"
+        ],
+        "license": "The Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+    "id": 26216,
+    "exportedSymbols": {
+      "IEmblemWeaver": [
+        26086
+      ],
+      "IShields": [
+        26215
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:706:22",
+    "nodes": [
+      {
+        "id": 26166,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:22",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 26167,
+        "nodeType": "ImportDirective",
+        "src": "67:29:22",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "file": "./IEmblemWeaver.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26216,
+        "sourceUnit": 26087,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26215,
+        "nodeType": "ContractDefinition",
+        "src": "98:649:22",
+        "nodes": [
+          {
+            "id": 26170,
+            "nodeType": "EnumDefinition",
+            "src": "123:56:22",
+            "nodes": [],
+            "canonicalName": "IShields.ShieldBadge",
+            "members": [
+              {
+                "id": 26168,
+                "name": "MAKER",
+                "nameLocation": "150:5:22",
+                "nodeType": "EnumValue",
+                "src": "150:5:22"
+              },
+              {
+                "id": 26169,
+                "name": "STANDARD",
+                "nameLocation": "165:8:22",
+                "nodeType": "EnumValue",
+                "src": "165:8:22"
+              }
+            ],
+            "name": "ShieldBadge",
+            "nameLocation": "128:11:22"
+          },
+          {
+            "id": 26186,
+            "nodeType": "StructDefinition",
+            "src": "185:169:22",
+            "nodes": [],
+            "canonicalName": "IShields.Shield",
+            "members": [
+              {
+                "constant": false,
+                "id": 26172,
+                "mutability": "mutable",
+                "name": "built",
+                "nameLocation": "214:5:22",
+                "nodeType": "VariableDeclaration",
+                "scope": 26186,
+                "src": "209:10:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 26171,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "209:4:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26174,
+                "mutability": "mutable",
+                "name": "field",
+                "nameLocation": "236:5:22",
+                "nodeType": "VariableDeclaration",
+                "scope": 26186,
+                "src": "229:12:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 26173,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "229:6:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26176,
+                "mutability": "mutable",
+                "name": "hardware",
+                "nameLocation": "258:8:22",
+                "nodeType": "VariableDeclaration",
+                "scope": 26186,
+                "src": "251:15:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 26175,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "251:6:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26178,
+                "mutability": "mutable",
+                "name": "frame",
+                "nameLocation": "283:5:22",
+                "nodeType": "VariableDeclaration",
+                "scope": 26186,
+                "src": "276:12:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 26177,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "276:6:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26181,
+                "mutability": "mutable",
+                "name": "shieldBadge",
+                "nameLocation": "310:11:22",
+                "nodeType": "VariableDeclaration",
+                "scope": 26186,
+                "src": "298:23:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                  "typeString": "enum IShields.ShieldBadge"
+                },
+                "typeName": {
+                  "id": 26180,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 26179,
+                    "name": "ShieldBadge",
+                    "nameLocations": [
+                      "298:11:22"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 26170,
+                    "src": "298:11:22"
+                  },
+                  "referencedDeclaration": 26170,
+                  "src": "298:11:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                    "typeString": "enum IShields.ShieldBadge"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26185,
+                "mutability": "mutable",
+                "name": "colors",
+                "nameLocation": "341:6:22",
+                "nodeType": "VariableDeclaration",
+                "scope": 26186,
+                "src": "331:16:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint24_$4_storage_ptr",
+                  "typeString": "uint24[4]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 26182,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "331:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "id": 26184,
+                  "length": {
+                    "hexValue": "34",
+                    "id": 26183,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "338:1:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_4_by_1",
+                      "typeString": "int_const 4"
+                    },
+                    "value": "4"
+                  },
+                  "nodeType": "ArrayTypeName",
+                  "src": "331:9:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint24_$4_storage_ptr",
+                    "typeString": "uint24[4]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Shield",
+            "nameLocation": "192:6:22",
+            "scope": 26215,
+            "visibility": "public"
+          },
+          {
+            "id": 26192,
+            "nodeType": "FunctionDefinition",
+            "src": "360:62:22",
+            "nodes": [],
+            "functionSelector": "00813dd5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emblemWeaver",
+            "nameLocation": "369:12:22",
+            "parameters": {
+              "id": 26187,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "381:2:22"
+            },
+            "returnParameters": {
+              "id": 26191,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26190,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26192,
+                  "src": "407:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IEmblemWeaver_$26086",
+                    "typeString": "contract IEmblemWeaver"
+                  },
+                  "typeName": {
+                    "id": 26189,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26188,
+                      "name": "IEmblemWeaver",
+                      "nameLocations": [
+                        "407:13:22"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26086,
+                      "src": "407:13:22"
+                    },
+                    "referencedDeclaration": 26086,
+                    "src": "407:13:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IEmblemWeaver_$26086",
+                      "typeString": "contract IEmblemWeaver"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "406:15:22"
+            },
+            "scope": 26215,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26214,
+            "nodeType": "FunctionDefinition",
+            "src": "428:317:22",
+            "nodes": [],
+            "functionSelector": "f862ab1b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "shields",
+            "nameLocation": "437:7:22",
+            "parameters": {
+              "id": 26195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26194,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "453:7:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "445:15:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "445:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "444:17:22"
+            },
+            "returnParameters": {
+              "id": 26213,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26197,
+                  "mutability": "mutable",
+                  "name": "field",
+                  "nameLocation": "529:5:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "522:12:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26196,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26199,
+                  "mutability": "mutable",
+                  "name": "hardware",
+                  "nameLocation": "555:8:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "548:15:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26198,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "548:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26201,
+                  "mutability": "mutable",
+                  "name": "frame",
+                  "nameLocation": "584:5:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "577:12:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26200,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "577:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26203,
+                  "mutability": "mutable",
+                  "name": "color1",
+                  "nameLocation": "610:6:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "603:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 26202,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "603:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26205,
+                  "mutability": "mutable",
+                  "name": "color2",
+                  "nameLocation": "637:6:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "630:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 26204,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26207,
+                  "mutability": "mutable",
+                  "name": "color3",
+                  "nameLocation": "664:6:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "657:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 26206,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "657:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26209,
+                  "mutability": "mutable",
+                  "name": "color4",
+                  "nameLocation": "691:6:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "684:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 26208,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "684:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26212,
+                  "mutability": "mutable",
+                  "name": "shieldBadge",
+                  "nameLocation": "723:11:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26214,
+                  "src": "711:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                    "typeString": "enum IShields.ShieldBadge"
+                  },
+                  "typeName": {
+                    "id": 26211,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26210,
+                      "name": "ShieldBadge",
+                      "nameLocations": [
+                        "711:11:22"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26170,
+                      "src": "711:11:22"
+                    },
+                    "referencedDeclaration": 26170,
+                    "src": "711:11:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                      "typeString": "enum IShields.ShieldBadge"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "508:236:22"
+            },
+            "scope": 26215,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IShields",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26215
+        ],
+        "name": "IShields",
+        "nameLocation": "108:8:22",
+        "scope": 26216,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "The Unlicense"
+  },
+  "id": 22
+}

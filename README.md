@@ -47,8 +47,27 @@ Gas used: 266368
 
 == Logs ==
   TwoTimesFourIsEight.generate():
-0x10000000000000700000000040200000000030000800000006000500000
+6901746346790564457901554991452530692688817142401467382862937683132416
 ```
+
+This will print seed in `uint256` format. 
+
+If you need to convert the value to a hexidecimal value, follow these steps:
+
+1. Run `chisel` in your terminal
+2. Copy and paste the following into your terminal:
+`uint256 puzzle = 6901746346790564457901554991452530692688817142401467382862937683132416`
+3. Type `puzzle`, this should return:
+```javascript
+chisel                                                                                                                                                                                                                       ─╯
+Welcome to Chisel! Type `!help` to show available commands.
+➜ uint256 puzzle = 6901746346790564457901554991452530692688817142401467382862937683132416
+➜ puzzle
+Type: uint
+├ Hex: 0x0000010000000000000700000000040200000000030000800000006000500000
+└ Decimal: 6901746346790564457901554991452530692688817142401467382862937683132416
+```
+4. Use the `Hex` value for your puzzles!
 
 Happy solving!
 

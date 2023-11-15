@@ -1,0 +1,2371 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "field",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint24[4]",
+          "name": "colors",
+          "type": "uint24[4]"
+        }
+      ],
+      "name": "getField",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "enum IFieldGenerator.FieldCategories",
+              "name": "fieldType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "string",
+              "name": "svgString",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IFieldGenerator.FieldData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "field",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint24[4]",
+          "name": "colors",
+          "type": "uint24[4]"
+        }
+      ],
+      "name": "getFieldSVG",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "field",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint24[4]",
+          "name": "colors",
+          "type": "uint24[4]"
+        }
+      ],
+      "name": "getFieldTitle",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "frame",
+          "type": "uint16"
+        }
+      ],
+      "name": "getFrame",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "svgString",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IFrameGenerator.FrameData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "frame",
+          "type": "uint16"
+        }
+      ],
+      "name": "getFrameSVG",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "frame",
+          "type": "uint16"
+        }
+      ],
+      "name": "getFrameTitle",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "hardware",
+          "type": "uint16"
+        }
+      ],
+      "name": "getHardware",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "enum IHardwareGenerator.HardwareCategories",
+              "name": "hardwareType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "string",
+              "name": "svgString",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IHardwareGenerator.HardwareData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "hardware",
+          "type": "uint16"
+        }
+      ],
+      "name": "getHardwareSVG",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "hardware",
+          "type": "uint16"
+        }
+      ],
+      "name": "getHardwareTitle",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shieldId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getShield",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "built",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "frame",
+              "type": "uint16"
+            },
+            {
+              "internalType": "enum IShields.ShieldBadge",
+              "name": "shieldBadge",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint24[4]",
+              "name": "colors",
+              "type": "uint24[4]"
+            }
+          ],
+          "internalType": "struct IShields.Shield",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shieldId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getShieldSVG",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "field",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint24[4]",
+          "name": "colors",
+          "type": "uint24[4]"
+        },
+        {
+          "internalType": "uint16",
+          "name": "hardware",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint16",
+          "name": "frame",
+          "type": "uint16"
+        }
+      ],
+      "name": "getShieldSVG",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shieldId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isShieldBuilt",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getField(uint16,uint24[4])": "eac67b4c",
+    "getFieldSVG(uint16,uint24[4])": "e148f19e",
+    "getFieldTitle(uint16,uint24[4])": "ba2910cc",
+    "getFrame(uint16)": "492e2fdf",
+    "getFrameSVG(uint16)": "abd94f84",
+    "getFrameTitle(uint16)": "d98abf05",
+    "getHardware(uint16)": "31758d92",
+    "getHardwareSVG(uint16)": "b38b5b82",
+    "getHardwareTitle(uint16)": "8232060e",
+    "getShield(uint256)": "40911db1",
+    "getShieldSVG(uint16,uint24[4],uint16,uint16)": "b63e7046",
+    "getShieldSVG(uint256)": "8173d343",
+    "isShieldBuilt(uint256)": "c3fa3d70"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint24[4]\",\"name\":\"colors\",\"type\":\"uint24[4]\"}],\"name\":\"getField\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"enum IFieldGenerator.FieldCategories\",\"name\":\"fieldType\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"svgString\",\"type\":\"string\"}],\"internalType\":\"struct IFieldGenerator.FieldData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint24[4]\",\"name\":\"colors\",\"type\":\"uint24[4]\"}],\"name\":\"getFieldSVG\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint24[4]\",\"name\":\"colors\",\"type\":\"uint24[4]\"}],\"name\":\"getFieldTitle\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"frame\",\"type\":\"uint16\"}],\"name\":\"getFrame\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"fee\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"svgString\",\"type\":\"string\"}],\"internalType\":\"struct IFrameGenerator.FrameData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"frame\",\"type\":\"uint16\"}],\"name\":\"getFrameSVG\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"frame\",\"type\":\"uint16\"}],\"name\":\"getFrameTitle\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"}],\"name\":\"getHardware\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"enum IHardwareGenerator.HardwareCategories\",\"name\":\"hardwareType\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"svgString\",\"type\":\"string\"}],\"internalType\":\"struct IHardwareGenerator.HardwareData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"}],\"name\":\"getHardwareSVG\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"}],\"name\":\"getHardwareTitle\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"shieldId\",\"type\":\"uint256\"}],\"name\":\"getShield\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"built\",\"type\":\"bool\"},{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"frame\",\"type\":\"uint16\"},{\"internalType\":\"enum IShields.ShieldBadge\",\"name\":\"shieldBadge\",\"type\":\"uint8\"},{\"internalType\":\"uint24[4]\",\"name\":\"colors\",\"type\":\"uint24[4]\"}],\"internalType\":\"struct IShields.Shield\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"shieldId\",\"type\":\"uint256\"}],\"name\":\"getShieldSVG\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint24[4]\",\"name\":\"colors\",\"type\":\"uint24[4]\"},{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"frame\",\"type\":\"uint16\"}],\"name\":\"getShieldSVG\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"shieldId\",\"type\":\"uint256\"}],\"name\":\"isShieldBuilt\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol\":\"IShieldsAPI\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol\":{\"keccak256\":\"0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600\",\"dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs\"]},\"lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol\":{\"keccak256\":\"0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad\",\"dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4\"]},\"lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol\":{\"keccak256\":\"0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e\",\"dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS\"]},\"lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol\":{\"keccak256\":\"0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887\",\"dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y\"]},\"lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol\":{\"keccak256\":\"0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf\",\"dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe\"]},\"lib/shields-api-contract/contracts/interfaces/IShields.sol\":{\"keccak256\":\"0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4\",\"dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH\"]},\"lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol\":{\"keccak256\":\"0xe8a1bfb80ca957d5246ebb34160c19ed72b22ffd88bc2e7af9560622d2403e74\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://89b99128ed6bb97474184f4ab5304c1331bdf21212becede6da4bef60190c760\",\"dweb:/ipfs/QmPdFkkSEaASzp46MZ237rebua6xrP4xKbDEayMRyhGpL3\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint24[4]",
+              "name": "colors",
+              "type": "uint24[4]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getField",
+          "outputs": [
+            {
+              "internalType": "struct IFieldGenerator.FieldData",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "enum IFieldGenerator.FieldCategories",
+                  "name": "fieldType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "string",
+                  "name": "svgString",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint24[4]",
+              "name": "colors",
+              "type": "uint24[4]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFieldSVG",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint24[4]",
+              "name": "colors",
+              "type": "uint24[4]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFieldTitle",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "frame",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFrame",
+          "outputs": [
+            {
+              "internalType": "struct IFrameGenerator.FrameData",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "fee",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "svgString",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "frame",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFrameSVG",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "frame",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFrameTitle",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getHardware",
+          "outputs": [
+            {
+              "internalType": "struct IHardwareGenerator.HardwareData",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "enum IHardwareGenerator.HardwareCategories",
+                  "name": "hardwareType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "string",
+                  "name": "svgString",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getHardwareSVG",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getHardwareTitle",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "shieldId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getShield",
+          "outputs": [
+            {
+              "internalType": "struct IShields.Shield",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "built",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "field",
+                  "type": "uint16"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "hardware",
+                  "type": "uint16"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "frame",
+                  "type": "uint16"
+                },
+                {
+                  "internalType": "enum IShields.ShieldBadge",
+                  "name": "shieldBadge",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint24[4]",
+                  "name": "colors",
+                  "type": "uint24[4]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "shieldId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getShieldSVG",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint24[4]",
+              "name": "colors",
+              "type": "uint24[4]"
+            },
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "frame",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getShieldSVG",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "shieldId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isShieldBuilt",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol": "IShieldsAPI"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol": {
+        "keccak256": "0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059",
+        "urls": [
+          "bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600",
+          "dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": {
+        "keccak256": "0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029",
+        "urls": [
+          "bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad",
+          "dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": {
+        "keccak256": "0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1",
+        "urls": [
+          "bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e",
+          "dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": {
+        "keccak256": "0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0",
+        "urls": [
+          "bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887",
+          "dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol": {
+        "keccak256": "0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c",
+        "urls": [
+          "bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf",
+          "dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShields.sol": {
+        "keccak256": "0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59",
+        "urls": [
+          "bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4",
+          "dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol": {
+        "keccak256": "0xe8a1bfb80ca957d5246ebb34160c19ed72b22ffd88bc2e7af9560622d2403e74",
+        "urls": [
+          "bzz-raw://89b99128ed6bb97474184f4ab5304c1331bdf21212becede6da4bef60190c760",
+          "dweb:/ipfs/QmPdFkkSEaASzp46MZ237rebua6xrP4xKbDEayMRyhGpL3"
+        ],
+        "license": "The Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+    "id": 26338,
+    "exportedSymbols": {
+      "IEmblemWeaver": [
+        26086
+      ],
+      "IFieldGenerator": [
+        26112
+      ],
+      "IFrameGenerator": [
+        26130
+      ],
+      "IHardwareGenerator": [
+        26152
+      ],
+      "IShields": [
+        26215
+      ],
+      "IShieldsAPI": [
+        26337
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:1679:23",
+    "nodes": [
+      {
+        "id": 26217,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:23",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 26218,
+        "nodeType": "ImportDirective",
+        "src": "67:24:23",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "file": "./IShields.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26338,
+        "sourceUnit": 26216,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26219,
+        "nodeType": "ImportDirective",
+        "src": "92:31:23",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "file": "./IFieldGenerator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26338,
+        "sourceUnit": 26113,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26220,
+        "nodeType": "ImportDirective",
+        "src": "124:34:23",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "file": "./IHardwareGenerator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26338,
+        "sourceUnit": 26153,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26221,
+        "nodeType": "ImportDirective",
+        "src": "159:31:23",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "file": "./IFrameGenerator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26338,
+        "sourceUnit": 26131,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26337,
+        "nodeType": "ContractDefinition",
+        "src": "192:1528:23",
+        "nodes": [
+          {
+            "id": 26229,
+            "nodeType": "FunctionDefinition",
+            "src": "220:108:23",
+            "nodes": [],
+            "functionSelector": "40911db1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getShield",
+            "nameLocation": "229:9:23",
+            "parameters": {
+              "id": 26224,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26223,
+                  "mutability": "mutable",
+                  "name": "shieldId",
+                  "nameLocation": "247:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26229,
+                  "src": "239:16:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26222,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "239:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "238:18:23"
+            },
+            "returnParameters": {
+              "id": 26228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26227,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26229,
+                  "src": "304:22:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Shield_$26186_memory_ptr",
+                    "typeString": "struct IShields.Shield"
+                  },
+                  "typeName": {
+                    "id": 26226,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26225,
+                      "name": "IShields.Shield",
+                      "nameLocations": [
+                        "304:8:23",
+                        "313:6:23"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26186,
+                      "src": "304:15:23"
+                    },
+                    "referencedDeclaration": 26186,
+                    "src": "304:15:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Shield_$26186_storage_ptr",
+                      "typeString": "struct IShields.Shield"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "303:24:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26236,
+            "nodeType": "FunctionDefinition",
+            "src": "334:102:23",
+            "nodes": [],
+            "functionSelector": "8173d343",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getShieldSVG",
+            "nameLocation": "343:12:23",
+            "parameters": {
+              "id": 26232,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26231,
+                  "mutability": "mutable",
+                  "name": "shieldId",
+                  "nameLocation": "364:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26236,
+                  "src": "356:16:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26230,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "355:18:23"
+            },
+            "returnParameters": {
+              "id": 26235,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26234,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26236,
+                  "src": "421:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26233,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "421:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "420:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26251,
+            "nodeType": "FunctionDefinition",
+            "src": "442:168:23",
+            "nodes": [],
+            "functionSelector": "b63e7046",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getShieldSVG",
+            "nameLocation": "451:12:23",
+            "parameters": {
+              "id": 26247,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26238,
+                  "mutability": "mutable",
+                  "name": "field",
+                  "nameLocation": "480:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26251,
+                  "src": "473:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26237,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26242,
+                  "mutability": "mutable",
+                  "name": "colors",
+                  "nameLocation": "512:6:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26251,
+                  "src": "495:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint24_$4_memory_ptr",
+                    "typeString": "uint24[4]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 26239,
+                      "name": "uint24",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "495:6:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint24",
+                        "typeString": "uint24"
+                      }
+                    },
+                    "id": 26241,
+                    "length": {
+                      "hexValue": "34",
+                      "id": 26240,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "502:1:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "nodeType": "ArrayTypeName",
+                    "src": "495:9:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint24_$4_storage_ptr",
+                      "typeString": "uint24[4]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26244,
+                  "mutability": "mutable",
+                  "name": "hardware",
+                  "nameLocation": "535:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26251,
+                  "src": "528:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26243,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "528:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26246,
+                  "mutability": "mutable",
+                  "name": "frame",
+                  "nameLocation": "560:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26251,
+                  "src": "553:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26245,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "463:108:23"
+            },
+            "returnParameters": {
+              "id": 26250,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26249,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26251,
+                  "src": "595:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26248,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "595:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "594:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26258,
+            "nodeType": "FunctionDefinition",
+            "src": "616:70:23",
+            "nodes": [],
+            "functionSelector": "c3fa3d70",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isShieldBuilt",
+            "nameLocation": "625:13:23",
+            "parameters": {
+              "id": 26254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26253,
+                  "mutability": "mutable",
+                  "name": "shieldId",
+                  "nameLocation": "647:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26258,
+                  "src": "639:16:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26252,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "639:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "638:18:23"
+            },
+            "returnParameters": {
+              "id": 26257,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26256,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26258,
+                  "src": "680:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 26255,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "680:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "679:6:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26270,
+            "nodeType": "FunctionDefinition",
+            "src": "692:138:23",
+            "nodes": [],
+            "functionSelector": "eac67b4c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getField",
+            "nameLocation": "701:8:23",
+            "parameters": {
+              "id": 26265,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26260,
+                  "mutability": "mutable",
+                  "name": "field",
+                  "nameLocation": "717:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26270,
+                  "src": "710:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26259,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "710:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26264,
+                  "mutability": "mutable",
+                  "name": "colors",
+                  "nameLocation": "741:6:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26270,
+                  "src": "724:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint24_$4_memory_ptr",
+                    "typeString": "uint24[4]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 26261,
+                      "name": "uint24",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "724:6:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint24",
+                        "typeString": "uint24"
+                      }
+                    },
+                    "id": 26263,
+                    "length": {
+                      "hexValue": "34",
+                      "id": 26262,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "731:1:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "nodeType": "ArrayTypeName",
+                    "src": "724:9:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint24_$4_storage_ptr",
+                      "typeString": "uint24[4]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "709:39:23"
+            },
+            "returnParameters": {
+              "id": 26269,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26268,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26270,
+                  "src": "796:32:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FieldData_$26099_memory_ptr",
+                    "typeString": "struct IFieldGenerator.FieldData"
+                  },
+                  "typeName": {
+                    "id": 26267,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26266,
+                      "name": "IFieldGenerator.FieldData",
+                      "nameLocations": [
+                        "796:15:23",
+                        "812:9:23"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26099,
+                      "src": "796:25:23"
+                    },
+                    "referencedDeclaration": 26099,
+                    "src": "796:25:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FieldData_$26099_storage_ptr",
+                      "typeString": "struct IFieldGenerator.FieldData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:34:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26281,
+            "nodeType": "FunctionDefinition",
+            "src": "836:124:23",
+            "nodes": [],
+            "functionSelector": "ba2910cc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFieldTitle",
+            "nameLocation": "845:13:23",
+            "parameters": {
+              "id": 26277,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26272,
+                  "mutability": "mutable",
+                  "name": "field",
+                  "nameLocation": "866:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26281,
+                  "src": "859:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26271,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "859:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26276,
+                  "mutability": "mutable",
+                  "name": "colors",
+                  "nameLocation": "890:6:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26281,
+                  "src": "873:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint24_$4_memory_ptr",
+                    "typeString": "uint24[4]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 26273,
+                      "name": "uint24",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "873:6:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint24",
+                        "typeString": "uint24"
+                      }
+                    },
+                    "id": 26275,
+                    "length": {
+                      "hexValue": "34",
+                      "id": 26274,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "880:1:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "nodeType": "ArrayTypeName",
+                    "src": "873:9:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint24_$4_storage_ptr",
+                      "typeString": "uint24[4]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "858:39:23"
+            },
+            "returnParameters": {
+              "id": 26280,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26279,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26281,
+                  "src": "945:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26278,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "945:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "944:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26292,
+            "nodeType": "FunctionDefinition",
+            "src": "966:122:23",
+            "nodes": [],
+            "functionSelector": "e148f19e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFieldSVG",
+            "nameLocation": "975:11:23",
+            "parameters": {
+              "id": 26288,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26283,
+                  "mutability": "mutable",
+                  "name": "field",
+                  "nameLocation": "994:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26292,
+                  "src": "987:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26282,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "987:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26287,
+                  "mutability": "mutable",
+                  "name": "colors",
+                  "nameLocation": "1018:6:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26292,
+                  "src": "1001:23:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint24_$4_memory_ptr",
+                    "typeString": "uint24[4]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 26284,
+                      "name": "uint24",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1001:6:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint24",
+                        "typeString": "uint24"
+                      }
+                    },
+                    "id": 26286,
+                    "length": {
+                      "hexValue": "34",
+                      "id": 26285,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1008:1:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "nodeType": "ArrayTypeName",
+                    "src": "1001:9:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint24_$4_storage_ptr",
+                      "typeString": "uint24[4]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "986:39:23"
+            },
+            "returnParameters": {
+              "id": 26291,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26290,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26292,
+                  "src": "1073:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26289,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1073:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1072:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26300,
+            "nodeType": "FunctionDefinition",
+            "src": "1094:125:23",
+            "nodes": [],
+            "functionSelector": "31758d92",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHardware",
+            "nameLocation": "1103:11:23",
+            "parameters": {
+              "id": 26295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26294,
+                  "mutability": "mutable",
+                  "name": "hardware",
+                  "nameLocation": "1122:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26300,
+                  "src": "1115:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26293,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1115:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1114:17:23"
+            },
+            "returnParameters": {
+              "id": 26299,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26298,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26300,
+                  "src": "1179:38:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_HardwareData_$26143_memory_ptr",
+                    "typeString": "struct IHardwareGenerator.HardwareData"
+                  },
+                  "typeName": {
+                    "id": 26297,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26296,
+                      "name": "IHardwareGenerator.HardwareData",
+                      "nameLocations": [
+                        "1179:18:23",
+                        "1198:12:23"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26143,
+                      "src": "1179:31:23"
+                    },
+                    "referencedDeclaration": 26143,
+                    "src": "1179:31:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_HardwareData_$26143_storage_ptr",
+                      "typeString": "struct IHardwareGenerator.HardwareData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1178:40:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26307,
+            "nodeType": "FunctionDefinition",
+            "src": "1225:105:23",
+            "nodes": [],
+            "functionSelector": "8232060e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHardwareTitle",
+            "nameLocation": "1234:16:23",
+            "parameters": {
+              "id": 26303,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26302,
+                  "mutability": "mutable",
+                  "name": "hardware",
+                  "nameLocation": "1258:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26307,
+                  "src": "1251:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26301,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1251:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1250:17:23"
+            },
+            "returnParameters": {
+              "id": 26306,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26305,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26307,
+                  "src": "1315:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26304,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1315:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1314:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26314,
+            "nodeType": "FunctionDefinition",
+            "src": "1336:103:23",
+            "nodes": [],
+            "functionSelector": "b38b5b82",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHardwareSVG",
+            "nameLocation": "1345:14:23",
+            "parameters": {
+              "id": 26310,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26309,
+                  "mutability": "mutable",
+                  "name": "hardware",
+                  "nameLocation": "1367:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26314,
+                  "src": "1360:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26308,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1360:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1359:17:23"
+            },
+            "returnParameters": {
+              "id": 26313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26312,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26314,
+                  "src": "1424:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26311,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1424:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1423:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26322,
+            "nodeType": "FunctionDefinition",
+            "src": "1445:113:23",
+            "nodes": [],
+            "functionSelector": "492e2fdf",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFrame",
+            "nameLocation": "1454:8:23",
+            "parameters": {
+              "id": 26317,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26316,
+                  "mutability": "mutable",
+                  "name": "frame",
+                  "nameLocation": "1470:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26322,
+                  "src": "1463:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26315,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1463:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1462:14:23"
+            },
+            "returnParameters": {
+              "id": 26321,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26320,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26322,
+                  "src": "1524:32:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FrameData_$26121_memory_ptr",
+                    "typeString": "struct IFrameGenerator.FrameData"
+                  },
+                  "typeName": {
+                    "id": 26319,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26318,
+                      "name": "IFrameGenerator.FrameData",
+                      "nameLocations": [
+                        "1524:15:23",
+                        "1540:9:23"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26121,
+                      "src": "1524:25:23"
+                    },
+                    "referencedDeclaration": 26121,
+                    "src": "1524:25:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FrameData_$26121_storage_ptr",
+                      "typeString": "struct IFrameGenerator.FrameData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1523:34:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26329,
+            "nodeType": "FunctionDefinition",
+            "src": "1564:75:23",
+            "nodes": [],
+            "functionSelector": "d98abf05",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFrameTitle",
+            "nameLocation": "1573:13:23",
+            "parameters": {
+              "id": 26325,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26324,
+                  "mutability": "mutable",
+                  "name": "frame",
+                  "nameLocation": "1594:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26329,
+                  "src": "1587:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26323,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1587:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1586:14:23"
+            },
+            "returnParameters": {
+              "id": 26328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26327,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26329,
+                  "src": "1624:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26326,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1624:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1623:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26336,
+            "nodeType": "FunctionDefinition",
+            "src": "1645:73:23",
+            "nodes": [],
+            "functionSelector": "abd94f84",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFrameSVG",
+            "nameLocation": "1654:11:23",
+            "parameters": {
+              "id": 26332,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26331,
+                  "mutability": "mutable",
+                  "name": "frame",
+                  "nameLocation": "1673:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26336,
+                  "src": "1666:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 26330,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1666:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1665:14:23"
+            },
+            "returnParameters": {
+              "id": 26335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26334,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26336,
+                  "src": "1703:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26333,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1703:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1702:15:23"
+            },
+            "scope": 26337,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IShieldsAPI",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26337
+        ],
+        "name": "IShieldsAPI",
+        "nameLocation": "202:11:23",
+        "scope": 26338,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "The Unlicense"
+  },
+  "id": 23
+}

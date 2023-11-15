@@ -14,7 +14,7 @@ contract DeployPuzzle13 is DeployBase {
     function run() external {
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17646736);
         vm.selectFork(forkId);
-        console.log("PingPong.generate():\n%x", IPuzzle(0x7E59780463e9fd543E725902f81BC4a51b1634eC).generate(mainnetWinner));
+        console.log("PingPong.generate():\n%s", IPuzzle(0x7E59780463e9fd543E725902f81BC4a51b1634eC).generate(mainnetWinner));
         vm.prank(mainnetWinner);
 
         // testSolved(0x123);

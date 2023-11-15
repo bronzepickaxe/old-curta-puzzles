@@ -13,7 +13,7 @@ contract DeployPuzzle4 is DeployBase {
     function run() external {
         puzzle = new WhatAreBuckets();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),16912910);
-        console.log("WhatAreBuckets.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("WhatAreBuckets.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

@@ -14,7 +14,7 @@ contract DeployPuzzle6 is DeployBase {
     function run() external {
         puzzle = new EventHorizon();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),16975460);
-        console.log("EventHorizon.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("EventHorizon.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

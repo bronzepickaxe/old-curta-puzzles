@@ -14,7 +14,7 @@ contract DeployPuzzle7 is DeployBase {
     function run() external {
         puzzle = new MiniMutant();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17053260);
-        console.log("MiniMutant.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("MiniMutant.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

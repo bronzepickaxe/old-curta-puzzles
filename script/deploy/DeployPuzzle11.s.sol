@@ -14,7 +14,7 @@ contract DeployPuzzle11 is DeployBase {
     function run() external {
         puzzle = new BabyItsMe();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17331030);
-        console.log("BabyItsMe.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("BabyItsMe.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

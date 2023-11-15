@@ -13,7 +13,7 @@ contract DeployPuzzle3 is DeployBase {
     function run() external {
         puzzle = new TinySig();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),16856852);
-        console.log("TinySig.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("TinySig.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

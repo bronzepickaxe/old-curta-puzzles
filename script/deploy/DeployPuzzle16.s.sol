@@ -12,7 +12,7 @@ contract DeployPuzzle16 is DeployBase {
     function run() external {
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17972216);
         vm.selectFork(forkId);
-        console.log("Elohim.generate():\n%x", IPuzzle(0xE92126D243D8290B47Af8b198B662Bf301439830).generate(mainnetWinner));
+        console.log("Elohim.generate():\n%s", IPuzzle(0xE92126D243D8290B47Af8b198B662Bf301439830).generate(mainnetWinner));
         vm.prank(mainnetWinner);
 
         // testSolved(0x123);

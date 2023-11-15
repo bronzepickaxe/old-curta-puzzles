@@ -1,0 +1,4439 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "src",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "lib/forge-std/src/Common.sol": {
+      "lastModificationDate": 1700067376592,
+      "contentHash": "ea3ecfaf9e52274a3ca35df6f809f120",
+      "sourceName": "lib/forge-std/src/Common.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/solvm/lib/ds-test/src/test.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "CommonBase": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Common.sol/CommonBase.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Components.sol": {
+      "lastModificationDate": 1700067376592,
+      "contentHash": "745a7e4623550699a5e0333bcf4f0184",
+      "sourceName": "lib/forge-std/src/Components.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/solvm/lib/ds-test/src/test.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Components": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Components.sol/Components.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Script.sol": {
+      "lastModificationDate": 1700067376592,
+      "contentHash": "a0d7ca329f3374a1698e48c493ab4f1a",
+      "sourceName": "lib/forge-std/src/Script.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/solvm/lib/ds-test/src/test.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Script": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Script.sol/Script.json"
+        },
+        "ScriptBase": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Script.sol/ScriptBase.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdAssertions.sol": {
+      "lastModificationDate": 1700067376592,
+      "contentHash": "d3f7487aaf77c715fdbdea89ea4f8399",
+      "sourceName": "lib/forge-std/src/StdAssertions.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/StdMath.sol",
+        "lib/solvm/lib/ds-test/src/test.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdAssertions": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdAssertions.sol/StdAssertions.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdCheats.sol": {
+      "lastModificationDate": 1700067376592,
+      "contentHash": "e7337996cb2aa604814b2994c9e65826",
+      "sourceName": "lib/forge-std/src/StdCheats.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdCheats": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdCheats.sol/StdCheats.json"
+        },
+        "StdCheatsSafe": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdCheats.sol/StdCheatsSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdError.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "64c896e1276a291776e5ea5aecb3870a",
+      "sourceName": "lib/forge-std/src/StdError.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdError": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdError.sol/stdError.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdJson.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "1df82178ad2d4556c856d0ca4b8f614d",
+      "sourceName": "lib/forge-std/src/StdJson.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "stdJson": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdJson.sol/stdJson.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdMath.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "9da8f453eba6bb98f3d75bc6822bfb29",
+      "sourceName": "lib/forge-std/src/StdMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdMath": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdMath.sol/stdMath.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdStorage.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "3f1bd6d72997330e2f556ececa8114a7",
+      "sourceName": "lib/forge-std/src/StdStorage.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdStorage": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdStorage.sol/stdStorage.json"
+        },
+        "stdStorageSafe": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdStorage.sol/stdStorageSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdUtils.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "1d1d6bf7b4609a675d06cc41f8dcd5ad",
+      "sourceName": "lib/forge-std/src/StdUtils.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdUtils": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "StdUtils.sol/StdUtils.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Test.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "23c73ad6c59f5d629042303f8ffc1359",
+      "sourceName": "lib/forge-std/src/Test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/solvm/lib/ds-test/src/test.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Test": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Test.sol/Test.json"
+        },
+        "TestBase": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Test.sol/TestBase.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Vm.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "af4e1189b1763fe0d73a21d17cc2ea9c",
+      "sourceName": "lib/forge-std/src/Vm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Vm": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Vm.sol/Vm.json"
+        },
+        "VmSafe": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Vm.sol/VmSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/console.sol": {
+      "lastModificationDate": 1700067376593,
+      "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
+      "sourceName": "lib/forge-std/src/console.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "console.sol/console.json"
+        }
+      }
+    },
+    "lib/forge-std/src/console2.sol": {
+      "lastModificationDate": 1700067376594,
+      "contentHash": "493035087920d89b7c215d662e53ace3",
+      "sourceName": "lib/forge-std/src/console2.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console2": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "console2.sol/console2.json"
+        }
+      }
+    },
+    "lib/foundry-huff/lib/solidity-stringutils/strings.sol": {
+      "lastModificationDate": 1700067376604,
+      "contentHash": "a35219f3ed241165477dabdfe496165a",
+      "sourceName": "lib/foundry-huff/lib/solidity-stringutils/strings.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "strings": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "strings.sol/strings.json"
+        }
+      }
+    },
+    "lib/foundry-huff/src/HuffConfig.sol": {
+      "lastModificationDate": 1700067376604,
+      "contentHash": "90eb000a017baa2544e6984375b80b0f",
+      "sourceName": "lib/foundry-huff/src/HuffConfig.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol",
+        "lib/foundry-huff/lib/solidity-stringutils/strings.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "HuffConfig": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "HuffConfig.sol/HuffConfig.json"
+        }
+      }
+    },
+    "lib/foundry-huff/src/HuffDeployer.sol": {
+      "lastModificationDate": 1700067376605,
+      "contentHash": "9d94a12fe68a13814ced41ddbdad1eb4",
+      "sourceName": "lib/foundry-huff/src/HuffDeployer.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol",
+        "lib/foundry-huff/lib/solidity-stringutils/strings.sol",
+        "lib/foundry-huff/src/HuffConfig.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "HuffDeployer": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "HuffDeployer.sol/HuffDeployer.json"
+        }
+      }
+    },
+    "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol": {
+      "lastModificationDate": 1700067376607,
+      "contentHash": "3ecb679a0d07d4663d0309a70e0116e1",
+      "sourceName": "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "IEmblemWeaver": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IEmblemWeaver.sol/IEmblemWeaver.json"
+        }
+      }
+    },
+    "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": {
+      "lastModificationDate": 1700067376607,
+      "contentHash": "22f86e0ff371e26d3924cc176821de6d",
+      "sourceName": "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "IFieldGenerator": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IFieldGenerator.sol/IFieldGenerator.json"
+        }
+      }
+    },
+    "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": {
+      "lastModificationDate": 1700067376607,
+      "contentHash": "5f6e9753d668abb355fc7878a91a326c",
+      "sourceName": "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "IFrameGenerator": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IFrameGenerator.sol/IFrameGenerator.json"
+        }
+      }
+    },
+    "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": {
+      "lastModificationDate": 1700067376607,
+      "contentHash": "dff2926dc2e42e33a5ec6cae2a407b45",
+      "sourceName": "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "IHardwareGenerator": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IHardwareGenerator.sol/IHardwareGenerator.json"
+        }
+      }
+    },
+    "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol": {
+      "lastModificationDate": 1700067376607,
+      "contentHash": "985780694112b613c96fab869946a9ed",
+      "sourceName": "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "IShieldBadgeSVGs": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IShieldBadgeSVGs.sol/IShieldBadgeSVGs.json"
+        }
+      }
+    },
+    "lib/shields-api-contract/contracts/interfaces/IShields.sol": {
+      "lastModificationDate": 1700067376607,
+      "contentHash": "e8aa6c3067c89a6ca33c4c4d5f8eb691",
+      "sourceName": "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "IShields": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IShields.sol/IShields.json"
+        }
+      }
+    },
+    "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol": {
+      "lastModificationDate": 1700067376607,
+      "contentHash": "c89166a637c57b174057f99c00a75aa7",
+      "sourceName": "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "IShieldsAPI": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IShieldsAPI.sol/IShieldsAPI.json"
+        }
+      }
+    },
+    "lib/solady/src/utils/LibString.sol": {
+      "lastModificationDate": 1700067376619,
+      "contentHash": "b3205f10599c269677b435f38c910c5d",
+      "sourceName": "lib/solady/src/utils/LibString.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {
+        "LibString": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "utils/LibString.sol/LibString.json"
+        }
+      }
+    },
+    "lib/solmate/src/auth/Owned.sol": {
+      "lastModificationDate": 1700067376626,
+      "contentHash": "11fec455b72d2743b77d783d6017e1e9",
+      "sourceName": "lib/solmate/src/auth/Owned.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "Owned": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Owned.sol/Owned.json"
+        }
+      }
+    },
+    "lib/solmate/src/tokens/ERC20.sol": {
+      "lastModificationDate": 1700067376629,
+      "contentHash": "0c7c7ada139062536af09d69d96d395c",
+      "sourceName": "lib/solmate/src/tokens/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "tokens/ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "lib/solmate/src/tokens/ERC721.sol": {
+      "lastModificationDate": 1700067376629,
+      "contentHash": "ecc06cefc5404b9e1adbc2e459d5757e",
+      "sourceName": "lib/solmate/src/tokens/ERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC721": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "tokens/ERC721.sol/ERC721.json"
+        },
+        "ERC721TokenReceiver": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "tokens/ERC721.sol/ERC721TokenReceiver.json"
+        }
+      }
+    },
+    "lib/solmate/src/utils/Bytes32AddressLib.sol": {
+      "lastModificationDate": 1700067376629,
+      "contentHash": "8a05c8576a41e44d3e96a6e169162327",
+      "sourceName": "lib/solmate/src/utils/Bytes32AddressLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "Bytes32AddressLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Bytes32AddressLib.sol/Bytes32AddressLib.json"
+        }
+      }
+    },
+    "lib/solmate/src/utils/LibString.sol": {
+      "lastModificationDate": 1700067376630,
+      "contentHash": "a6389de7be2f21dff5bf9d3f958291b3",
+      "sourceName": "lib/solmate/src/utils/LibString.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LibString": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "src/utils/LibString.sol/LibString.json"
+        }
+      }
+    },
+    "lib/solmate/src/utils/SafeTransferLib.sol": {
+      "lastModificationDate": 1700067376630,
+      "contentHash": "668dd0a8a175344c51036ae7fcb01d36",
+      "sourceName": "lib/solmate/src/utils/SafeTransferLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/src/tokens/ERC20.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SafeTransferLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "SafeTransferLib.sol/SafeTransferLib.json"
+        }
+      }
+    },
+    "lib/solvm/lib/ds-test/src/test.sol": {
+      "lastModificationDate": 1700067376631,
+      "contentHash": "9febff9d09f18af5306669dc276c4c43",
+      "sourceName": "lib/solvm/lib/ds-test/src/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "DSTest": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "test.sol/DSTest.json"
+        }
+      }
+    },
+    "lib/solvm/lib/memmove/src/Array.sol": {
+      "lastModificationDate": 1700067376636,
+      "contentHash": "ecc40c24a859c5bd5090f2f932601d63",
+      "sourceName": "lib/solvm/lib/memmove/src/Array.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "ArrayLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Array.sol/ArrayLib.json"
+        },
+        "RefArrayLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Array.sol/RefArrayLib.json"
+        }
+      }
+    },
+    "lib/solvm/lib/memmove/src/LinkedList.sol": {
+      "lastModificationDate": 1700067376637,
+      "contentHash": "d97eb113596d10ea6923492617aa02bf",
+      "sourceName": "lib/solvm/lib/memmove/src/LinkedList.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "IndexableLinkedListLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "LinkedList.sol/IndexableLinkedListLib.json"
+        },
+        "LinkedListLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "LinkedList.sol/LinkedListLib.json"
+        }
+      }
+    },
+    "lib/solvm/lib/memmove/src/Mapping.sol": {
+      "lastModificationDate": 1700067376637,
+      "contentHash": "c57c48ba77d45f4442c79632a8bb32ce",
+      "sourceName": "lib/solvm/lib/memmove/src/Mapping.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "MappingLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Mapping.sol/MappingLib.json"
+        }
+      }
+    },
+    "lib/solvm/src/Evm.sol": {
+      "lastModificationDate": 1700067376637,
+      "contentHash": "7d1a73552a1e6e5a3303928ebf1ea9c8",
+      "sourceName": "lib/solvm/src/Evm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol",
+        "lib/solvm/lib/memmove/src/Mapping.sol",
+        "lib/solvm/src/EvmContext.sol",
+        "lib/solvm/src/Memory.sol",
+        "lib/solvm/src/Stack.sol",
+        "lib/solvm/src/Storage.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "EvmLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Evm.sol/EvmLib.json"
+        }
+      }
+    },
+    "lib/solvm/src/EvmContext.sol": {
+      "lastModificationDate": 1700067376638,
+      "contentHash": "cd043b25bdef2c6e29ae7481398646bc",
+      "sourceName": "lib/solvm/src/EvmContext.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol",
+        "lib/solvm/lib/memmove/src/Mapping.sol",
+        "lib/solvm/src/EvmContext.sol",
+        "lib/solvm/src/Memory.sol",
+        "lib/solvm/src/Stack.sol",
+        "lib/solvm/src/Storage.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "EvmContextLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "EvmContext.sol/EvmContextLib.json"
+        }
+      }
+    },
+    "lib/solvm/src/Memory.sol": {
+      "lastModificationDate": 1700067376638,
+      "contentHash": "c678894aa1167e11675e0830924c01de",
+      "sourceName": "lib/solvm/src/Memory.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol",
+        "lib/solvm/lib/memmove/src/Mapping.sol",
+        "lib/solvm/src/EvmContext.sol",
+        "lib/solvm/src/Memory.sol",
+        "lib/solvm/src/Stack.sol",
+        "lib/solvm/src/Storage.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "MemoryLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Memory.sol/MemoryLib.json"
+        }
+      }
+    },
+    "lib/solvm/src/Stack.sol": {
+      "lastModificationDate": 1700067376638,
+      "contentHash": "b500ce95a85efda2797f38ed893f7ac4",
+      "sourceName": "lib/solvm/src/Stack.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol",
+        "lib/solvm/lib/memmove/src/Mapping.sol",
+        "lib/solvm/src/EvmContext.sol",
+        "lib/solvm/src/Memory.sol",
+        "lib/solvm/src/Stack.sol",
+        "lib/solvm/src/Storage.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "BinOps": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Stack.sol/BinOps.json"
+        },
+        "Builtins": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Stack.sol/Builtins.json"
+        },
+        "ControlFlow": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Stack.sol/ControlFlow.json"
+        },
+        "MathOps": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Stack.sol/MathOps.json"
+        },
+        "StackLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Stack.sol/StackLib.json"
+        }
+      }
+    },
+    "lib/solvm/src/Storage.sol": {
+      "lastModificationDate": 1700067376638,
+      "contentHash": "9d3c98d688e2063fd04dc212a501b6e9",
+      "sourceName": "lib/solvm/src/Storage.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol",
+        "lib/solvm/lib/memmove/src/Mapping.sol",
+        "lib/solvm/src/EvmContext.sol",
+        "lib/solvm/src/Memory.sol",
+        "lib/solvm/src/Stack.sol",
+        "lib/solvm/src/Storage.sol"
+      ],
+      "versionRequirement": ">=0.8.13, <0.9.0",
+      "artifacts": {
+        "StorageLib": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Storage.sol/StorageLib.json"
+        }
+      }
+    },
+    "script/deploy/DeployBase.s.sol": {
+      "lastModificationDate": 1700067376638,
+      "contentHash": "1d5b6f483320e59721c14cff0225cee9",
+      "sourceName": "script/deploy/DeployBase.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployBase": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployBase.s.sol/DeployBase.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle1.s.sol": {
+      "lastModificationDate": 1700067432861,
+      "contentHash": "6303cf1b73e2b645dccdfbdc3a0c0fa3",
+      "sourceName": "script/deploy/DeployPuzzle1.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-01/TwoTimesFourIsEight.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle1": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle1.s.sol/DeployPuzzle1.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle10.s.sol": {
+      "lastModificationDate": 1700067799775,
+      "contentHash": "06d6a6fe1f8a1286bba4c9c8eeb6a478",
+      "sourceName": "script/deploy/DeployPuzzle10.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-10/Chess.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle10": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle10.s.sol/DeployPuzzle10.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle11.s.sol": {
+      "lastModificationDate": 1700067799775,
+      "contentHash": "4eaf26a4aa578580ac281201500bdfc5",
+      "sourceName": "script/deploy/DeployPuzzle11.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-11/BabyItsMe.sol",
+        "src/puzzles/puzzle-11/Verifier.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle11": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle11.s.sol/DeployPuzzle11.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle12.s.sol": {
+      "lastModificationDate": 1700067799751,
+      "contentHash": "b7151f7fd7f7147538ad010b73b0199b",
+      "sourceName": "script/deploy/DeployPuzzle12.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/foundry-huff/lib/solidity-stringutils/strings.sol",
+        "lib/foundry-huff/src/HuffConfig.sol",
+        "lib/foundry-huff/src/HuffDeployer.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle12": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle12.s.sol/DeployPuzzle12.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle13.s.sol": {
+      "lastModificationDate": 1700067799751,
+      "contentHash": "7acb445a3c8bb224078a64b9f8dfc9c0",
+      "sourceName": "script/deploy/DeployPuzzle13.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-13/PingPong.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle13": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle13.s.sol/DeployPuzzle13.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle14.s.sol": {
+      "lastModificationDate": 1700067799733,
+      "contentHash": "46446d8c6d5ed39eca2f1985415689f4",
+      "sourceName": "script/deploy/DeployPuzzle14.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/foundry-huff/lib/solidity-stringutils/strings.sol",
+        "lib/foundry-huff/src/HuffConfig.sol",
+        "lib/foundry-huff/src/HuffDeployer.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle14": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle14.s.sol/DeployPuzzle14.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle15.s.sol": {
+      "lastModificationDate": 1700067799780,
+      "contentHash": "f52bcfaedccc1368d6361941cc45656f",
+      "sourceName": "script/deploy/DeployPuzzle15.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/ERC20.sol",
+        "src/interfaces/ERC721.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IERC721.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-15/BillyTheBull.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle15": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle15.s.sol/DeployPuzzle15.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle16.s.sol": {
+      "lastModificationDate": 1700067799775,
+      "contentHash": "d1c2823134540a7f9523eddc2b89eb40",
+      "sourceName": "script/deploy/DeployPuzzle16.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle16": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle16.s.sol/DeployPuzzle16.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle17.s.sol": {
+      "lastModificationDate": 1700067799775,
+      "contentHash": "c26fd6b198fec3612338f61abc27b347",
+      "sourceName": "script/deploy/DeployPuzzle17.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle17": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle17.s.sol/DeployPuzzle17.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle18.s.sol": {
+      "lastModificationDate": 1700067799725,
+      "contentHash": "2a07e746842441fb35f9cd392eb03524",
+      "sourceName": "script/deploy/DeployPuzzle18.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle18": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle18.s.sol/DeployPuzzle18.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle2.s.sol": {
+      "lastModificationDate": 1700067799779,
+      "contentHash": "ce6612b54e6d67b82f348ae1b6e4d17f",
+      "sourceName": "script/deploy/DeployPuzzle2.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-02/F1A9.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle2": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle2.s.sol/DeployPuzzle2.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle3.s.sol": {
+      "lastModificationDate": 1700067799725,
+      "contentHash": "7548ccb3dc38bde0d0d17284f1d72b60",
+      "sourceName": "script/deploy/DeployPuzzle3.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-03/TinySig.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle3": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle3.s.sol/DeployPuzzle3.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle4.s.sol": {
+      "lastModificationDate": 1700067799785,
+      "contentHash": "7e11ed8206bc4a13c1714bc22920c07d",
+      "sourceName": "script/deploy/DeployPuzzle4.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-04/WhatAreBuckets.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle4": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle4.s.sol/DeployPuzzle4.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle6.s.sol": {
+      "lastModificationDate": 1700067799779,
+      "contentHash": "8ca7aa313278b343fd23b085936a94b7",
+      "sourceName": "script/deploy/DeployPuzzle6.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-06/EventHorizon.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle6": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle6.s.sol/DeployPuzzle6.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle7.s.sol": {
+      "lastModificationDate": 1700067799733,
+      "contentHash": "a988f29178a61b219b69e596717292df",
+      "sourceName": "script/deploy/DeployPuzzle7.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol",
+        "lib/solvm/lib/memmove/src/Mapping.sol",
+        "lib/solvm/src/Evm.sol",
+        "lib/solvm/src/EvmContext.sol",
+        "lib/solvm/src/Memory.sol",
+        "lib/solvm/src/Stack.sol",
+        "lib/solvm/src/Storage.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-07/MiniMutant.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle7": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle7.s.sol/DeployPuzzle7.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle8.s.sol": {
+      "lastModificationDate": 1700067799725,
+      "contentHash": "5e828015d85743afa07d3ba0f804d028",
+      "sourceName": "script/deploy/DeployPuzzle8.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-08/Chal.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle8": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle8.s.sol/DeployPuzzle8.json"
+        }
+      }
+    },
+    "script/deploy/DeployPuzzle9.s.sol": {
+      "lastModificationDate": 1700067799725,
+      "contentHash": "dd8ecf4973fb46448c2aca34820b4102",
+      "sourceName": "script/deploy/DeployPuzzle9.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Common.sol",
+        "lib/forge-std/src/Components.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/foundry-huff/lib/solidity-stringutils/strings.sol",
+        "lib/foundry-huff/src/HuffConfig.sol",
+        "lib/foundry-huff/src/HuffDeployer.sol",
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solvm/lib/ds-test/src/test.sol",
+        "script/deploy/DeployBase.s.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "DeployPuzzle9": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "DeployPuzzle9.s.sol/DeployPuzzle9.json"
+        }
+      }
+    },
+    "src/AuthorshipToken.sol": {
+      "lastModificationDate": 1700067376639,
+      "contentHash": "dd0cf5fe411b7a68f8d942a26d969e8b",
+      "sourceName": "src/AuthorshipToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "AuthorshipToken": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "AuthorshipToken.sol/AuthorshipToken.json"
+        }
+      }
+    },
+    "src/Curta.sol": {
+      "lastModificationDate": 1700067376639,
+      "contentHash": "4b4e04a70f0030c599661380b6428f09",
+      "sourceName": "src/Curta.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC20.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "lib/solmate/src/utils/SafeTransferLib.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/FlagsERC721.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "Curta": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Curta.sol/Curta.json"
+        }
+      }
+    },
+    "src/FlagRenderer.sol": {
+      "lastModificationDate": 1700067376639,
+      "contentHash": "fbb589f2af2bb15045c7dcc09d37f00c",
+      "sourceName": "src/FlagRenderer.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "FlagRenderer": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "FlagRenderer.sol/FlagRenderer.json"
+        }
+      }
+    },
+    "src/FlagsERC721.sol": {
+      "lastModificationDate": 1700067376639,
+      "contentHash": "6b04ab65da3c73f5d5c6464f9db30d47",
+      "sourceName": "src/FlagsERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/src/tokens/ERC721.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "FlagsERC721": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "FlagsERC721.sol/FlagsERC721.json"
+        }
+      }
+    },
+    "src/interfaces/ERC20.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "0c7c7ada139062536af09d69d96d395c",
+      "sourceName": "src/interfaces/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "src/interfaces/ERC721.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "ecc06cefc5404b9e1adbc2e459d5757e",
+      "sourceName": "src/interfaces/ERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC721": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "ERC721.sol/ERC721.json"
+        },
+        "ERC721TokenReceiver": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "ERC721.sol/ERC721TokenReceiver.json"
+        }
+      }
+    },
+    "src/interfaces/IColormapRegistry.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "b91dfd25c62aa250e0b254d9abaff824",
+      "sourceName": "src/interfaces/IColormapRegistry.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPaletteGenerator.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "IColormapRegistry": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IColormapRegistry.sol/IColormapRegistry.json"
+        }
+      }
+    },
+    "src/interfaces/ICurta.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "ded783c45abdb8fb3d01a5a5c8818128",
+      "sourceName": "src/interfaces/ICurta.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "lib/shields-api-contract/contracts/interfaces/IShieldsAPI.sol",
+        "lib/solady/src/utils/LibString.sol",
+        "lib/solmate/src/auth/Owned.sol",
+        "lib/solmate/src/tokens/ERC721.sol",
+        "lib/solmate/src/utils/LibString.sol",
+        "src/AuthorshipToken.sol",
+        "src/FlagRenderer.sol",
+        "src/interfaces/IColormapRegistry.sol",
+        "src/interfaces/ICurta.sol",
+        "src/interfaces/IPaletteGenerator.sol",
+        "src/interfaces/IPuzzle.sol",
+        "src/utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "ICurta": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "ICurta.sol/ICurta.json"
+        }
+      }
+    },
+    "src/interfaces/IERC721.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "5393745359fd11bdacad30e586200d54",
+      "sourceName": "src/interfaces/IERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/ERC721.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC721": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IERC721.sol/IERC721.json"
+        }
+      }
+    },
+    "src/interfaces/IPaletteGenerator.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "dfdf2870f288d6faf19dbd459bba2e73",
+      "sourceName": "src/interfaces/IPaletteGenerator.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "IPaletteGenerator": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IPaletteGenerator.sol/IPaletteGenerator.json"
+        }
+      }
+    },
+    "src/interfaces/IPuzzle.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "1b6a31ad2e190f093288eca95af96f3b",
+      "sourceName": "src/interfaces/IPuzzle.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "IPuzzle": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "IPuzzle.sol/IPuzzle.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-01/TwoTimesFourIsEight.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "123d048d1a06e6fbedda8eec1806e955",
+      "sourceName": "src/puzzles/puzzle-01/TwoTimesFourIsEight.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "TwoTimesFourIsEight": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "TwoTimesFourIsEight.sol/TwoTimesFourIsEight.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-02/F1A9.sol": {
+      "lastModificationDate": 1700067376640,
+      "contentHash": "7b87e8337a274588521daed644c661fc",
+      "sourceName": "src/puzzles/puzzle-02/F1A9.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "F1A9": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "F1A9.sol/F1A9.json"
+        },
+        "ISolve": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "F1A9.sol/ISolve.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-03/TinySig.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "d44b8e48896abc623eaa57ab8398afef",
+      "sourceName": "src/puzzles/puzzle-03/TinySig.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "Deployer": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "TinySig.sol/Deployer.json"
+        },
+        "TinySig": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "TinySig.sol/TinySig.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-04/WhatAreBuckets.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "3ce54b7a376f6bb7f185d6b29d440263",
+      "sourceName": "src/puzzles/puzzle-04/WhatAreBuckets.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "WhatAreBuckets": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "WhatAreBuckets.sol/WhatAreBuckets.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-06/EventHorizon.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "b20ea3991aa00ce6938d4d981914ec39",
+      "sourceName": "src/puzzles/puzzle-06/EventHorizon.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "EventHorizon": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "EventHorizon.sol/EventHorizon.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-07/MiniMutant.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "dccce137d9d40dcc15009fae6921bcbd",
+      "sourceName": "src/puzzles/puzzle-07/MiniMutant.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solvm/lib/memmove/src/Array.sol",
+        "lib/solvm/lib/memmove/src/LinkedList.sol",
+        "lib/solvm/lib/memmove/src/Mapping.sol",
+        "lib/solvm/src/Evm.sol",
+        "lib/solvm/src/EvmContext.sol",
+        "lib/solvm/src/Memory.sol",
+        "lib/solvm/src/Stack.sol",
+        "lib/solvm/src/Storage.sol",
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "MiniMutant": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "MiniMutant.sol/MiniMutant.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-08/Chal.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "1d35bc3efee6052687dd8109d6eb7150",
+      "sourceName": "src/puzzles/puzzle-08/Chal.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "Chal": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Chal.sol/Chal.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-10/Chess.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "773d86586fa007ad96a058d9b2032cc8",
+      "sourceName": "src/puzzles/puzzle-10/Chess.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "Chess": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Chess.sol/Chess.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-11/BabyItsMe.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "f3f7250ccfa0e10015c9e7a590cba104",
+      "sourceName": "src/puzzles/puzzle-11/BabyItsMe.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol",
+        "src/puzzles/puzzle-11/Verifier.sol"
+      ],
+      "versionRequirement": "^0.8.20",
+      "artifacts": {
+        "BabyItsMe": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "BabyItsMe.sol/BabyItsMe.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-11/Verifier.sol": {
+      "lastModificationDate": 1700067376641,
+      "contentHash": "e002de00807504823f98083add089928",
+      "sourceName": "src/puzzles/puzzle-11/Verifier.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Pairing": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Verifier.sol/Pairing.json"
+        },
+        "Verifier": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Verifier.sol/Verifier.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-13/PingPong.sol": {
+      "lastModificationDate": 1700067376642,
+      "contentHash": "273253531de7c44762e37c5e5848e8ba",
+      "sourceName": "src/puzzles/puzzle-13/PingPong.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "IStarknetCore": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "PingPong.sol/IStarknetCore.json"
+        },
+        "PingPong": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "PingPong.sol/PingPong.json"
+        }
+      }
+    },
+    "src/puzzles/puzzle-15/BillyTheBull.sol": {
+      "lastModificationDate": 1700067376642,
+      "contentHash": "ca7fe6bc5175d63e0cb44125ac1cde3b",
+      "sourceName": "src/puzzles/puzzle-15/BillyTheBull.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/ERC20.sol",
+        "src/interfaces/ERC721.sol",
+        "src/interfaces/IERC721.sol",
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "BillyTheBull": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "BillyTheBull.sol/BillyTheBull.json"
+        },
+        "NFTOutlet": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "BillyTheBull.sol/NFTOutlet.json"
+        }
+      }
+    },
+    "src/utils/Base64.sol": {
+      "lastModificationDate": 1700067376642,
+      "contentHash": "f49a2c4d2eedf037f1fffcad9e416adc",
+      "sourceName": "src/utils/Base64.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "Base64": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "Base64.sol/Base64.json"
+        }
+      }
+    },
+    "src/utils/LibRLP.sol": {
+      "lastModificationDate": 1700067376642,
+      "contentHash": "5ec4835bd2e63275de9ff928e093d1a3",
+      "sourceName": "src/utils/LibRLP.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/src/utils/Bytes32AddressLib.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LibRLP": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "LibRLP.sol/LibRLP.json"
+        }
+      }
+    },
+    "src/utils/mock/MockPuzzle.sol": {
+      "lastModificationDate": 1700067376642,
+      "contentHash": "cf379eb55776b1e7ef779ec33eb63070",
+      "sourceName": "src/utils/mock/MockPuzzle.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 875
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/interfaces/IPuzzle.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "MockPuzzle": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "MockPuzzle.sol/MockPuzzle.json"
+        }
+      }
+    }
+  }
+}

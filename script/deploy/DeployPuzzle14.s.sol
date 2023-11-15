@@ -16,7 +16,7 @@ contract DeployPuzzle14 is DeployBase {
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17743334);
         vm.selectFork(forkId);
         puzzle = IPuzzle(HuffDeployer.deploy("../../src/puzzle-14/SacredGeometry"));
-        console.log("Labyrinth.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("Labyrinth.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.prank(mainnetWinner);
 
         // testSolved(0x123);

@@ -1,0 +1,318 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "enum IShields.ShieldBadge",
+          "name": "shieldBadge",
+          "type": "uint8"
+        }
+      ],
+      "name": "generateShieldBadgeSVG",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "generateShieldBadgeSVG(uint8)": "a975e752"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"enum IShields.ShieldBadge\",\"name\":\"shieldBadge\",\"type\":\"uint8\"}],\"name\":\"generateShieldBadgeSVG\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol\":\"IShieldBadgeSVGs\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol\":{\"keccak256\":\"0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600\",\"dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs\"]},\"lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol\":{\"keccak256\":\"0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad\",\"dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4\"]},\"lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol\":{\"keccak256\":\"0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e\",\"dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS\"]},\"lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol\":{\"keccak256\":\"0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887\",\"dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y\"]},\"lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol\":{\"keccak256\":\"0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf\",\"dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe\"]},\"lib/shields-api-contract/contracts/interfaces/IShields.sol\":{\"keccak256\":\"0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4\",\"dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "enum IShields.ShieldBadge",
+              "name": "shieldBadge",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "generateShieldBadgeSVG",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol": "IShieldBadgeSVGs"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol": {
+        "keccak256": "0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059",
+        "urls": [
+          "bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600",
+          "dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": {
+        "keccak256": "0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029",
+        "urls": [
+          "bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad",
+          "dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": {
+        "keccak256": "0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1",
+        "urls": [
+          "bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e",
+          "dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": {
+        "keccak256": "0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0",
+        "urls": [
+          "bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887",
+          "dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol": {
+        "keccak256": "0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c",
+        "urls": [
+          "bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf",
+          "dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShields.sol": {
+        "keccak256": "0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59",
+        "urls": [
+          "bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4",
+          "dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH"
+        ],
+        "license": "The Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+    "id": 26165,
+    "exportedSymbols": {
+      "IEmblemWeaver": [
+        26086
+      ],
+      "IShieldBadgeSVGs": [
+        26164
+      ],
+      "IShields": [
+        26215
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:215:21",
+    "nodes": [
+      {
+        "id": 26154,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:21",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 26155,
+        "nodeType": "ImportDirective",
+        "src": "67:24:21",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "file": "./IShields.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26165,
+        "sourceUnit": 26216,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26164,
+        "nodeType": "ContractDefinition",
+        "src": "93:163:21",
+        "nodes": [
+          {
+            "id": 26163,
+            "nodeType": "FunctionDefinition",
+            "src": "126:128:21",
+            "nodes": [],
+            "functionSelector": "a975e752",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateShieldBadgeSVG",
+            "nameLocation": "135:22:21",
+            "parameters": {
+              "id": 26159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26158,
+                  "mutability": "mutable",
+                  "name": "shieldBadge",
+                  "nameLocation": "179:11:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26163,
+                  "src": "158:32:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                    "typeString": "enum IShields.ShieldBadge"
+                  },
+                  "typeName": {
+                    "id": 26157,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26156,
+                      "name": "IShields.ShieldBadge",
+                      "nameLocations": [
+                        "158:8:21",
+                        "167:11:21"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26170,
+                      "src": "158:20:21"
+                    },
+                    "referencedDeclaration": 26170,
+                    "src": "158:20:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                      "typeString": "enum IShields.ShieldBadge"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "157:34:21"
+            },
+            "returnParameters": {
+              "id": 26162,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26161,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26163,
+                  "src": "239:13:21",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26160,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "239:6:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "238:15:21"
+            },
+            "scope": 26164,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IShieldBadgeSVGs",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26164
+        ],
+        "name": "IShieldBadgeSVGs",
+        "nameLocation": "103:16:21",
+        "scope": 26165,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "The Unlicense"
+  },
+  "id": 21
+}

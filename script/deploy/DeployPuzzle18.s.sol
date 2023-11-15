@@ -13,7 +13,7 @@ contract DeployPuzzle18 is DeployBase {
     function run() external {
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),18193473);
         vm.selectFork(forkId);
-        console.log("MurderMistery.generate():\n%x", IPuzzle(0x00000000001a9C5723d08a79907288d556d37a95).generate(mainnetWinner));
+        console.log("MurderMistery.generate():\n%s", IPuzzle(0x00000000001a9C5723d08a79907288d556d37a95).generate(mainnetWinner));
         vm.prank(mainnetWinner);
 
         // testSolved(0x123);

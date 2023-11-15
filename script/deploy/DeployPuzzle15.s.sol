@@ -16,7 +16,7 @@ contract DeployPuzzle15 is DeployBase {
         puzzle = new BillyTheBull();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17843232);
         vm.selectFork(forkId);
-        console.log("BillyTheBull.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("BillyTheBull.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.prank(mainnetWinner);
 
         // testSolved(0x123);

@@ -14,7 +14,7 @@ contract DeployPuzzle8 is DeployBase {
     function run() external {
         puzzle = new Chal();
         uint256 forkId = vm.createFork(vm.envString("RPC_URL_MAINNET"),17104932);
-        console.log("Chal.generate():\n%x", puzzle.generate(mainnetWinner));
+        console.log("Chal.generate():\n%s", puzzle.generate(mainnetWinner));
         vm.selectFork(forkId);
         vm.prank(mainnetWinner);
 

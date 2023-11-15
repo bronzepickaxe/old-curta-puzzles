@@ -1,0 +1,949 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "fieldGenerator",
+      "outputs": [
+        {
+          "internalType": "contract IFieldGenerator",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "frameGenerator",
+      "outputs": [
+        {
+          "internalType": "contract IFrameGenerator",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum IShields.ShieldBadge",
+          "name": "shieldBadge",
+          "type": "uint8"
+        }
+      ],
+      "name": "generateShieldBadgeURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "built",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint16",
+              "name": "field",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "hardware",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "frame",
+              "type": "uint16"
+            },
+            {
+              "internalType": "enum IShields.ShieldBadge",
+              "name": "shieldBadge",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint24[4]",
+              "name": "colors",
+              "type": "uint24[4]"
+            }
+          ],
+          "internalType": "struct IShields.Shield",
+          "name": "shield",
+          "type": "tuple"
+        }
+      ],
+      "name": "generateShieldURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "hardwareGenerator",
+      "outputs": [
+        {
+          "internalType": "contract IHardwareGenerator",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "shieldBadgeSVGGenerator",
+      "outputs": [
+        {
+          "internalType": "contract IShieldBadgeSVGs",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "fieldGenerator()": "1b740a33",
+    "frameGenerator()": "2900a9aa",
+    "generateShieldBadgeURI(uint8)": "120ea84c",
+    "generateShieldURI((bool,uint16,uint16,uint16,uint8,uint24[4]))": "8ee1d84c",
+    "hardwareGenerator()": "291c881d",
+    "shieldBadgeSVGGenerator()": "b6c18a9a"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"fieldGenerator\",\"outputs\":[{\"internalType\":\"contract IFieldGenerator\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"frameGenerator\",\"outputs\":[{\"internalType\":\"contract IFrameGenerator\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum IShields.ShieldBadge\",\"name\":\"shieldBadge\",\"type\":\"uint8\"}],\"name\":\"generateShieldBadgeURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"built\",\"type\":\"bool\"},{\"internalType\":\"uint16\",\"name\":\"field\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"hardware\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"frame\",\"type\":\"uint16\"},{\"internalType\":\"enum IShields.ShieldBadge\",\"name\":\"shieldBadge\",\"type\":\"uint8\"},{\"internalType\":\"uint24[4]\",\"name\":\"colors\",\"type\":\"uint24[4]\"}],\"internalType\":\"struct IShields.Shield\",\"name\":\"shield\",\"type\":\"tuple\"}],\"name\":\"generateShieldURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"hardwareGenerator\",\"outputs\":[{\"internalType\":\"contract IHardwareGenerator\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"shieldBadgeSVGGenerator\",\"outputs\":[{\"internalType\":\"contract IShieldBadgeSVGs\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol\":\"IEmblemWeaver\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":875},\"remappings\":[\":@/contracts/=src/\",\":@/script/=script/\",\":colormap-registry/=lib/colormap-registry/src/\",\":ds-test/=lib/solvm/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":foundry-huff/=lib/foundry-huff/src/\",\":memmove/=lib/solvm/lib/memmove/src/\",\":shields-api-contract/=lib/shields-api-contract/contracts/\",\":shields-api/=lib/shields-api-contract/contracts/\",\":solady/=lib/solady/src/\",\":solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/\",\":solmate/=lib/solmate/src/\",\":solvm/=lib/solvm/src/\",\":stringutils/=lib/foundry-huff/lib/solidity-stringutils/\"]},\"sources\":{\"lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol\":{\"keccak256\":\"0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600\",\"dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs\"]},\"lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol\":{\"keccak256\":\"0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad\",\"dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4\"]},\"lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol\":{\"keccak256\":\"0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e\",\"dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS\"]},\"lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol\":{\"keccak256\":\"0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887\",\"dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y\"]},\"lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol\":{\"keccak256\":\"0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf\",\"dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe\"]},\"lib/shields-api-contract/contracts/interfaces/IShields.sol\":{\"keccak256\":\"0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59\",\"license\":\"The Unlicense\",\"urls\":[\"bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4\",\"dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "fieldGenerator",
+          "outputs": [
+            {
+              "internalType": "contract IFieldGenerator",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "frameGenerator",
+          "outputs": [
+            {
+              "internalType": "contract IFrameGenerator",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "enum IShields.ShieldBadge",
+              "name": "shieldBadge",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "generateShieldBadgeURI",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct IShields.Shield",
+              "name": "shield",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "built",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "field",
+                  "type": "uint16"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "hardware",
+                  "type": "uint16"
+                },
+                {
+                  "internalType": "uint16",
+                  "name": "frame",
+                  "type": "uint16"
+                },
+                {
+                  "internalType": "enum IShields.ShieldBadge",
+                  "name": "shieldBadge",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint24[4]",
+                  "name": "colors",
+                  "type": "uint24[4]"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "generateShieldURI",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "hardwareGenerator",
+          "outputs": [
+            {
+              "internalType": "contract IHardwareGenerator",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "shieldBadgeSVGGenerator",
+          "outputs": [
+            {
+              "internalType": "contract IShieldBadgeSVGs",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@/contracts/=src/",
+        "@/script/=script/",
+        "colormap-registry/=lib/colormap-registry/src/",
+        "ds-test/=lib/solvm/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-huff/=lib/foundry-huff/src/",
+        "memmove/=lib/solvm/lib/memmove/src/",
+        "shields-api-contract/=lib/shields-api-contract/contracts/",
+        "shields-api/=lib/shields-api-contract/contracts/",
+        "solady/=lib/solady/src/",
+        "solidity-stringutils/=lib/foundry-huff/lib/solidity-stringutils/",
+        "solmate/=lib/solmate/src/",
+        "solvm/=lib/solvm/src/",
+        "stringutils/=lib/foundry-huff/lib/solidity-stringutils/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 875
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol": "IEmblemWeaver"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol": {
+        "keccak256": "0xe9d38e8847dad29e0e5bbb9b25820f935c81da0bbcbdcf6dc00da13f6ac3d059",
+        "urls": [
+          "bzz-raw://80f305b59f47827b5a93cfb0bc449aa9cfea421fdbea9e84bdb12c197597e600",
+          "dweb:/ipfs/QmRcpTeYFFE48WzePC1opd6t1dgcnfSqqVSd6id52Arzhs"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol": {
+        "keccak256": "0x1bef229bcaf77b6c5b80132ef0bfec5f56a37f61872969d2ea2849ed0b58b029",
+        "urls": [
+          "bzz-raw://92e9f58e0e45b831015a44dfe2f698254f9ece12ee42a15b4feb67ce502ef5ad",
+          "dweb:/ipfs/QmeXn8ddDnA74qXpe5i2L12tBbofb5R9PQT4UiZkpcRVP4"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol": {
+        "keccak256": "0x166b788970f6aa91ebb37a715de1032dde1f144ff799591f19d22500a5fa0ca1",
+        "urls": [
+          "bzz-raw://aba207cb96221397429d3096b5015614da3f878132e875ed41664d555f90de4e",
+          "dweb:/ipfs/QmSHHf2WwHjhdDr7baL8kZ7jrLBaREV5qhqTCZqkbG6RXS"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol": {
+        "keccak256": "0x0e65213b5d383566d5a5dfa7242f7dac260201278ef82a7fdcf5a655f28a0dd0",
+        "urls": [
+          "bzz-raw://10a5d8ca7c9bc6b8fa690ef739455c61b81519a1d9bfcdce9ed10c16e34e2887",
+          "dweb:/ipfs/QmZxgrRExdHMfouhjd5LLF625y7yhZ8FT11iwbmgqyiW2Y"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol": {
+        "keccak256": "0x98f2b19804b9fe3977032c8e527e6ec0b1edf57433cdbe7099c854a9124d194c",
+        "urls": [
+          "bzz-raw://4415b82ff3c32f7901acf114d3db81edf7ce6809ccfec129f2a47fa603a45ccf",
+          "dweb:/ipfs/QmR3PrPzk6giKeRoXzKed5SWtv39Jex7E7kwd29wdGxHpe"
+        ],
+        "license": "The Unlicense"
+      },
+      "lib/shields-api-contract/contracts/interfaces/IShields.sol": {
+        "keccak256": "0x674d29f8191afce3411723a043ff42d52f63278485b33f12b7d3d5d8cbcefe59",
+        "urls": [
+          "bzz-raw://9bcbb51c3003340d7cf3f95b50edfe93112567daf018327f4ee9532f9016a7f4",
+          "dweb:/ipfs/QmTJXhVkGJx5B13gjVJGawr9mGy8LBKUT7F2NAkmZQj3gH"
+        ],
+        "license": "The Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/shields-api-contract/contracts/interfaces/IEmblemWeaver.sol",
+    "id": 26087,
+    "exportedSymbols": {
+      "IEmblemWeaver": [
+        26086
+      ],
+      "IFieldGenerator": [
+        26112
+      ],
+      "IFrameGenerator": [
+        26130
+      ],
+      "IHardwareGenerator": [
+        26152
+      ],
+      "IShieldBadgeSVGs": [
+        26164
+      ],
+      "IShields": [
+        26215
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:754:17",
+    "nodes": [
+      {
+        "id": 26040,
+        "nodeType": "PragmaDirective",
+        "src": "42:23:17",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 26041,
+        "nodeType": "ImportDirective",
+        "src": "67:24:17",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IShields.sol",
+        "file": "./IShields.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26087,
+        "sourceUnit": 26216,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26042,
+        "nodeType": "ImportDirective",
+        "src": "92:31:17",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IFrameGenerator.sol",
+        "file": "./IFrameGenerator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26087,
+        "sourceUnit": 26131,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26043,
+        "nodeType": "ImportDirective",
+        "src": "124:31:17",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IFieldGenerator.sol",
+        "file": "./IFieldGenerator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26087,
+        "sourceUnit": 26113,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26044,
+        "nodeType": "ImportDirective",
+        "src": "156:34:17",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IHardwareGenerator.sol",
+        "file": "./IHardwareGenerator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26087,
+        "sourceUnit": 26153,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26045,
+        "nodeType": "ImportDirective",
+        "src": "191:32:17",
+        "nodes": [],
+        "absolutePath": "lib/shields-api-contract/contracts/interfaces/IShieldBadgeSVGs.sol",
+        "file": "./IShieldBadgeSVGs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26087,
+        "sourceUnit": 26165,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26086,
+        "nodeType": "ContractDefinition",
+        "src": "225:570:17",
+        "nodes": [
+          {
+            "id": 26051,
+            "nodeType": "FunctionDefinition",
+            "src": "255:61:17",
+            "nodes": [],
+            "functionSelector": "1b740a33",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fieldGenerator",
+            "nameLocation": "264:14:17",
+            "parameters": {
+              "id": 26046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "278:2:17"
+            },
+            "returnParameters": {
+              "id": 26050,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26049,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26051,
+                  "src": "299:15:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFieldGenerator_$26112",
+                    "typeString": "contract IFieldGenerator"
+                  },
+                  "typeName": {
+                    "id": 26048,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26047,
+                      "name": "IFieldGenerator",
+                      "nameLocations": [
+                        "299:15:17"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26112,
+                      "src": "299:15:17"
+                    },
+                    "referencedDeclaration": 26112,
+                    "src": "299:15:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFieldGenerator_$26112",
+                      "typeString": "contract IFieldGenerator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "298:17:17"
+            },
+            "scope": 26086,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26057,
+            "nodeType": "FunctionDefinition",
+            "src": "322:67:17",
+            "nodes": [],
+            "functionSelector": "291c881d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hardwareGenerator",
+            "nameLocation": "331:17:17",
+            "parameters": {
+              "id": 26052,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "348:2:17"
+            },
+            "returnParameters": {
+              "id": 26056,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26055,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26057,
+                  "src": "369:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IHardwareGenerator_$26152",
+                    "typeString": "contract IHardwareGenerator"
+                  },
+                  "typeName": {
+                    "id": 26054,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26053,
+                      "name": "IHardwareGenerator",
+                      "nameLocations": [
+                        "369:18:17"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26152,
+                      "src": "369:18:17"
+                    },
+                    "referencedDeclaration": 26152,
+                    "src": "369:18:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IHardwareGenerator_$26152",
+                      "typeString": "contract IHardwareGenerator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "368:20:17"
+            },
+            "scope": 26086,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26063,
+            "nodeType": "FunctionDefinition",
+            "src": "395:61:17",
+            "nodes": [],
+            "functionSelector": "2900a9aa",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "frameGenerator",
+            "nameLocation": "404:14:17",
+            "parameters": {
+              "id": 26058,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "418:2:17"
+            },
+            "returnParameters": {
+              "id": 26062,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26061,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26063,
+                  "src": "439:15:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFrameGenerator_$26130",
+                    "typeString": "contract IFrameGenerator"
+                  },
+                  "typeName": {
+                    "id": 26060,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26059,
+                      "name": "IFrameGenerator",
+                      "nameLocations": [
+                        "439:15:17"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26130,
+                      "src": "439:15:17"
+                    },
+                    "referencedDeclaration": 26130,
+                    "src": "439:15:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFrameGenerator_$26130",
+                      "typeString": "contract IFrameGenerator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "438:17:17"
+            },
+            "scope": 26086,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26069,
+            "nodeType": "FunctionDefinition",
+            "src": "462:71:17",
+            "nodes": [],
+            "functionSelector": "b6c18a9a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "shieldBadgeSVGGenerator",
+            "nameLocation": "471:23:17",
+            "parameters": {
+              "id": 26064,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "494:2:17"
+            },
+            "returnParameters": {
+              "id": 26068,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26067,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26069,
+                  "src": "515:16:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IShieldBadgeSVGs_$26164",
+                    "typeString": "contract IShieldBadgeSVGs"
+                  },
+                  "typeName": {
+                    "id": 26066,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26065,
+                      "name": "IShieldBadgeSVGs",
+                      "nameLocations": [
+                        "515:16:17"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26164,
+                      "src": "515:16:17"
+                    },
+                    "referencedDeclaration": 26164,
+                    "src": "515:16:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IShieldBadgeSVGs_$26164",
+                      "typeString": "contract IShieldBadgeSVGs"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "514:18:17"
+            },
+            "scope": 26086,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26077,
+            "nodeType": "FunctionDefinition",
+            "src": "539:120:17",
+            "nodes": [],
+            "functionSelector": "8ee1d84c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateShieldURI",
+            "nameLocation": "548:17:17",
+            "parameters": {
+              "id": 26073,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26072,
+                  "mutability": "mutable",
+                  "name": "shield",
+                  "nameLocation": "589:6:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26077,
+                  "src": "566:29:17",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Shield_$26186_memory_ptr",
+                    "typeString": "struct IShields.Shield"
+                  },
+                  "typeName": {
+                    "id": 26071,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26070,
+                      "name": "IShields.Shield",
+                      "nameLocations": [
+                        "566:8:17",
+                        "575:6:17"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26186,
+                      "src": "566:15:17"
+                    },
+                    "referencedDeclaration": 26186,
+                    "src": "566:15:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Shield_$26186_storage_ptr",
+                      "typeString": "struct IShields.Shield"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "565:31:17"
+            },
+            "returnParameters": {
+              "id": 26076,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26075,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26077,
+                  "src": "644:13:17",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26074,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "644:6:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "643:15:17"
+            },
+            "scope": 26086,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26085,
+            "nodeType": "FunctionDefinition",
+            "src": "665:128:17",
+            "nodes": [],
+            "functionSelector": "120ea84c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateShieldBadgeURI",
+            "nameLocation": "674:22:17",
+            "parameters": {
+              "id": 26081,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26080,
+                  "mutability": "mutable",
+                  "name": "shieldBadge",
+                  "nameLocation": "718:11:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26085,
+                  "src": "697:32:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                    "typeString": "enum IShields.ShieldBadge"
+                  },
+                  "typeName": {
+                    "id": 26079,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26078,
+                      "name": "IShields.ShieldBadge",
+                      "nameLocations": [
+                        "697:8:17",
+                        "706:11:17"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26170,
+                      "src": "697:20:17"
+                    },
+                    "referencedDeclaration": 26170,
+                    "src": "697:20:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShieldBadge_$26170",
+                      "typeString": "enum IShields.ShieldBadge"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:34:17"
+            },
+            "returnParameters": {
+              "id": 26084,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26083,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26085,
+                  "src": "778:13:17",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26082,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "778:6:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "777:15:17"
+            },
+            "scope": 26086,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEmblemWeaver",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          26086
+        ],
+        "name": "IEmblemWeaver",
+        "nameLocation": "235:13:17",
+        "scope": 26087,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "The Unlicense"
+  },
+  "id": 17
+}
