@@ -24,7 +24,7 @@ I decided to create a directory of old Curta puzzles because I want to play them
 Make sure to check out the [Curta.wtf website](https://www.curta.wtf/) for new puzzles and join there [Discord](https://discord.com/invite/zxerRE2Dn7).
 
 ### Step 1 (Setup)
-- Run `forge install`
+- Run `forge build`
 - Install [Huff](https://docs.huff.sh/get-started/installing/)
 
 Put your `RPC_URL_MAINNET` in `.env.example`:
@@ -37,7 +37,7 @@ I use [Infura](infura.io), but other RPC providers will work as well.
 
 ### Step 2 (Generating seed)
 Pick the puzzle you want to play. Let's say you want to play Puzzle1, run this command:
-`forge script/deployDeployPuzzle1.s.sol`
+`forge script script/deploy/DeployPuzzle1.s.sol`
 This will log the seed to your console:
 ```javascript
 [⠒] Compiling...
